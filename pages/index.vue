@@ -1,3 +1,3 @@
 <template>
-    <div>INDEX</div>
+    <div class="px-4">INDEX</div>
 </template>
