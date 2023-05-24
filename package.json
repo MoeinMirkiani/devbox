@@ -1,4 +1,5 @@
 {
+    "type": "module",
     "name": "nuxt-app",
     "private": true,
     "scripts": {
@@ -11,6 +12,7 @@
     "devDependencies": {
         "@nuxt/eslint-config": "^0.1.1",
         "@nuxtjs/eslint-module": "^4.0.2",
+        "@nuxtjs/i18n": "^8.0.0-beta.12",
         "@nuxtjs/tailwindcss": "^6.7.0",
         "@types/node": "^18",
         "eslint": "^8.41.0",
