@@ -1,3 +1,7 @@
 <template>
-    <div class="px-[14px] shadow-card text-primary-green font-bold text-50">{{ $t('buttons.download') }}</div>
+    <DBButton>{{ $t('buttons.download') }}</DBButton>
 </template>
+
+<script setup lang="ts">
+import DBButton from '~/components/UI/DBButton.vue'
+</script>
