@@ -1,5 +1,3 @@
-// @ts-ignore
-// @ts-ignore
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/eslint-module',
@@ -7,16 +5,6 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
         'nuxt-icons'
     ],
-
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: '@use "@/assets/styles/main.scss" as *;'
-                }
-            }
-        }
-    },
 
     i18n: {
         legacy: false,
@@ -30,5 +18,16 @@ export default defineNuxtConfig({
                 file: 'en-US.json'
             }
         ]
+    },
+
+    // @ts-ignore
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: '@use "@/assets/styles/main.scss" as *;'
+                }
+            }
+        }
     }
 })
