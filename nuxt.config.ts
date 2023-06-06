@@ -2,7 +2,8 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/eslint-module',
         '@nuxtjs/tailwindcss',
-        '@nuxtjs/i18n'
+        '@nuxtjs/i18n',
+        'nuxt-icons'
     ],
 
     i18n: {
