@@ -26,5 +26,10 @@ export default {
 
     buttons: {
         download: "Download"
+    },
+
+    responsive: {
+        first: 'Sorry :(',
+        second: 'Responsive version not available.'
     }
 }
