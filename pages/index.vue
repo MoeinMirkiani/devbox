@@ -1,7 +1,12 @@
 <template>
-    <DBButton>{{ $t('buttons.download') }}</DBButton>
+    <div id="hero">
+        <AppContainer>
+            <TypeSwiper />
+        </AppContainer>
+    </div>
 </template>
 
 <script setup lang="ts">
-import DBButton from '~/components/UI/DBButton.vue'
+import AppContainer from '~/components/UI/AppContainer.vue'
+import TypeSwiper from '~/components/TypeSwiper.vue'
 </script>
