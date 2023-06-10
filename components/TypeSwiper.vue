@@ -4,6 +4,7 @@
         :slides-per-view="1"
         :loop="true"
         :effect="'fade'"
+        :speed="10"
         :autoplay="{
             delay: 3000,
             disableOnInteraction: true,
@@ -12,28 +13,60 @@
             crossFade: true
         }"
     >
-        <SwiperSlide v-for="slide in 10" :key="slide">
-            <p class="type">images</p>
+        <SwiperSlide v-for="category in words" :key="category">
+            <div class="type flex items-center justify-center gap-5">
+                <p class="type__fixed font-inter font-light text-72">{{ fixedWord }}</p>
+                <div class="type__writing flex items-center text-center px-4 bg-primary-green opacity-60">
+                    <p class="text-grey-98 text-72 font-light">{{ category }}</p>
+                </div>
+            </div>
         </SwiperSlide>
     </Swiper>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+defineProps({
+    fixedWord: {
+        type: String,
+        required: true
+    },
+    words: {
+        type: Array,
+        required: true
+    }
+})
+</script>
 
 <style lang="scss" scoped>
 .swiper {
     &-slide {
         .type {
-            width: 0;
-            overflow: hidden;
+            &__fixed {
+                min-width: max-content;
+            }
+
+            &__writing {
+                height: 72px;
+                min-width: 280px;
+
+                p {
+                    width: 0;
+                    max-width: max-content;
+                    overflow: hidden;
+                }
+            }
         }
 
         &-active {
             .type {
-                animation-name: typewrite;
-                animation-duration: 3s;
-                animation-iteration-count: infinite;
-                animation-delay: 0.5s;
+                &__writing {
+                    p {
+                        animation-name: typewrite;
+                        animation-duration: 3s;
+                        animation-iteration-count: 1;
+                        animation-timing-function: linear;
+                    }
+                }
             }
         }
     }
@@ -44,12 +77,24 @@
         width: 0;
     }
 
-    50% {
+    10% {
+        width: 50%;
+    }
+
+    20% {
+        width: 100%;
+    }
+
+    80% {
+        width: 100%;
+    }
+
+    90% {
         width: 50%;
     }
 
     100% {
-        width: 100%;
+        width: 0;
     }
 }
 </style>

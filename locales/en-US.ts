@@ -24,6 +24,13 @@ export default {
         ]
     },
 
+    main: {
+        hero: {
+            fixed: 'Find free',
+            description: 'Access many of royalty-free soundtracks, stock photos, sample videos, avatars and logos for your projects'
+        }
+    },
+
     buttons: {
         download: "Download"
     },
@@ -32,4 +39,4 @@ export default {
         first: 'Sorry :(',
         second: 'Responsive version not available.'
     }
-}
+} as const
