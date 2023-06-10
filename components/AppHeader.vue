@@ -1,6 +1,6 @@
 <template>
     <header class="header flex items-center shadow-header px-20">
-        <DBContainer class="flex items-center">
+        <AppContainer class="flex items-center">
             <NuxtLink to="/" class="header__logo block">
                 <NuxtIcon name="devbox-logo" filled />
             </NuxtLink>
@@ -14,12 +14,12 @@
                     </li>
                 </ul>
             </nav>
-        </DBContainer>
+        </AppContainer>
     </header>
 </template>
 
 <script lang="ts" setup>
-import DBContainer from '~/components/UI/DBContainer.vue'
+import AppContainer from '~/components/UI/AppContainer.vue'
 
 const localePath = useLocalePath()
 </script>

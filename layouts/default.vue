@@ -1,7 +1,7 @@
 <template>
     <div id="layout__default">
         <div class="hidden md:block">
-            <DBHeader />
+            <AppHeader />
 
             <main class="page-content">
                 <slot />
@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-import DBHeader from '~/components/DBHeader.vue'
+import AppHeader from '~/components/AppHeader.vue'
 </script>
 
 <style lang="scss">
