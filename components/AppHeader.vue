@@ -1,5 +1,5 @@
 <template>
-    <header class="header flex items-center shadow-header px-20">
+    <header class="header flex items-center shadow-header px-20 z-10 sticky">
         <AppContainer class="flex items-center">
             <NuxtLink to="/" class="header__logo block">
                 <NuxtIcon name="devbox-logo" filled />
