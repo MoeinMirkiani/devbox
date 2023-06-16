@@ -22,13 +22,5 @@ export default defineNuxtConfig({
     },
 
     // @ts-ignore
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: '@use "@/assets/styles/main.scss" as *;'
-                }
-            }
-        }
-    }
+    css: ['@/assets/styles/main.scss']
 })
