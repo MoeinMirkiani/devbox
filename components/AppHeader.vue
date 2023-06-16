@@ -9,7 +9,7 @@
 
             <nav class="navigation">
                 <ul class="navigation__list flex gap-12">
-                    <li v-for="(item, i) in $tm('header.navigation')" :key="i" class="navigation__item text-grey-60 text-18 font-400">
+                    <li v-for="(item, i) in $tm('header.navigation')" :key="i" class="navigation__item text-gray-60 text-18 font-400">
                         <NuxtLink :to="localePath($rt(item.link))" class="block">{{ $rt(item.name) }}</NuxtLink>
                     </li>
                 </ul>

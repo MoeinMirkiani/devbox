@@ -11,12 +11,12 @@ module.exports = {
             'primary-shade': '#156961',
             'white': '#FFFFFF',
             'black': '#000000',
-            'grey-98': '#FAFAFA',
-            'grey-95': '#F2F2F2',
-            'grey-90': '#E6E6E6',
-            'grey-80': '#CCCCCC',
-            'grey-60': '#999999',
-            'grey-30': '#4D4D4D',
+            'gray-98': '#FAFAFA',
+            'gray-95': '#F2F2F2',
+            'gray-90': '#E6E6E6',
+            'gray-80': '#CCCCCC',
+            'gray-60': '#999999',
+            'gray-30': '#4D4D4D',
             'link': '#55A6E0',
             'error': '#B71C1C',
             'success': '#2E7D32'
@@ -62,11 +62,6 @@ module.exports = {
             'card-hover': '0px 10px 20px 0px rgba(0, 0, 0, 0.18)',
             'header': '0px 4px 15px 0px rgba(114, 114, 114, 0.1)',
             'dropdown': '0px 4px 8px 0px rgba(0, 0, 0, 0.15)'
-        },
-        extend: {
-            fontFamily: {
-                'sans': ['Inter', 'sans-serif']
-            },
         }
     }
 }
