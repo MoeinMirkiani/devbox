@@ -14,9 +14,9 @@
         }"
     >
         <SwiperSlide v-for="category in words" :key="category">
-            <div class="type flex items-center justify-center gap-5">
-                <p class="type__fixed font-inter font-light text-72">{{ fixedWord }}</p>
-                <div class="type__writing flex items-center text-center px-4 bg-primary-green opacity-60">
+            <div class="word flex items-center justify-center gap-5">
+                <p class="word__fixed font-inter font-light text-72">{{ fixedWord }}</p>
+                <div class="word__writing flex px-4 bg-primary-green opacity-60">
                     <p class="text-grey-98 text-72 font-light">{{ category }}</p>
                 </div>
             </div>
@@ -40,7 +40,7 @@ defineProps({
 <style lang="scss" scoped>
 .swiper {
     &-slide {
-        .type {
+        .word {
             &__fixed {
                 min-width: max-content;
             }
@@ -58,7 +58,7 @@ defineProps({
         }
 
         &-active {
-            .type {
+            .word {
                 &__writing {
                     p {
                         animation-name: typewrite;
