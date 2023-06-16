@@ -12,6 +12,7 @@
         :fade-effect="{
             crossFade: true
         }"
+        :allow-touch-move="false"
     >
         <SwiperSlide v-for="category in words" :key="category">
             <div class="word flex items-center justify-center gap-5">
