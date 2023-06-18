@@ -1,10 +1,14 @@
 <template>
     <Swiper
-        :modules="[SwiperAutoplay, SwiperEffectFade]"
+        :modules="[SwiperNavigation, SwiperAutoplay, SwiperEffectFade]"
         :slides-per-view="1"
         :loop="true"
         :effect="'fade'"
         :speed="10"
+        :navigation="{
+            nextEl: '.swiper-button__next',
+            prevEl: '.swiper-button__prev'
+        }"
         :autoplay="{
             delay: 3000,
             disableOnInteraction: true,
@@ -22,6 +26,9 @@
                 </div>
             </div>
         </SwiperSlide>
+
+        <div class="swiper-button swiper-button__next">n</div>
+        <div class="swiper-button swiper-button__prev">p</div>
     </Swiper>
 </template>
 
