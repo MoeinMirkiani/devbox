@@ -15,10 +15,10 @@
         :allow-touch-move="false"
     >
         <SwiperSlide v-for="category in words" :key="category">
-            <div class="word flex items-center justify-center gap-5">
-                <p class="word__fixed min-w-max font-inter font-light text-72 text-gray-30">{{ fixedWord }}</p>
-                <div class="word__writing min-w-[280px] h-[76px] flex px-4 bg-primary-green opacity-60">
-                    <p class="mx-auto pb-3 text-grey-98 text-72 font-light text-center text-gray-98 leading-[64px] overflow-hidden">{{ category }}</p>
+            <div class="word flex items-center justify-center gap-4">
+                <p class="word__fixed min-w-max font-light text-72 text-gray-30">{{ fixedWord }}</p>
+                <div class="word__writing min-w-[244px]">
+                    <p class="text-primary-green text-72 font-light overflow-hidden">{{ category }}</p>
                 </div>
             </div>
         </SwiperSlide>
