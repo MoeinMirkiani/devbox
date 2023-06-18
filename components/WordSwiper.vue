@@ -11,12 +11,13 @@
         }"
         :autoplay="{
             delay: 3000,
-            disableOnInteraction: true,
+            disableOnInteraction: false,
         }"
         :fade-effect="{
             crossFade: true
         }"
         :allow-touch-move="false"
+        class="relative max-w-[580px]"
     >
         <SwiperSlide v-for="category in words" :key="category">
             <div class="word flex items-center justify-center gap-4">
@@ -27,8 +28,13 @@
             </div>
         </SwiperSlide>
 
-        <div class="swiper-button swiper-button__next">n</div>
-        <div class="swiper-button swiper-button__prev">p</div>
+        <div class="swiper-button swiper-button__next w-20 h-20 cursor-pointer absolute top-1/2 left-full -translate-y-1/2">
+            <NuxtIcon name="swiper-button-next" filled />
+        </div>
+
+        <div class="swiper-button swiper-button__prev w-20 h-20 cursor-pointer absolute top-1/2 right-full -translate-y-1/2">
+            <NuxtIcon name="swiper-button-prev" filled />
+        </div>
     </Swiper>
 </template>
 
@@ -47,6 +53,8 @@ defineProps({
 
 <style lang="scss" scoped>
 .swiper {
+    overflow: visible !important;
+
     &-slide {
         .word {
             &__writing {
