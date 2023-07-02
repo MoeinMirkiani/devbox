@@ -23,7 +23,7 @@
             <div class="word flex items-center justify-center gap-4">
                 <p class="word__fixed min-w-max font-light text-72 text-gray-30">{{ fixedWord }}</p>
                 <div class="word__writing min-w-[244px]">
-                    <p class="text-primary-green text-72 font-light overflow-hidden">{{ category }}</p>
+                    <p class="text-primary-green text-72 font-light overflow-hidden">{{ category.title.toLowerCase() }}</p>
                 </div>
             </div>
         </SwiperSlide>

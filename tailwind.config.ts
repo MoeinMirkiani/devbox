@@ -16,6 +16,7 @@ module.exports = {
             'gray-90': '#E6E6E6',
             'gray-80': '#CCCCCC',
             'gray-60': '#999999',
+            'gray-50': '#808080',
             'gray-30': '#4D4D4D',
             'link': '#55A6E0',
             'error': '#B71C1C',
@@ -85,6 +86,15 @@ module.exports = {
             '23': '92px',
             '24': '96px',
             '25': '100px'
+        },
+        borderRadius: {
+            '1': '4px',
+            '2': '8px',
+            '3': '12px',
+            '4': '16px',
+            '5': '20px',
+            '6': '24px',
+            'full': '9999px'
         },
         boxShadow: {
             'card': '0px 4px 15px 0px rgba(0, 0, 0, 0.09)',
