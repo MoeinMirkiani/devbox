@@ -1,20 +1,13 @@
 <template>
-    <div id="hero" class="-mt-17 pt-[168px] pb-17">
-        <AppContainer>
-            <WordSwiper :words="categories" :fixed-word="$t('main.hero.fixed')" />
-        </AppContainer>
+    <div class="-mt-17">
+        <HeroSection />
     </div>
 </template>
 
 <script setup lang="ts">
-import AppContainer from '~/components/UI/AppContainer.vue'
-import WordSwiper from '~/components/WordSwiper.vue'
+import HeroSection from '~/components/main/HeroSection.vue'
 
-const categories: string[] = ['images', 'videos', 'avatars', 'sounds', 'logos']
+useHead({
+    title: 'Main'
+})
 </script>
-
-<style lang="scss" scoped>
-#hero {
-    background: url('@/assets/images/main--hero-bg.jpg') no-repeat center center/cover;
-}
-</style>
