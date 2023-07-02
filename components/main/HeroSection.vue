@@ -1,5 +1,5 @@
 <template>
-    <section id="hero" class="hero pt-[168px] pb-17">
+    <section id="hero" class="hero pt-[168px] pb-[144px]">
         <AppContainer>
             <WordSwiper :words="categories" :fixed-word="$t('main.hero.fixed')" class="mb-6" />
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="page-content -mt-17">
+    <div class="page-content-wrapper -mt-17">
         <HeroSection />
     </div>
 </template>
@@ -13,7 +13,7 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-.page-content {
+.page-content-wrapper {
     background: url('@/assets/images/main--hero-bg.jpg') no-repeat top center/cover;
 }
 </style>
