@@ -60,7 +60,7 @@ const categories: object[] = [
         &:hover {
             .hero__category--bg {
                 background: theme('colors.primary-green');
-                box-shadow: -0.5px 8px 8px 0px rgba(42, 82, 77, 0.04);
+                box-shadow: -0.5px 8px 8px 0px rgba(42, 82, 77, 0.04), -2px 38px 29px 0px rgba(42, 82, 77, 0.06), -5px 100px 92px 0px rgba(42, 82, 77, 0.10);
             }
 
             .hero__category--title,
