@@ -32,6 +32,10 @@ export default {
 
         images: {
             text: 'detailed images you can use for any project'
+        },
+
+        videos: {
+            text: 'Videos for any purposes'
         }
     },
 

@@ -31,7 +31,7 @@ const samples = [sample1, sample2, sample4, sample3]
 <style lang="scss" scoped>
 .images {
     .container {
-        background: url('@/assets/icons/heading--images.svg') no-repeat 20px 0;
+        background: url('@/assets/icons/heading--images.svg') no-repeat top left;
         background-size: 568px;
     }
 

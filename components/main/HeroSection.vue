@@ -27,23 +27,23 @@ import WordSwiper from '~/components/WordSwiper.vue'
 const categories: object[] = [
     {
         title: 'Images',
-        icon: 'ic-images'
+        icon: 'ic--images'
     },
     {
         title: 'Videos',
-        icon: 'ic-videos'
+        icon: 'ic--videos'
     },
     {
         title: 'Avatars',
-        icon: 'ic-avatars'
+        icon: 'ic--avatars'
     },
     {
         title: 'Sounds',
-        icon: 'ic-sounds'
+        icon: 'ic--sounds'
     },
     {
         title: 'Logos',
-        icon: 'ic-logos'
+        icon: 'ic--logos'
     }
 ]
 </script>

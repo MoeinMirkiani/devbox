@@ -3,12 +3,15 @@
         <HeroSection />
 
         <ImagesSection />
+
+        <VideosSection />
     </div>
 </template>
 
 <script setup lang="ts">
 import HeroSection from '~/components/main/HeroSection.vue'
 import ImagesSection from '~/components/main/ImagesSection.vue'
+import VideosSection from '~/components/main/VideosSection.vue'
 
 useHead({
     title: 'Main'
@@ -17,6 +20,6 @@ useHead({
 
 <style lang="scss" scoped>
 .page-content-wrapper {
-    background: url('@/assets/images/main--hero-bg.jpg') no-repeat top center/cover;
+    background: url('@/assets/images/main--hero-bg.jpg') no-repeat top center/contain;
 }
 </style>
