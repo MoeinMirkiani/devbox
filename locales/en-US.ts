@@ -28,11 +28,16 @@ export default {
         hero: {
             fixed: 'Find free',
             description: 'Access many of royalty-free soundtracks, stock photos, sample videos, avatars and logos for your projects'
+        },
+
+        images: {
+            text: 'detailed images you can use for any project'
         }
     },
 
     buttons: {
-        download: "Download"
+        download: "Download",
+        more: 'View more'
     },
 
     responsive: {

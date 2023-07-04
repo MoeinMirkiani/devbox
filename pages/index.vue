@@ -1,11 +1,14 @@
 <template>
     <div class="page-content-wrapper -mt-17">
         <HeroSection />
+
+        <ImagesSection />
     </div>
 </template>
 
 <script setup lang="ts">
 import HeroSection from '~/components/main/HeroSection.vue'
+import ImagesSection from '~/components/main/ImagesSection.vue'
 
 useHead({
     title: 'Main'
