@@ -46,6 +46,6 @@ export default {
 
     responsive: {
         first: 'Sorry :(',
-        second: 'Responsive version not available.'
+        second: 'Responsive version is not available.'
     }
 } as const
