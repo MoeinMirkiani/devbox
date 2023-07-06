@@ -18,8 +18,8 @@
 
 <script setup lang="ts">
 import AppContainer from '~/components/UI/AppContainer.vue'
-import WordSwiper from '~/components/WordSwiper.vue'
-import CategoryCard from "~/components/CategoryCard.vue"
+import WordSwiper from '~/components/swiper/WordSwiper.vue'
+import CategoryCard from '~/components/category/CategoryCard.vue'
 
 const categories: object[] = [
     {
