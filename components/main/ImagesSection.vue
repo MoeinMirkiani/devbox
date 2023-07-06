@@ -9,7 +9,7 @@
 
             <div class="images__samples flex flex-wrap gap-4 w-3/5 pt-15">
                 <div v-for="(sample, i) in samples" :key="i" class="images__sample--wrapper flex items-end">
-                    <img :src="sample" :alt="`sample-${i + 1}`" class="images__image rounded-[30px] shadow-card hover:shadow-card-hover object-cover w-full" />
+                    <img :src="sample" :alt="`sample-${i + 1}`" class="images__image aspect-[1.6] rounded-[30px] shadow-card hover:shadow-card-hover object-cover w-full" />
                 </div>
             </div>
         </AppContainer>
@@ -41,10 +41,6 @@ const samples = [sample1, sample2, sample4, sample3]
         &:first-child,
         &:last-child {
             width: calc(40% - 8px);
-
-            .images__image {
-                height: 148px;
-            }
         }
 
         &:last-child {
@@ -53,7 +49,6 @@ const samples = [sample1, sample2, sample4, sample3]
     }
 
     &__image {
-        height: 200px;
         transition: all 0.2s linear;
     }
 }
