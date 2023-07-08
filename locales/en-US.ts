@@ -36,6 +36,10 @@ export default {
 
         videos: {
             text: 'Videos for any purposes'
+        },
+
+        sounds: {
+            text: 'Find your perfect track file fast and free'
         }
     },
 
