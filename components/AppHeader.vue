@@ -1,11 +1,11 @@
 <template>
-    <header class="header flex items-center shadow-header px-20 z-10 sticky">
+    <header class="header h-17 flex items-center shadow-header px-20 z-10 sticky bg-[rgba(255,255,255,0.4)]">
         <AppContainer class="flex items-center">
             <NuxtLink to="/" class="header__logo block">
-                <NuxtIcon name="devbox-logo" filled />
+                <NuxtIcon name="devbox-logo" filled class="inline-block w-[143px] h-[30px]" />
             </NuxtLink>
 
-            <span class="header__divider bg-grey-80 mx-12" />
+            <span class="header__divider inline-block h-6 w-[1px] bg-gray-80 mx-12" />
 
             <nav class="navigation">
                 <ul class="navigation__list flex gap-12">
@@ -23,20 +23,3 @@ import AppContainer from '~/components/UI/AppContainer.vue'
 
 const localePath = useLocalePath()
 </script>
-
-<style lang="scss">
-.header {
-    height: 68px;
-    background: rgba(255,255,255,0.4);
-
-    &__logo {
-        min-width: 143px;
-        height: 30px;
-    }
-
-    &__divider {
-        height: 24px;
-        width: 1px;
-    }
-}
-</style>
