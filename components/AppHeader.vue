@@ -1,7 +1,7 @@
 <template>
     <header class="header h-17 flex items-center shadow-header px-20 z-10 sticky bg-[rgba(255,255,255,0.4)]">
         <AppContainer class="flex items-center">
-            <NuxtLink to="/" class="header__logo block">
+            <NuxtLink to="/" class="header__logo flex">
                 <NuxtIcon name="devbox-logo" filled class="inline-block w-[143px] h-[30px]" />
             </NuxtLink>
 

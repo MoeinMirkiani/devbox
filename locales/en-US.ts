@@ -24,6 +24,10 @@ export default {
         ]
     },
 
+    footer: {
+        copyright: '© 2021 devbox.com All Rights Reserved'
+    },
+
     main: {
         hero: {
             fixed: 'Find free',
