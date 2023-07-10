@@ -94,6 +94,7 @@ module.exports = {
             '4': '16px',
             '5': '20px',
             '6': '24px',
+            '9': '36px',
             'full': '9999px'
         },
         boxShadow: {

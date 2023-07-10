@@ -8,15 +8,15 @@
             </div>
 
             <div class="logos__samples flex flex-wrap gap-4 w-2/5 pt-15 relative">
-                <SoundSample :image="sample1" width="144px" top="0" right="0" />
+                <LogoSample :image="dribbble" width="160px" top="0" right="10px" />
 
-                <SoundSample :image="sample2" width="116px" top="34px" right="254px" index="20" />
+                <LogoSample :image="appStore" width="138px" top="56px" right="250px" />
 
-                <SoundSample :image="sample3" width="208px" top="100px" right="92px" index="10" />
+                <LogoSample :image="discord" width="200px" top="116px" right="70px" index="10" />
 
-                <SoundSample :image="sample4" width="128px" top="240px" right="0" />
+                <LogoSample :image="slack" width="116px" top="290px" right="0" />
 
-                <SoundSample :image="sample5" width="130px" top="332px" right="130px" />
+                <LogoSample :image="spotify" width="132px" top="290px" right="216px" />
             </div>
         </AppContainer>
     </section>
@@ -25,13 +25,13 @@
 <script setup lang="ts">
 import AppButton from "~/components/UI/AppButton.vue"
 import AppContainer from "~/components/UI/AppContainer.vue"
-import SoundSample from "~/components/sounds/SoundSample.vue"
+import LogoSample from "~/components/logos/LogoSample.vue"
 
-import sample1 from '~/assets/images/main--sounds-sample1.jpg'
-import sample2 from '~/assets/images/main--sounds-sample2.jpg'
-import sample3 from '~/assets/images/main--sounds-sample3.jpg'
-import sample4 from '~/assets/images/main--sounds-sample4.jpg'
-import sample5 from '~/assets/images/main--sounds-sample5.jpg'
+import dribbble from '~/assets/images/main--logos-dribbble.png'
+import appStore from '~/assets/images/main--logos-app-store.png'
+import discord from '~/assets/images/main--logos-discord.png'
+import slack from '~/assets/images/main--logos-slack.png'
+import spotify from '~/assets/images/main--logos-spotify.png'
 </script>
 
 <style lang="scss" scoped>
