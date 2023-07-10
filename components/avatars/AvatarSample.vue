@@ -1,6 +1,6 @@
 <template>
-    <div class="sound-sample shadow-card rounded-6 overflow-hidden cursor-pointer" :class="{ 'absolute': absolute }">
-        <img :src="image" alt="devbox-sound-sample" class="aspect-[1]" />
+    <div class="avatar-sample shadow-card-hover overflow-hidden cursor-pointer" :class="{ 'absolute': absolute }">
+        <img :src="image" alt="devbox-avatar-sample" class="aspect-[1]" />
     </div>
 </template>
 
@@ -42,9 +42,10 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-.sound-sample {
+.avatar-sample {
     width: v-bind(width);
     height: v-bind(width);
+    border-radius: v-bind(width);
     top: v-bind(top);
     bottom: v-bind(bottom);
     left: v-bind(left);
