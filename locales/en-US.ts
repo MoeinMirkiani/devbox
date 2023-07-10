@@ -44,6 +44,10 @@ export default {
 
         sounds: {
             text: 'Find your perfect track file fast and free'
+        },
+
+        avatars: {
+            text: 'Avatars for everyone and any age'
         }
     },
 

@@ -7,6 +7,8 @@
         <VideosSection />
 
         <SoundsSection />
+
+        <AvatarsSection />
     </div>
 </template>
 
@@ -15,6 +17,7 @@ import HeroSection from '~/components/main/HeroSection.vue'
 import ImagesSection from '~/components/main/ImagesSection.vue'
 import VideosSection from '~/components/main/VideosSection.vue'
 import SoundsSection from '~/components/main/SoundsSection.vue'
+import AvatarsSection from '~/components/main/AvatarsSection.vue'
 
 useHead({
     title: 'Main'
