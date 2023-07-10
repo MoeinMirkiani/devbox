@@ -8,25 +8,15 @@
             </div>
 
             <div class="sounds__samples flex flex-wrap gap-4 w-2/5 pt-15 relative">
-                <div class="sounds__sample w-[144px] absolute top-0 right-0 shadow-card rounded-6 overflow-hidden cursor-pointer">
-                    <img :src="sample1" alt="devbox-sounds-sample" class="aspect-[1]" />
-                </div>
+                <SoundSample :image="sample1" width="144px" top="0" right="0" />
 
-                <div class="sounds__sample w-[116px] absolute top-[34px] right-[254px] shadow-card rounded-6 overflow-hidden cursor-pointer z-20">
-                    <img :src="sample2" alt="devbox-sounds-sample" class="aspect-[1]" />
-                </div>
+                <SoundSample :image="sample2" width="116px" top="34px" right="254px" index="20" />
 
-                <div class="sounds__sample w-[208px] absolute top-[100px] right-[92px] shadow-card rounded-6 overflow-hidden cursor-pointer z-10">
-                    <img :src="sample3" alt="devbox-sounds-sample" class="aspect-[1]" />
-                </div>
+                <SoundSample :image="sample3" width="208px" top="100px" right="92px" index="10" />
 
-                <div class="sounds__sample w-[128px] absolute top-[240px] right-0 shadow-card rounded-6 overflow-hidden cursor-pointer">
-                    <img :src="sample4" alt="devbox-sounds-sample" class="aspect-[1]" />
-                </div>
+                <SoundSample :image="sample4" width="128px" top="240px" right="0" />
 
-                <div class="sounds__sample w-[130px] absolute top-[332px] right-[130px] shadow-card rounded-6 overflow-hidden cursor-pointer">
-                    <img :src="sample5" alt="devbox-sounds-sample" class="aspect-[1]" />
-                </div>
+                <SoundSample :image="sample5" width="130px" top="332px" right="130px" />
             </div>
         </AppContainer>
     </section>
@@ -35,14 +25,13 @@
 <script setup lang="ts">
 import AppButton from "~/components/UI/AppButton.vue"
 import AppContainer from "~/components/UI/AppContainer.vue"
+import SoundSample from "~/components/sounds/SoundSample.vue"
 
 import sample1 from '~/assets/images/main--sounds-sample1.jpg'
 import sample2 from '~/assets/images/main--sounds-sample2.jpg'
 import sample3 from '~/assets/images/main--sounds-sample3.jpg'
 import sample4 from '~/assets/images/main--sounds-sample4.jpg'
 import sample5 from '~/assets/images/main--sounds-sample5.jpg'
-
-const samples = [sample1, sample2, sample3, sample4, sample5]
 </script>
 
 <style lang="scss" scoped>
@@ -50,15 +39,6 @@ const samples = [sample1, sample2, sample3, sample4, sample5]
     .container {
         background: url('@/assets/icons/heading--sounds.svg') no-repeat 0 80px;
         background-size: 600px;
-    }
-
-    &__sample {
-        transition: all 0.2s linear;
-
-        &:hover {
-            z-index: 30;
-            transform: scale(1.1);
-        }
     }
 }
 </style>
