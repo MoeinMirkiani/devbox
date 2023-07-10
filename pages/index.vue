@@ -23,7 +23,7 @@ import AvatarsSection from '~/components/main/AvatarsSection.vue'
 import LogosSection from '~/components/main/LogosSection.vue'
 
 useHead({
-    title: 'Main'
+    title: 'Home'
 })
 </script>
 
