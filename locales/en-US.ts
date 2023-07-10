@@ -48,6 +48,10 @@ export default {
 
         avatars: {
             text: 'Avatars for everyone and any age'
+        },
+
+        logos: {
+            text: 'High-res logos for your website & digital use'
         }
     },
 
