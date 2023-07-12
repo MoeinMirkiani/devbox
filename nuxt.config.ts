@@ -22,5 +22,11 @@ export default defineNuxtConfig({
     },
 
     // @ts-ignore
+    app: {
+        head: {
+            titleTemplate: 'Devbox - %s'
+        }
+    },
+
     css: ['@/assets/styles/main.scss']
 })
