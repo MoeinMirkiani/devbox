@@ -1,5 +1,5 @@
 <template>
-    <div class="page-content__wrapper -mt-17">
+    <div class="home-page__wrapper -mt-17">
         <HeroSection />
 
         <ImagesSection />
@@ -28,7 +28,7 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-.page-content-wrapper {
+.home-page__wrapper {
     background: url('@/assets/images/main--hero-bg.jpg') no-repeat top center/contain;
 }
 </style>

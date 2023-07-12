@@ -1,5 +1,5 @@
 <template>
-    <div class="page-content__wrapper">IMAGES</div>
+    <div class="images-page__wrapper">IMAGES</div>
 </template>
 
 <script lang="ts" setup>
