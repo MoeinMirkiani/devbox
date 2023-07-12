@@ -57,11 +57,16 @@ export default {
 
     buttons: {
         download: "Download",
-        more: 'View more'
+        more: 'View more',
+        goBack: 'Go Back'
     },
 
     responsive: {
         first: 'Sorry :(',
         second: 'Responsive version is not available.'
+    },
+
+    errors: {
+        sorry: 'Sorry!'
     }
 } as const
