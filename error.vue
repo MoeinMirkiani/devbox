@@ -30,6 +30,10 @@
 import AppHeader from "~/components/AppHeader.vue"
 import AppButton from "~/components/UI/AppButton.vue"
 
+useHead({
+    title: 'Error'
+})
+
 defineProps(['error'])
 </script>
 
