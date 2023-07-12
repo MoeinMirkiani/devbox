@@ -1,5 +1,5 @@
 <template>
-    <div class="page-content-wrapper -mt-17">
+    <div class="page-content__wrapper -mt-17">
         <HeroSection />
 
         <ImagesSection />
