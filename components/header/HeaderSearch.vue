@@ -1,7 +1,7 @@
 <template>
     <div class="header-search h-25 pb-4 pt-5 flex">
-        <div class="header-search__title flex w-[210px]">
-            <span class="text-50 font-light text-gray-30">Images</span>
+        <div id="page-title" class="header-search__title flex w-[210px]">
+            <span class="text-50 font-light text-gray-30">{{ pageTitle }}</span>
         </div>
 
         <div class="header-search__input relative">
@@ -18,6 +18,13 @@
 
 <script lang="ts" setup>
 import IconButton from "~/components/UI/IconButton.vue"
+
+const route = useRoute()
+
+const pageTitle = computed(() => {
+    const title = route.path.replace('/', '')
+    return title.charAt(0).toUpperCase() + title.slice(1)
+})
 </script>
 
 <style lang="scss" scoped>
