@@ -4,17 +4,21 @@
             <span class="text-50 font-light text-gray-30">Images</span>
         </div>
 
-        <div class="header-search__input">
+        <div class="header-search__input relative">
             <input
                 type="text"
                 class="outline-none w-full h-full bg-gray-95 rounded-4 pl-6 pr-22 py-5 text-18 text-gray-30"
                 placeholder="Search for free images"
             />
+
+            <IconButton name="ic--search" radius="16px" class="absolute top-0 right-0" />
         </div>
     </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import IconButton from "~/components/UI/IconButton.vue";
+</script>
 
 <style lang="scss" scoped>
 .header-search {
