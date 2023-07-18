@@ -1,5 +1,5 @@
 <template>
-    <div id="layout__default">
+    <div id="layout-default">
         <div class="hidden md:block">
             <AppHeader />
 

@@ -1,5 +1,5 @@
 <template>
-    <div id="layout__default">
+    <div id="layout-search">
         <div class="hidden md:block">
             <AppHeader search />
 
