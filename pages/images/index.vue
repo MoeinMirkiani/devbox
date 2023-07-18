@@ -10,4 +10,8 @@ import AppContainer from "~/components/UI/AppContainer.vue"
 useHead(({
     title: 'Images'
 }))
+
+definePageMeta({
+    layout: 'search'
+})
 </script>
