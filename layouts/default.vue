@@ -10,13 +10,7 @@
             <AppFooter />
         </div>
 
-        <div class="responsive__alert h-[100vh] flex items-center justify-center md:hidden">
-            <p class="text-primary-green text-24">
-                {{ $t('responsive.first') }}
-                <br />
-                {{ $t('responsive.second') }}
-            </p>
-        </div>
+        <ResponsiveAlert class="md:hidden" />
     </div>
 </template>
 
