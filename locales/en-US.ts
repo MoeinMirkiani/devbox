@@ -28,6 +28,12 @@ export default {
         copyright: '© 2021 devbox.com All Rights Reserved'
     },
 
+    buttons: {
+        download: "Download",
+        more: 'View more',
+        goBack: 'Go Back'
+    },
+
     main: {
         hero: {
             fixed: 'Find free',
@@ -55,10 +61,13 @@ export default {
         }
     },
 
-    buttons: {
-        download: "Download",
-        more: 'View more',
-        goBack: 'Go Back'
+    images: {
+        image: {
+            res: 'Resolution',
+            size: 'Size',
+            ratio: 'Ratio',
+            dimension: 'Dimension'
+        }
     },
 
     responsive: {
