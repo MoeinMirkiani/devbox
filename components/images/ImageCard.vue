@@ -1,5 +1,5 @@
 <template>
-    <div class="image w-full md:w-[calc(50%-8px)] lg:w-[336px] bg-white rounded-5 shadow-card hover:shadow-card-hover transition-all">
+    <div class="image bg-white rounded-5 shadow-card hover:shadow-card-hover transition-all">
         <NuxtLink :to="{ path: `/images/${image.id}` }" class="image--link block p-3">
             <div class="image--cover w-full rounded-5 overflow-hidden">
                 <img :src="image.cover" alt="image" class="aspect-[1.6] object-cover" />
