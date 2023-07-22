@@ -31,11 +31,10 @@ const pageTitle = computed(() => {
     return title.charAt(0).toUpperCase() + title.slice(1)
 })
 
-const query = ref('')
+const query = ref(route.query.search || '')
 
 const updateQuery = debounce(() => {
     router.push({
-        path: '',
         query: {
             search: query.value
         }
