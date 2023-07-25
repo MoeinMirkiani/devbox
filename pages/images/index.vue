@@ -9,7 +9,8 @@
                     class="basis-[100%] md:basis-[34%] md:max-w-[calc((100%-16px)/2)] lg:basis-[26%] lg:max-w-[calc((100%-32px)/3)] flex-grow"
                 />
             </div>
-            <span ref="loadMore">has next page</span>
+
+            <SpinnerIcon v-if="hasNextPage" ref="loadMore" class="w-10 h-10 mt-10 mx-auto" />
         </AppContainer>
     </div>
 </template>
@@ -21,6 +22,7 @@ import AppContainer from "~/components/UI/AppContainer.vue"
 import ImageCard from "~/components/images/ImageCard.vue"
 
 import imagesDb from '~/db/images.json'
+import SpinnerIcon from "~/components/UI/SpinnerIcon.vue";
 
 useHead(({
     title: 'Images'
