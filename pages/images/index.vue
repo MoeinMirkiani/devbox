@@ -16,6 +16,8 @@
 </template>
 
 <script lang="ts" setup>
+// import { useIntersectionObserver } from '@vueuse/core'
+
 import AppContainer from "~/components/UI/AppContainer.vue"
 import ImageCard from "~/components/images/ImageCard.vue"
 import SpinnerIcon from "~/components/UI/SpinnerIcon.vue"
@@ -40,4 +42,13 @@ const filteredImages = ref(useSearch(imagesDb, keyword.value))
 watch(keyword, newKeyword => {
     filteredImages.value = useSearch(imagesDb, newKeyword)
 })
+
+// useIntersectionObserver(loadMore, (entries) => {
+//     if (hasNextPage.value && entries[0].isIntersecting) {
+//         setTimeout(() => {
+//             currentPage.value++
+//             images.value = [...images.value, ...images.value.slice((currentPage.value - 1) * 12, 12 * currentPage.value)]
+//         }, 1000)
+//     }
+// })
 </script>
