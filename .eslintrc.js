@@ -8,7 +8,7 @@ module.exports = {
     plugins: [],
     rules: {
         indent: ['error', 4, {SwitchCase: 1}],
-        'brace-style': ['error', 'stroustrup', {allowSingleLine: true}],
+        'brace-style': ['error', '1tbs', {allowSingleLine: true}],
         'function-call-argument-newline': 'off',
         'vue/html-indent': ['error', 4],
         'object-curly-spacing': ['error', 'always'],

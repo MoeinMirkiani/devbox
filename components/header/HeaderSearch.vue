@@ -34,11 +34,7 @@ const pageTitle = computed(() => {
 const query = ref(route.query.search || '')
 
 const updateQuery = debounce(() => {
-    router.push({
-        query: {
-            search: query.value
-        }
-    })
+    router.push(query.value === '' ? { query: {} } : { query: { search: query.value } })
 }, 500)
 </script>
 
