@@ -1,7 +1,7 @@
 <template>
     <div class="images">
-        <div v-if="loading" class="images__loading">
-            <SpinnerIcon class="w-10 h-10 mt-10 mx-auto" />
+        <div v-if="true" class="images__loading">
+            <SpinnerIcon class="mt-10 mx-auto" />
         </div>
 
         <div v-else class="images__wrapper flex flex-wrap gap-x-4 gap-y-5">

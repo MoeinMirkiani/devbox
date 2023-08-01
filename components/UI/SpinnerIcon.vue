@@ -6,3 +6,19 @@
         </svg>
     </div>
 </template>
+
+<script lang="ts" setup>
+defineProps({
+    width: {
+        type: String,
+        default: '40px'
+    }
+})
+</script>
+
+<style lang="scss" scoped>
+.spinner {
+    width: v-bind(width);
+    height: v-bind(width);
+}
+</style>

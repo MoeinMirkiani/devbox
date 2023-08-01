@@ -3,7 +3,7 @@
         <AppContainer>
             <ImagesList :images="filteredImages" :loading="loading" />
 
-            <!--<SpinnerIcon ref="loadMore" class="w-10 h-10 mt-10 mx-auto" />-->
+            <!--<SpinnerIcon ref="loadMore" class="mt-10 mx-auto" />-->
         </AppContainer>
     </div>
 </template>
