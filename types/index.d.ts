@@ -1,4 +1,4 @@
-interface Image {
+export interface Image {
     id: string
     title: string
     cover: string
