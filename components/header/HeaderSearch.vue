@@ -13,7 +13,7 @@
                 placeholder="Search"
             />
 
-            <IconButton name="ic--search" radius="16px" class="absolute top-0 right-0" />
+            <IconButton @click="updateQuery" name="ic--search" radius="16px" class="absolute top-0 right-0" />
         </div>
     </div>
 </template>

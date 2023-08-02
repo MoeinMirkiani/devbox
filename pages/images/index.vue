@@ -27,7 +27,7 @@ definePageMeta({
     layout: 'search'
 })
 
-const { keyword, searchedMedias } = useSearch(imagesDb)
+const { searchedMedias } = useSearch(imagesDb)
 const { paginatedItems, hasNextPage, loadMore } = usePagination(searchedMedias)
 
 const loadMoreImages = ref(null)
