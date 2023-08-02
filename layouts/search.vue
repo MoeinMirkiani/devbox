@@ -1,7 +1,7 @@
 <template>
-    <div id="layout-default">
+    <div id="layout-search">
         <div class="hidden md:block">
-            <AppHeader />
+            <AppHeader search />
 
             <main class="page-content">
                 <slot />
