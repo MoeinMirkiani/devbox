@@ -32,8 +32,10 @@ const { paginatedItems, hasNextPage, loadMore } = usePagination(searchedMedias)
 
 const loadMoreImages = ref(null)
 useIntersectionObserver(loadMoreImages,([{ isIntersecting }]) => {
-    if(isIntersecting && hasNextPage.value) {
-        loadMore()
-    }
+    setTimeout(() => {
+        if(isIntersecting && hasNextPage.value) {
+            loadMore()
+        }
+    }, 1000)
 })
 </script>
