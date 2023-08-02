@@ -28,7 +28,7 @@ definePageMeta({
 })
 
 const { keyword, searchedMedias } = useSearch(imagesDb)
-const { paginatedItems, hasNextPage, loadMore } = usePagination(searchedMedias.value)
+const { paginatedItems, hasNextPage, loadMore } = usePagination(searchedMedias)
 
 const loadMoreImages = ref(null)
 useIntersectionObserver(loadMoreImages,([{ isIntersecting }]) => {
