@@ -1,4 +1,4 @@
-export interface Image {
+export interface Media {
     id: string
     title: string
     cover: string
