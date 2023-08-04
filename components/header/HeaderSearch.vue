@@ -13,7 +13,7 @@
                 placeholder="Search"
             />
 
-            <IconButton @click="updateQuery" name="ic--search" radius="16px" class="absolute top-0 right-0" />
+            <IconButton @click="handleSearch" name="ic--search" radius="16px" class="absolute top-0 right-0" />
         </div>
     </div>
 </template>
@@ -36,6 +36,16 @@ const query = ref(route.query.search || '')
 const updateQuery = debounce(() => {
     router.push(query.value === '' ? { query: {} } : { query: { search: query.value } })
 }, 500)
+
+const handleSearch = () => {
+    const keyword = query.value
+    if (keyword) {
+        router.push({ query: { } })
+        setTimeout(() => {
+            router.push({ query: { search: keyword } })
+        }, 500)
+    }
+}
 </script>
 
 <style lang="scss" scoped>

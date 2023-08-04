@@ -17,5 +17,9 @@ export const usePagination = (items: ComputedRef<Media[]>, itemsPerPage: number 
         }
     }
 
+    watch(items, () => {
+        currentPage.value = 1
+    })
+
     return { paginatedItems, hasNextPage, loadMore }
 }

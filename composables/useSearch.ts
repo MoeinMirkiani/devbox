@@ -12,5 +12,5 @@ export const useSearch = (items: Media[]) => {
         return keyword.value.length ? items.filter(item => item.title.toLowerCase().includes(keyword.value.toLowerCase())) : items
     })
 
-    return { keyword, searchedMedias }
+    return { searchedMedias }
 }
