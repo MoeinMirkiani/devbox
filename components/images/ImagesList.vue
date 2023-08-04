@@ -13,10 +13,11 @@
 
 <script setup lang="ts">
 import ImageCard from "~/components/images/ImageCard.vue"
+import { Media } from "~/types"
 
 defineProps({
     images: {
-        type: Array,
+        type: Array as PropType<Media[]>,
         required: true
     }
 })
