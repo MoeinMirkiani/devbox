@@ -17,7 +17,8 @@ import AppContainer from "~/components/UI/AppContainer.vue"
 import ImagesList from "~/components/images/ImagesList.vue"
 import SpinnerIcon from "~/components/UI/SpinnerIcon.vue"
 
-import imagesDb from '~/db/images.json'
+//@ts-ignore
+import { images } from '~/db/images.ts'
 
 useHead(({
     title: 'Images'
@@ -27,7 +28,7 @@ definePageMeta({
     layout: 'search'
 })
 
-const { searchedMedias } = useSearch(imagesDb)
+const { searchedMedias } = useSearch(images)
 const { paginatedItems, hasNextPage, loadMore } = usePagination(searchedMedias)
 
 const loadMoreImages = ref(null)
