@@ -2,7 +2,7 @@
     <div class="image bg-white rounded-5 shadow-card hover:shadow-card-hover transition-all">
         <NuxtLink :to="{ path: `/images/${image.id}` }" class="image--link block p-3">
             <div class="image--cover w-full rounded-5 overflow-hidden">
-                <img :src="`/_nuxt/assets/images/${image.cover}`" alt="image" class="aspect-[1.6] object-cover" />
+                <img :src="image.cover" alt="image" class="aspect-[1.6] object-cover" />
             </div>
 
             <div class="image--detail pt-4 pb-1 px-3">
@@ -30,10 +30,11 @@
 
 <script lang="ts" setup>
 import MediaInfo from "~/components/UI/MediaInfo.vue"
+import { Media } from '~/types'
 
 defineProps({
     image: {
-        type: Object,
+        type: Object as PropType<Media>,
         required: true
     }
 })
