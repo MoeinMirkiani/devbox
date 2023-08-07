@@ -31,7 +31,8 @@ export default {
     buttons: {
         download: "Download",
         more: 'View more',
-        goBack: 'Go Back'
+        goBack: 'Go Back',
+        goTo: 'Go to'
     },
 
     main: {
@@ -76,6 +77,7 @@ export default {
     },
 
     errors: {
-        sorry: 'Sorry!'
+        sorry: 'Sorry!',
+        noResults: 'No Results Found!'
     }
 } as const
