@@ -7,6 +7,8 @@ import image4 from '~/assets/images/main--images-sample4.jpg'
 export const images: Media[] = [
     {
         id: "64bfda2d79df8f00b77ce6bd",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Guzman Murray Cat",
         cover: image1,
         resolution: "2160px x 3840px",
@@ -16,6 +18,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2dabddccf1b7fb9ad9",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Catalina Barron",
         cover: image2,
         resolution: "1920px x 1040px",
@@ -25,6 +29,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d18741b35641e71a4",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Macdonald Lynn Cat",
         cover: image3,
         resolution: "1920px x 1040px",
@@ -34,6 +40,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d66cf6b44e2e0a913",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Adkins Wynn",
         cover: image4,
         resolution: "2160px x 3840px",
@@ -43,6 +51,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d28126efc49cf81ab",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Gutierrez Conway Cat",
         cover: image1,
         resolution: "1366px x 636px",
@@ -52,6 +62,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2dcd6b5246d759c42b",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Olson Hahn",
         cover: image2,
         resolution: "1366px x 636px",
@@ -61,6 +73,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d04fa3fc60a6c2f40",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Ana Cochran Cat",
         cover: image3,
         resolution: "1920px x 1040px",
@@ -70,6 +84,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2df1c7848f99426072",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Helga Irwin",
         cover: image4,
         resolution: "1920px x 1040px",
@@ -79,6 +95,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2dc6a18fa70ed2997f",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Romero Barnett Cat",
         cover: image1,
         resolution: "1366px x 636px",
@@ -88,6 +106,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2db457aff27e28c61f",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Ross Winters",
         cover: image2,
         resolution: "1920px x 1040px",
@@ -97,6 +117,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d010f840d294d272b",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Alicia Baird Cat",
         cover: image3,
         resolution: "2160px x 3840px",
@@ -106,6 +128,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d08d0206c41538800",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Darlene Daugherty",
         cover: image4,
         resolution: "1366px x 636px",
@@ -115,6 +139,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d79dbd957bcb99da0",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Tyson Bradshaw Cat",
         cover: image1,
         resolution: "1920px x 1040px",
@@ -124,6 +150,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d7fdcc245565ca979",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Estrada Cain",
         cover: image2,
         resolution: "1366px x 636px",
@@ -133,6 +161,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d8085f84ed9f153dc",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Susan Vang Cat",
         cover: image3,
         resolution: "1920px x 1040px",
@@ -142,6 +172,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2dd118fd86993cfa7e",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Brooke Berg",
         cover: image4,
         resolution: "1366px x 636px",
@@ -151,6 +183,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d1c554c3db436ce03",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Charity Holcomb Cat",
         cover: image1,
         resolution: "1920px x 1040px",
@@ -160,6 +194,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d4224642678cb1889",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Celia Roy",
         cover: image2,
         resolution: "2160px x 3840px",
@@ -169,6 +205,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d6a94757b188cdd85",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Branch Hayden Cat",
         cover: image3,
         resolution: "1366px x 636px",
@@ -178,6 +216,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2de36114e946aec3fb",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Hawkins Humphrey",
         cover: image4,
         resolution: "1920px x 1040px",
@@ -187,6 +227,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2dbb8bf002fb4b4ac4",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Chen Brooks Cat",
         cover: image1,
         resolution: "1366px x 636px",
@@ -196,6 +238,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2dfe5e09db684370a9",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Mccormick Farrell",
         cover: image2,
         resolution: "1920px x 1040px",
@@ -205,6 +249,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2dd86e0cb010d1b70b",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Pat Freeman Cat",
         cover: image3,
         resolution: "1366px x 636px",
@@ -214,6 +260,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2df5100ee923a528cf",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Bernice Walls",
         cover: image4,
         resolution: "2160px x 3840px",
@@ -223,6 +271,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d734eb67c5bd3c450",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Perez Weeks Cat",
         cover: image1,
         resolution: "1920px x 1040px",
@@ -232,6 +282,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2dab8dcbfbbc2f0027",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Patel Holder",
         cover: image2,
         resolution: "2160px x 3840px",
@@ -241,6 +293,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d4c19e4ddf8089c74",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Shepard Kramer Cat",
         cover: image3,
         resolution: "1366px x 636px",
@@ -250,6 +304,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d11f7230a394e49ef",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Liz Stein",
         cover: image4,
         resolution: "1366px x 636px",
@@ -259,6 +315,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2da89e92319e48b0ed",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Crosby Shields Cat",
         cover: image1,
         resolution: "1920px x 1040px",
@@ -268,6 +326,8 @@ export const images: Media[] = [
     },
     {
         id: "64bfda2d871c93aa804ddf3b",
+        mediaType: 'image',
+        source: 'www.pexels.com',
         title: "Nguyen Fitzpatrick",
         cover: image2,
         resolution: "2160px x 3840px",
