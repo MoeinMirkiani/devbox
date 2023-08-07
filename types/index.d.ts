@@ -8,4 +8,5 @@ export interface Media {
     size: string
     ratio: string
     dimension: string
+    format: string
 }
