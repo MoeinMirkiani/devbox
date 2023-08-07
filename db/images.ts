@@ -14,7 +14,8 @@ export const images: Media[] = [
         resolution: "2160px x 3840px",
         size: "756KB",
         ratio: "2:1",
-        dimension: "600 x 400"
+        dimension: "600 x 400",
+        format: 'PNG'
     },
     {
         id: "64bfda2dabddccf1b7fb9ad9",
@@ -25,7 +26,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "756KB",
         ratio: "4:3",
-        dimension: "1440 x 800"
+        dimension: "1440 x 800",
+        format: 'JPEG'
     },
     {
         id: "64bfda2d18741b35641e71a4",
@@ -36,7 +38,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "1.2MB",
         ratio: "2:1",
-        dimension: "900 x 600"
+        dimension: "900 x 600",
+        format: 'PNG'
     },
     {
         id: "64bfda2d66cf6b44e2e0a913",
@@ -47,7 +50,8 @@ export const images: Media[] = [
         resolution: "2160px x 3840px",
         size: "1.2MB",
         ratio: "3:2",
-        dimension: "900 x 600"
+        dimension: "900 x 600",
+        format: 'JPEG'
     },
     {
         id: "64bfda2d28126efc49cf81ab",
@@ -58,7 +62,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "1010KB",
         ratio: "3:2",
-        dimension: "900 x 600"
+        dimension: "900 x 600",
+        format: 'PNG'
     },
     {
         id: "64bfda2dcd6b5246d759c42b",
@@ -69,7 +74,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "756KB",
         ratio: "4:3",
-        dimension: "600 x 400"
+        dimension: "600 x 400",
+        format: 'JPEG'
     },
     {
         id: "64bfda2d04fa3fc60a6c2f40",
@@ -80,7 +86,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "24KB",
         ratio: "2:1",
-        dimension: "600 x 400"
+        dimension: "600 x 400",
+        format: 'PNG'
     },
     {
         id: "64bfda2df1c7848f99426072",
@@ -91,7 +98,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "756KB",
         ratio: "3:2",
-        dimension: "1200 x 600"
+        dimension: "1200 x 600",
+        format: 'JPEG'
     },
     {
         id: "64bfda2dc6a18fa70ed2997f",
@@ -102,7 +110,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "1010KB",
         ratio: "4:3",
-        dimension: "1200 x 600"
+        dimension: "1200 x 600",
+        format: 'PNG'
     },
     {
         id: "64bfda2db457aff27e28c61f",
@@ -113,7 +122,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "756KB",
         ratio: "3:2",
-        dimension: "900 x 600"
+        dimension: "900 x 600",
+        format: 'JPEG'
     },
     {
         id: "64bfda2d010f840d294d272b",
@@ -124,7 +134,8 @@ export const images: Media[] = [
         resolution: "2160px x 3840px",
         size: "1010KB",
         ratio: "2:1",
-        dimension: "1200 x 600"
+        dimension: "1200 x 600",
+        format: 'PNG'
     },
     {
         id: "64bfda2d08d0206c41538800",
@@ -135,7 +146,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "1010KB",
         ratio: "3:2",
-        dimension: "900 x 600"
+        dimension: "900 x 600",
+        format: 'JPEG'
     },
     {
         id: "64bfda2d79dbd957bcb99da0",
@@ -146,7 +158,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "1.2MB",
         ratio: "4:3",
-        dimension: "1440 x 800"
+        dimension: "1440 x 800",
+        format: 'PNG'
     },
     {
         id: "64bfda2d7fdcc245565ca979",
@@ -157,7 +170,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "1.2MB",
         ratio: "3:2",
-        dimension: "900 x 600"
+        dimension: "900 x 600",
+        format: 'JPEG'
     },
     {
         id: "64bfda2d8085f84ed9f153dc",
@@ -168,7 +182,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "756KB",
         ratio: "4:3",
-        dimension: "600 x 400"
+        dimension: "600 x 400",
+        format: 'PNG'
     },
     {
         id: "64bfda2dd118fd86993cfa7e",
@@ -179,7 +194,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "1010KB",
         ratio: "3:2",
-        dimension: "1440 x 800"
+        dimension: "1440 x 800",
+        format: 'JPEG'
     },
     {
         id: "64bfda2d1c554c3db436ce03",
@@ -190,7 +206,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "24KB",
         ratio: "4:3",
-        dimension: "1200 x 600"
+        dimension: "1200 x 600",
+        format: 'PNG'
     },
     {
         id: "64bfda2d4224642678cb1889",
@@ -201,7 +218,8 @@ export const images: Media[] = [
         resolution: "2160px x 3840px",
         size: "1010KB",
         ratio: "2:1",
-        dimension: "1440 x 800"
+        dimension: "1440 x 800",
+        format: 'JPEG'
     },
     {
         id: "64bfda2d6a94757b188cdd85",
@@ -212,7 +230,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "756KB",
         ratio: "4:3",
-        dimension: "1440 x 800"
+        dimension: "1440 x 800",
+        format: 'PNG'
     },
     {
         id: "64bfda2de36114e946aec3fb",
@@ -223,7 +242,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "24KB",
         ratio: "4:3",
-        dimension: "1440 x 800"
+        dimension: "1440 x 800",
+        format: 'JPEG'
     },
     {
         id: "64bfda2dbb8bf002fb4b4ac4",
@@ -234,7 +254,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "756KB",
         ratio: "3:2",
-        dimension: "600 x 400"
+        dimension: "600 x 400",
+        format: 'PNG'
     },
     {
         id: "64bfda2dfe5e09db684370a9",
@@ -245,7 +266,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "756KB",
         ratio: "4:3",
-        dimension: "600 x 400"
+        dimension: "600 x 400",
+        format: 'JPEG'
     },
     {
         id: "64bfda2dd86e0cb010d1b70b",
@@ -256,7 +278,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "1010KB",
         ratio: "2:1",
-        dimension: "600 x 400"
+        dimension: "600 x 400",
+        format: 'PNG'
     },
     {
         id: "64bfda2df5100ee923a528cf",
@@ -267,7 +290,8 @@ export const images: Media[] = [
         resolution: "2160px x 3840px",
         size: "1010KB",
         ratio: "2:1",
-        dimension: "600 x 400"
+        dimension: "600 x 400",
+        format: 'JPEG'
     },
     {
         id: "64bfda2d734eb67c5bd3c450",
@@ -278,7 +302,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "756KB",
         ratio: "2:1",
-        dimension: "900 x 600"
+        dimension: "900 x 600",
+        format: 'PNG'
     },
     {
         id: "64bfda2dab8dcbfbbc2f0027",
@@ -289,7 +314,8 @@ export const images: Media[] = [
         resolution: "2160px x 3840px",
         size: "1010KB",
         ratio: "4:3",
-        dimension: "900 x 600"
+        dimension: "900 x 600",
+        format: 'JPEG'
     },
     {
         id: "64bfda2d4c19e4ddf8089c74",
@@ -300,7 +326,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "1010KB",
         ratio: "4:3",
-        dimension: "1200 x 600"
+        dimension: "1200 x 600",
+        format: 'PNG'
     },
     {
         id: "64bfda2d11f7230a394e49ef",
@@ -311,7 +338,8 @@ export const images: Media[] = [
         resolution: "1366px x 636px",
         size: "1010KB",
         ratio: "2:1",
-        dimension: "600 x 400"
+        dimension: "600 x 400",
+        format: 'JPEG'
     },
     {
         id: "64bfda2da89e92319e48b0ed",
@@ -322,7 +350,8 @@ export const images: Media[] = [
         resolution: "1920px x 1040px",
         size: "24KB",
         ratio: "4:3",
-        dimension: "900 x 600"
+        dimension: "900 x 600",
+        format: 'PNG'
     },
     {
         id: "64bfda2d871c93aa804ddf3b",
@@ -333,6 +362,7 @@ export const images: Media[] = [
         resolution: "2160px x 3840px",
         size: "756KB",
         ratio: "3:2",
-        dimension: "1440 x 800"
+        dimension: "1440 x 800",
+        format: 'JPEG'
     }
 ]
