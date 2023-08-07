@@ -1,5 +1,5 @@
 <template>
-    <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)]">
+    <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center items-center">
         <AppContainer>
             <SpinnerIcon v-if="loading" class="mt-10 mx-auto" />
 
