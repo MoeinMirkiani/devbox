@@ -1,7 +1,7 @@
 export interface Media {
     id: string
     mediaType: 'image' | 'video' | 'sound' | 'logo' | 'avatar'
-    source: string
+    source: object
     title: string
     cover: string
     resolution: string
