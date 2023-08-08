@@ -1,6 +1,8 @@
 <template>
-    <div class="image min-h-[calc(100vh-148px)]">
+    <div class="image min-h-[calc(100vh-148px)] pt-8 pb-16">
         <AppContainer>
+            <MediaTitle :title="image.title" :source="image.source" class="mb-8" />
+
             <ImagePreview :image="image.cover" :alt="image.title" />
         </AppContainer>
     </div>
