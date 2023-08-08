@@ -69,7 +69,8 @@ export default {
             ratio: 'Ratio',
             dimension: 'Dimension'
         },
-        free: 'Free to use'
+        free: 'Free to use',
+        from: 'From'
     },
 
     responsive: {
