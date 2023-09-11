@@ -4,7 +4,8 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         '@nuxtjs/i18n',
         'nuxt-icons',
-        'nuxt-swiper'
+        'nuxt-swiper',
+        '@nuxtjs/apollo'
     ],
 
     i18n: {
@@ -28,5 +29,13 @@ export default defineNuxtConfig({
         }
     },
 
-    css: ['@/assets/styles/main.scss']
+    css: ['@/assets/styles/main.scss'],
+
+    apollo: {
+        clients: {
+            default: {
+                httpEndpoint: 'http://headless.local/graphql'
+            }
+        }
+    }
 })

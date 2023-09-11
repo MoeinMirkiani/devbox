@@ -60,4 +60,20 @@ watch(searchedMedias, () => {
         loading.value = false
     }, 1000)
 })
+
+const query = gql`
+    query getImages {
+        images {
+            edges {
+                node {
+                    imageId
+                    title
+                }
+            }
+        }
+    }
+`
+
+const { result } = useQuery(query)
+console.log(result)
 </script>
