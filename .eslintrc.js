@@ -11,6 +11,8 @@ module.exports = {
         'brace-style': ['error', '1tbs', {allowSingleLine: true}],
         'function-call-argument-newline': 'off',
         'vue/html-indent': ['error', 4],
+        'vue/html-self-closing': 'off',
+        'vue/mustache-interpolation-spacing' :'off',
         'object-curly-spacing': ['error', 'always'],
         'vue/v-slot-style': ['error', {named: 'longform', default: 'v-slot'}],
         'vue/singleline-html-element-content-newline': 'off',

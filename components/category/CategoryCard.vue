@@ -2,7 +2,7 @@
     <NuxtLink :to="{ path: '/' }" class="category h-[116px] flex flex-col justify-center items-center relative">
         <div class="category__bg w-[216px] h-[188px] rounded-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"></div>
         <div class="category__icon w-16 h-16 z-10">
-            <NuxtIcon :name="icon" class="text-primary-green"/>
+            <NuxtIcon :name="icon" class="text-primary-green" />
         </div>
         <span class="category__title text-22 text-gray-50 z-10">{{ category }}</span>
     </NuxtLink>
