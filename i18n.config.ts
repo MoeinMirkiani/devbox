@@ -14,7 +14,7 @@ export default defineI18nConfig(() => ({
     locales: [
         {
             code: 'en',
-            file: 'en-US.json'
+            file: 'en-US.ts'
         }
     ]
 }))

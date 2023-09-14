@@ -5,11 +5,17 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
         'nuxt-icons',
         'nuxt-swiper',
-        '@nuxtjs/apollo'
     ],
 
+    app: {
+        head: {
+            titleTemplate: 'Devbox - %s'
+        }
+    },
+
+    css: ['@/assets/styles/main.scss'],
+
     i18n: {
-        legacy: false,
         lazy: true,
         langDir: 'locales',
         defaultLocale: 'en',
@@ -20,22 +26,5 @@ export default defineNuxtConfig({
                 file: 'en-US.ts'
             }
         ]
-    },
-
-    // @ts-ignore
-    app: {
-        head: {
-            titleTemplate: 'Devbox - %s'
-        }
-    },
-
-    css: ['@/assets/styles/main.scss'],
-
-    apollo: {
-        clients: {
-            default: {
-                httpEndpoint: 'http://headless.local/graphql'
-            }
-        }
     }
 })
