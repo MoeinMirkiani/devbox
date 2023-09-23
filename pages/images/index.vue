@@ -60,4 +60,7 @@ watch(searchedMedias, () => {
         loading.value = false
     }, 1000)
 })
+
+const { data: imagesList } = await useFetch('/api/images')
+console.log(imagesList.value)
 </script>

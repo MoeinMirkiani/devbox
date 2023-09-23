@@ -31,15 +31,15 @@ const navigation: object[] = [
     },
     {
         name: 'Avatars',
-        link: 'avatars'
+        link: ''
     },
     {
         name: 'Sounds',
-        link: 'sounds'
+        link: ''
     },
     {
         name: 'Logos',
-        link: 'logos'
+        link: ''
     }
 ]
 </script>

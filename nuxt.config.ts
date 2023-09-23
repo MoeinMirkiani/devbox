@@ -2,8 +2,9 @@ export default defineNuxtConfig({
     css: ['@/assets/styles/main.scss'],
 
     runtimeConfig: {
-        apiURL: process.env.API_URL,
-        apiKey: process.env.API_KEY
+        baseUrl: process.env.SUPABASE_URL,
+        apiURL: process.env.SUPABASE_URL,
+        apiKey: process.env.SUPABASE_KEY
     },
 
     app: {
