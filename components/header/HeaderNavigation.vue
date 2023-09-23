@@ -8,13 +8,13 @@
 
         <nav class="header-navigation">
             <ul class="header-navigation__list flex gap-12">
-                <li v-for="(item, i) in $tm('header.navigation')" :key="i" class="header-navigation__item text-gray-60 hover:text-primary-green text-18 font-400 relative">
+                <li v-for="(item, i) in items" :key="i" class="header-navigation__item text-gray-60 hover:text-primary-green text-18 font-400 relative">
                     <NuxtLink
-                        :to="localePath($rt(item.link))"
+                        :to="item.link"
                         class="block header-navigation__link"
                         active-class="header-navigation__link-active"
                     >
-                        {{ $rt(item.name) }}
+                        {{ item.name }}
                     </NuxtLink>
                 </li>
             </ul>
@@ -23,7 +23,12 @@
 </template>
 
 <script lang="ts" setup>
-const localePath = useLocalePath()
+defineProps({
+    items: {
+        type: Array,
+        required: true
+    }
+})
 </script>
 
 <style lang="scss" scoped>

@@ -3,6 +3,7 @@ export default defineI18nConfig(() => ({
     locale: 'en',
     defaultLocale: 'en',
     fallbackLocale: 'en',
+    globalInjection: true,
     messages: {
         en: {
             header: {
