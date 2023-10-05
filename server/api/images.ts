@@ -1,5 +1,4 @@
 import { serverSupabaseClient } from '#supabase/server'
-import {QueryObject} from "ufo";
 
 export default defineEventHandler(async event => {
     const client = await serverSupabaseClient(event)
