@@ -13,8 +13,6 @@
 
 <script setup lang="ts">
 import ImageCard from "~/components/images/ImageCard.vue"
-import NoResults from "~/components/UI/NoResults.vue"
-
 import { Media } from "~/types"
 
 defineProps({

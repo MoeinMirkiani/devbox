@@ -1,27 +1,17 @@
 <template>
     <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center items-center">
         <AppContainer>
-            <SpinnerIcon v-if="loading" class="mt-10 mx-auto" />
-
-            <ImagesList v-else :images="paginatedItems" />
-
-            <SpinnerIcon v-if="hasNextPage && !loading" class="mt-10 mx-auto" />
-
-            <span v-if="hasNextPage" ref="loadMoreImages" />
+            <ImagesList :images="images" />
+            <SpinnerIcon v-if="loading" class="mx-auto" />
         </AppContainer>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { onMounted, watch } from 'vue'
-import { useIntersectionObserver } from "@vueuse/core"
-
 import AppContainer from "~/components/UI/AppContainer.vue"
 import ImagesList from "~/components/images/ImagesList.vue"
 import SpinnerIcon from "~/components/UI/SpinnerIcon.vue"
-
-//@ts-ignore
-import { images } from '~/db/images.ts'
+import { Media } from "~/types"
 
 useHead(({
     title: 'Images'
@@ -31,36 +21,26 @@ definePageMeta({
     layout: 'search'
 })
 
-const { searchedMedias } = useSearch(images)
-const { paginatedItems, hasNextPage, loadMore } = usePagination(searchedMedias)
+// Variables
+const loading = ref<boolean>(false)
+const images = ref<Media[]>([])
+const currentPage = ref<number>(1)
+const perPage = ref<number>(9)
 
-const loadMoreImages = ref(null)
-const firstLoadMore = ref(true)
-useIntersectionObserver(loadMoreImages,([{ isIntersecting }]) => {
-    if (firstLoadMore.value) {
-        firstLoadMore.value = false
-    } else if (isIntersecting && hasNextPage.value) {
-        setTimeout(() => {
-            loadMore()
-        }, 1000)
-    }
-})
-
-const loading = ref(true)
-onMounted(() => {
-    setTimeout(() => {
-        loading.value = false
-    }, 1000)
-})
-
-watch(searchedMedias, () => {
-    firstLoadMore.value = true
+// Methods
+const fetchImages = async () => {
     loading.value = true
-    setTimeout(() => {
-        loading.value = false
-    }, 1000)
-})
+    try {
+        const { data } = await useFetch(`/api/images/?currentPage=${currentPage.value}&perPage=${perPage.value}`)
+        images.value = images.value.concat(data.value as Media[])
+    } catch (e) {
+        console.log(e)
+    }
+    loading.value = false
+}
 
-const { data: imagesList } = await useFetch('/api/images')
-console.log(imagesList.value)
+// Hooks
+onMounted(() => {
+    fetchImages()
+})
 </script>

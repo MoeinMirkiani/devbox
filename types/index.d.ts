@@ -3,7 +3,7 @@ export interface Media {
     mediaType: 'image' | 'video' | 'sound' | 'logo' | 'avatar'
     source: Source
     title: string
-    cover: string
+    file: string
     resolution: string
     size: string
     ratio: string

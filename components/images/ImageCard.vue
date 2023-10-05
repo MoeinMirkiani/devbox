@@ -2,7 +2,7 @@
     <div class="image bg-white rounded-5 shadow-card hover:shadow-card-hover transition-all">
         <NuxtLink :to="{ path: `/images/${image.id}` }" class="image--link block p-3">
             <div class="image--cover w-full rounded-5 overflow-hidden">
-                <img :src="image.cover" alt="image" class="aspect-[1.6] object-cover" />
+                <img :src="image.file" alt="image" class="aspect-[1.6] object-cover" />
             </div>
 
             <div class="image--detail pt-4 pb-1 px-3">
