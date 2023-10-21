@@ -1,4 +1,4 @@
 export type Source = {
-    title: string
+    title: string,
     link: string
 }
