@@ -30,12 +30,7 @@
 
 <script lang="ts" setup>
 import MediaInfo from "~/components/UI/MediaInfo.vue"
-import { Media } from '~/types'
+import type { ImageCardProps } from "~/contracts/components/images/ImageCardProps"
 
-defineProps({
-    image: {
-        type: Object as PropType<Media>,
-        required: true
-    }
-})
+defineProps<ImageCardProps>()
 </script>
