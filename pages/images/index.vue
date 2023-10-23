@@ -25,7 +25,7 @@ definePageMeta({
 // Variables
 const loading = ref<boolean>(false)
 const images = ref<Images>([])
-const currentPage = ref<number>(1)
+const currentPage = ref<number>(2)
 const perPage = ref<number>(9)
 // const items = ref<Images>([
 //     {
@@ -87,7 +87,7 @@ const perPage = ref<number>(9)
 // ])
 
 // Methods
-const { data } = await ImageService.list(perPage.value)
+const { data } = await ImageService.list(currentPage.value, perPage.value)
 images.value = images.value.concat(data.value)
 console.log(data.value)
 </script>

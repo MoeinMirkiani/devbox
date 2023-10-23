@@ -8,12 +8,12 @@ const baseUrl = (): string => {
 }
 
 export default {
-    list: (count: number = 9): AsyncData<ImagesResponse> => {
+    list: (currentPage: number = 1, perPage: number = 9): AsyncData<ImagesResponse> => {
         return useHttp('api/images', {
             baseURL: baseUrl,
             query: {
-                currentPage: 1,
-                perPage: count
+                currentPage,
+                perPage
             }
         })
     }
