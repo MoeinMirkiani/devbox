@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Source } from "~/types"
+import { Source } from '~/contracts/types/Source'
 
 defineProps({
     title: {
