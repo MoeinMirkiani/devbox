@@ -27,7 +27,7 @@ definePageMeta({
 const images = ref<Images>([])
 const currentPage = ref<number>(1)
 const perPage = ref<number>(9)
-const hasNextPage = ref<boolean>(true)
+const hasNextPage = ref<boolean>(false)
 const loadMore = ref(null)
 
 // Methods
