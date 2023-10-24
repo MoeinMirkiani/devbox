@@ -1,8 +1,10 @@
 <template>
-    <NuxtLayout>
+    <NuxtLayout class="hidden md:block">
         <NuxtLoadingIndicator :height="2" :color="progressBarColor" />
-        <NuxtPage/>
+        <NuxtPage />
     </NuxtLayout>
+
+    <ResponsiveAlert class="md:hidden" />
 </template>
 
 <script lang="ts" setup>
