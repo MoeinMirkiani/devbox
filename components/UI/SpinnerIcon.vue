@@ -8,11 +8,10 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-    width: {
-        type: String,
-        default: '40px'
-    }
+import type { SpinnerIconProps } from "~/contracts/components/UI/SpinnerIconProps"
+
+withDefaults(defineProps<SpinnerIconProps>(), {
+    width: '40px'
 })
 </script>
 
