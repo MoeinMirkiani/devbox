@@ -1,16 +1,12 @@
 <template>
     <div id="layout-search">
-        <div class="hidden md:block">
-            <AppHeader search />
+        <AppHeader search />
 
-            <main class="page-content">
-                <slot />
-            </main>
+        <main class="page-content">
+            <slot />
+        </main>
 
-            <AppFooter />
-        </div>
-
-        <ResponsiveAlert class="md:hidden" />
+        <AppFooter />
     </div>
 </template>
 

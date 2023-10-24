@@ -1,7 +1,7 @@
 <template>
     <header class="header shadow-header px-20 z-10 sticky bg-[rgba(255,255,255,0.4)]">
         <AppContainer>
-            <HeaderNavigation />
+            <HeaderNavigation :items="navigation" />
 
             <HeaderSearch v-if="search" />
         </AppContainer>
@@ -31,15 +31,15 @@ const navigation: object[] = [
     },
     {
         name: 'Avatars',
-        link: 'avatars'
+        link: ''
     },
     {
         name: 'Sounds',
-        link: 'sounds'
+        link: ''
     },
     {
         name: 'Logos',
-        link: 'logos'
+        link: ''
     }
 ]
 </script>

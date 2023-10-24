@@ -1,16 +1,12 @@
 <template>
     <div id="layout-default">
-        <div class="hidden md:block">
-            <AppHeader />
+        <AppHeader />
 
-            <main class="page-content">
-                <slot />
-            </main>
+        <main class="page-content">
+            <slot/>
+        </main>
 
-            <AppFooter />
-        </div>
-
-        <ResponsiveAlert class="md:hidden" />
+        <AppFooter />
     </div>
 </template>
 

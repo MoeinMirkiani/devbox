@@ -6,14 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-    label: {
-        type: String,
-        required: true
-    },
-    value: {
-        type: String,
-        required: true
-    }
-})
+import type { MediaInfoProps } from "~/contracts/components/UI/MediaInfoProps"
+
+defineProps<MediaInfoProps>()
 </script>

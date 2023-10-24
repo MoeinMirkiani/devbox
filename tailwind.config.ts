@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     theme: {
         screens: {
             sm: '600px',

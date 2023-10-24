@@ -1,32 +1,30 @@
 export default defineNuxtConfig({
-    modules: [
-        '@nuxtjs/eslint-module',
-        '@nuxtjs/tailwindcss',
-        '@nuxtjs/i18n',
-        'nuxt-icons',
-        'nuxt-swiper'
-    ],
+    css: ['@/assets/styles/main.scss'],
 
-    i18n: {
-        legacy: false,
-        lazy: true,
-        langDir: 'locales',
-        defaultLocale: 'en',
-        strategy: 'prefix_except_default',
-        locales: [
-            {
-                code: 'en',
-                file: 'en-US.ts'
-            }
-        ]
+    runtimeConfig: {
+        baseUrl: process.env.SUPABASE_URL,
+        apiURL: process.env.SUPABASE_URL,
+        apiKey: process.env.SUPABASE_KEY
     },
 
-    // @ts-ignore
     app: {
         head: {
             titleTemplate: 'Devbox - %s'
         }
     },
 
-    css: ['@/assets/styles/main.scss']
+    supabase: {
+        url: process.env.SUPABASE_URL,
+        key: process.env.SUPABASE_KEY,
+        redirect: false
+    },
+
+    modules: [
+        '@nuxtjs/eslint-module',
+        '@nuxtjs/tailwindcss',
+        '@nuxtjs/i18n',
+        'nuxt-icons',
+        'nuxt-swiper',
+        '@nuxtjs/supabase'
+    ]
 })
