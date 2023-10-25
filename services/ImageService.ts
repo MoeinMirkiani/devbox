@@ -4,7 +4,7 @@ import { type ImagesResponse } from "~/contracts/http/responses/ImagesResponse"
 
 const baseUrl = (): string => {
     const runtimeConfig = useRuntimeConfig()
-    return runtimeConfig.baseUrl
+    return runtimeConfig.apiURL
 }
 
 export default {
