@@ -6,7 +6,7 @@ import { type FetchResponse } from "ofetch"
 export async function useHttp(path: string, payload?: any): AsyncData<any> {
     const nuxtApp: NuxtApp = useNuxtApp()
     const runtimeConfig = useRuntimeConfig()
-    const baseUrl: string = runtimeConfig.baseUrl
+    const baseUrl: string = runtimeConfig.public.graphqlURL
 
     let navigateToData: NavigateToData | null = null
 
@@ -41,6 +41,7 @@ export async function useHttp(path: string, payload?: any): AsyncData<any> {
             }
         },
         async onResponseError({ options, response }) {
+            console.log(response)
             if ([401, 403].includes(response.status)) {
                 navigateToData = {
                     path: '/auth/?auth=false',
@@ -110,5 +111,5 @@ const prepareErrorMessage = (response: FetchResponse<any>, defaultMessage: strin
 }
 
 const showError = (message: string) => {
-    alert(message)
+    console.log(message)
 }

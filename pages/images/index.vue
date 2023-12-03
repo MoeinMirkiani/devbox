@@ -1,6 +1,7 @@
 <template>
     <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center items-center">
         <AppContainer>
+            <span>{{ runtimeConfig.apiURL || 'undefined' }}</span>
             <ImageList :items="images" />
             <SpinnerIcon v-if="hasNextPage" ref="loadMore" class="mx-auto mt-10" />
         </AppContainer>
@@ -30,24 +31,7 @@ const perPage = ref<number>(9)
 const hasNextPage = ref<boolean>(false)
 const loadMore = ref(null)
 
+const runtimeConfig = useRuntimeConfig()
+
 // Methods
-const fetchImages = async () => {
-    try {
-        const { data } = await ImageService.list(currentPage.value, perPage.value)
-        images.value = images.value.concat(data.value)
-        hasNextPage.value = !(data.value.length < perPage.value)
-    } catch (e) {
-        console.log(e)
-    }
-}
-
-// Observers
-useIntersectionObserver(loadMore, ([{ isIntersecting }]) => {
-    if (isIntersecting) {
-        currentPage.value++
-        fetchImages()
-    }
-})
-
-await fetchImages()
 </script>
