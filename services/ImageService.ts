@@ -26,21 +26,34 @@ const presenter = (image: any): Image => {
     }
 }
 
-const transform = (data: any): Image | Image[] => {
+const transform = (data: any): { images: Image | Image[], pageInfo: any } => {
+    let images
+
     if (Array.isArray(data.data.images.edges)) {
-        return data.data.images.edges.map((image: any) => {
+        images = data.data.images.edges.map((image: any) => {
             return presenter(image)
         })
+    } else {
+        images = presenter(data.data.images.edges)
     }
 
-    return presenter(data.data.images.edges)
+    return {
+        images: images,
+        pageInfo: data.data.images.pageInfo
+    }
 }
 
 export default {
-    list: (): AsyncData<ImagesResponse> => {
+    list: (first: number, after: string): AsyncData<ImagesResponse> => {
         return useHttp('graphql', {
             baseURL: baseUrl,
-            body: { query: ImagesQuery },
+            body: {
+                query: ImagesQuery,
+                variables: {
+                    first,
+                    after
+                }
+            },
             transform: transform
         })
     }
