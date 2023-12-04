@@ -1,6 +1,6 @@
 export const ImagesQuery: string = `
-query Images($first: Int!) {
-  images(first: $first) {
+query Images($first: Int!, $after: String!) {
+  images(first: $first, after: $after) {
     edges {
       node {
         id
