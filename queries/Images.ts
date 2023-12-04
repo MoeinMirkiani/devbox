@@ -1,6 +1,6 @@
 export const ImagesQuery: string = `
-query Images {
-  images {
+query Images($first: Int!) {
+  images(first: $first) {
     edges {
       node {
         id
@@ -29,6 +29,10 @@ query Images {
           }
         }
       }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
     }
   }
 }
