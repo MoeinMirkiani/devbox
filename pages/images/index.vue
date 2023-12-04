@@ -30,18 +30,23 @@ const perPage = ref<number>(9)
 const hasNextPage = ref<boolean>(false)
 const loadMoreElement = ref(null)
 
-const runtimeConfig = useRuntimeConfig()
+// Observers
+useIntersectionObserver(
+    loadMoreElement,
+    async ([{ isIntersecting }]) => {
+        if (isIntersecting) {
+            await fetchImages()
+        }
+    }
+)
 
 // Methods
 const fetchImages = async () => {
     const { data } = await ImageService.list(perPage.value, currentPage.value)
-    console.log(data.value)
     images.value = [...images.value, ...data.value.images]
     hasNextPage.value = data.value.pageInfo.hasNextPage
     currentPage.value = data.value.pageInfo.endCursor
 }
-
-const loadMore = async () => {}
 
 await fetchImages()
 </script>
