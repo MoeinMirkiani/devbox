@@ -12,7 +12,7 @@ export async function useHttp(path: string, payload?: any): AsyncData<any> {
 
     const http = useFetch(path, {
         baseURL: baseUrl,
-        method: payload?.method ?? 'get',
+        method: payload?.method ?? 'post',
         key: payload?.key ?? undefined,
         query: payload?.query ?? undefined,
         body: payload?.body ?? undefined,
