@@ -1,9 +1,8 @@
 <template>
     <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center items-center">
         <AppContainer>
-            <span>{{ runtimeConfig.apiURL || 'undefined' }}</span>
             <ImageList :items="images" />
-            <SpinnerIcon v-if="hasNextPage" ref="loadMore" class="mx-auto mt-10" />
+            <SpinnerIcon v-if="hasNextPage" ref="loadMoreElement" class="mx-auto mt-10" />
         </AppContainer>
     </div>
 </template>
@@ -26,12 +25,23 @@ definePageMeta({
 
 // Variables
 const images = ref<Images>([])
-const currentPage = ref<number>(1)
+const currentPage = ref<string>('')
 const perPage = ref<number>(9)
 const hasNextPage = ref<boolean>(false)
-const loadMore = ref(null)
+const loadMoreElement = ref(null)
 
 const runtimeConfig = useRuntimeConfig()
 
 // Methods
+const fetchImages = async () => {
+    const { data } = await ImageService.list(perPage.value, currentPage.value)
+    console.log(data.value)
+    images.value = [...images.value, ...data.value.images]
+    hasNextPage.value = data.value.pageInfo.hasNextPage
+    currentPage.value = data.value.pageInfo.endCursor
+}
+
+const loadMore = async () => {}
+
+await fetchImages()
 </script>
