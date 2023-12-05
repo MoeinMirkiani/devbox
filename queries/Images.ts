@@ -1,6 +1,6 @@
 export const ImagesQuery: string = `
-query Images($first: Int!, $after: String!) {
-  images(first: $first, after: $after) {
+query Images($first: Int!, $after: String!, $keyword: String!) {
+  images(first: $first, after: $after, where: { search: $keyword }) {
     edges {
       node {
         id
