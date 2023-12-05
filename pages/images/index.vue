@@ -29,6 +29,11 @@ const currentPage = ref<string>('')
 const perPage = ref<number>(9)
 const hasNextPage = ref<boolean>(false)
 const loadMoreElement = ref(null)
+const route = useRoute()
+const keyword = computed<string>(() => {
+    const search = route.query.search
+    return Array.isArray(search) ? search[0] || '' : search || ''
+})
 
 // Observers
 useIntersectionObserver(
@@ -40,9 +45,17 @@ useIntersectionObserver(
     }
 )
 
+watch(keyword, async (newValue, oldValue) => {
+    if (newValue.length) {
+        images.value = []
+        hasNextPage.value = false
+        await fetchImages()
+    }
+})
+
 // Methods
 const fetchImages = async () => {
-    const { data } = await ImageService.list(perPage.value, currentPage.value)
+    const { data } = await ImageService.list(perPage.value, currentPage.value, keyword.value)
     images.value = [...images.value, ...data.value.images]
     hasNextPage.value = data.value.pageInfo.hasNextPage
     currentPage.value = data.value.pageInfo.endCursor
