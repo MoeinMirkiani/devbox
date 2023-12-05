@@ -28,6 +28,7 @@ const presenter = (image: any): Image => {
 
 const transform = (data: any): { images: Image | Image[], pageInfo: any } => {
     let images
+    let pageInfo
 
     if (Array.isArray(data.data.images.edges)) {
         images = data.data.images.edges.map((image: any) => {
@@ -37,21 +38,27 @@ const transform = (data: any): { images: Image | Image[], pageInfo: any } => {
         images = presenter(data.data.images.edges)
     }
 
+    pageInfo = {
+        hasNextPage: data.data.images.pageInfo.hasNextPage,
+        endCursor: data.data.images.pageInfo.endCursor || ''
+    }
+
     return {
-        images: images,
-        pageInfo: data.data.images.pageInfo
+        images,
+        pageInfo
     }
 }
 
 export default {
-    list: (first: number, after: string): AsyncData<ImagesResponse> => {
+    list: (first: number, after: string, keyword: string): AsyncData<ImagesResponse> => {
         return useHttp('graphql', {
             baseURL: baseUrl,
             body: {
                 query: ImagesQuery,
                 variables: {
                     first,
-                    after
+                    after,
+                    keyword
                 }
             },
             transform: transform
