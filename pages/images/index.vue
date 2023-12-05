@@ -1,5 +1,5 @@
 <template>
-    <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center items-center">
+    <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center">
         <AppContainer>
             <ImageList :items="images" :loading="loading" />
             <SpinnerIcon v-if="hasNextPage" ref="loadMoreElement" class="mx-auto mt-10" />
@@ -46,14 +46,12 @@ useIntersectionObserver(
     }
 )
 
-watch(keyword, async (newValue, oldValue) => {
-    if (newValue.length) {
-        images.value = []
-        hasNextPage.value = false
-        loading.value = true
-        await fetchImages()
-        loading.value = false
-    }
+watch(keyword, async () => {
+    images.value = []
+    hasNextPage.value = false
+    loading.value = true
+    await fetchImages()
+    loading.value = false
 })
 
 // Methods

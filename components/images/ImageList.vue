@@ -1,7 +1,9 @@
 <template>
-    <div class="images">
-        <div class="images__wrapper flex flex-wrap gap-x-4 gap-y-5">
-            <SpinnerIcon v-if="loading" class="mx-auto mt-10" />
+    <div class="images h-full flex justify-center items-center">
+        <SpinnerIcon v-if="loading" class="mx-auto mt-10" />
+        <NoResults v-if="!items.length && !loading" />
+
+        <div class="images__wrapper h-full flex items-start flex-wrap gap-x-4 gap-y-5">
             <ImageCard
                 v-for="image in props.items"
                 :key="image.id"
@@ -16,6 +18,7 @@
 import ImageCard from "~/components/images/ImageCard.vue"
 import type { ImageListProps } from "~/contracts/components/images/ImageListProps"
 import SpinnerIcon from "~/components/UI/SpinnerIcon.vue";
+import NoResults from "~/components/UI/NoResults.vue";
 
 const props = defineProps<ImageListProps>()
 </script>
