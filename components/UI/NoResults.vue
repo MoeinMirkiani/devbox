@@ -1,5 +1,5 @@
 <template>
-    <div class="no-results flex flex-col items-center">
+    <div class="no-results flex flex-col justify-center items-center">
         <div class="no-results__message flex flex-col items-center mb-10">
             <NuxtIcon name="ic--no-results" class="inline-block w-[158px] h-[158px] text-primary-green mb-3" />
 
