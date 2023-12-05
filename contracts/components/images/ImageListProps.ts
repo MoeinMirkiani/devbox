@@ -1,5 +1,6 @@
-import type { Image } from "~/contracts/types/Image";
+import type { Image } from "~/contracts/types/Image"
 
 export interface ImageListProps {
-    items: Image[]
+    items: Image[],
+    loading: boolean
 }

@@ -1,6 +1,7 @@
 <template>
     <div class="images">
         <div class="images__wrapper flex flex-wrap gap-x-4 gap-y-5">
+            <SpinnerIcon v-if="loading" class="mx-auto mt-10" />
             <ImageCard
                 v-for="image in props.items"
                 :key="image.id"
@@ -14,6 +15,7 @@
 <script setup lang="ts">
 import ImageCard from "~/components/images/ImageCard.vue"
 import type { ImageListProps } from "~/contracts/components/images/ImageListProps"
+import SpinnerIcon from "~/components/UI/SpinnerIcon.vue";
 
 const props = defineProps<ImageListProps>()
 </script>
