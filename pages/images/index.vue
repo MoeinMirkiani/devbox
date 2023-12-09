@@ -25,8 +25,8 @@ definePageMeta({
 
 // Variables
 const images = ref<Images>([])
-const currentPage = ref<string>('')
-const perPage = ref<number>(9)
+const first = ref<number>(9)
+const after = ref<string>('')
 const hasNextPage = ref<boolean>(false)
 const loadMoreElement = ref(null)
 const loading = ref<boolean>(false)
@@ -48,6 +48,7 @@ useIntersectionObserver(
 
 watch(keyword, async () => {
     images.value = []
+    after.value = ''
     hasNextPage.value = false
     loading.value = true
     await fetchImages()
@@ -56,10 +57,11 @@ watch(keyword, async () => {
 
 // Methods
 const fetchImages = async () => {
-    const { data } = await ImageService.list(perPage.value, currentPage.value, keyword.value)
+    console.log(first.value, after.value, keyword.value)
+    const { data } = await ImageService.list(first.value, after.value, keyword.value)
     images.value = [...images.value, ...data.value.images]
     hasNextPage.value = data.value.pageInfo.hasNextPage
-    currentPage.value = data.value.pageInfo.endCursor
+    after.value = data.value.pageInfo.endCursor
 }
 
 await fetchImages()
