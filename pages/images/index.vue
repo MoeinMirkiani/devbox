@@ -57,7 +57,6 @@ watch(keyword, async () => {
 
 // Methods
 const fetchImages = async () => {
-    console.log(first.value, after.value, keyword.value)
     const { data } = await ImageService.list(first.value, after.value, keyword.value)
     images.value = [...images.value, ...data.value.images]
     hasNextPage.value = data.value.pageInfo.hasNextPage
