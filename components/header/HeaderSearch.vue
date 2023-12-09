@@ -38,12 +38,11 @@ const updateQuery = debounce(() => {
 }, 500)
 
 const handleSearch = () => {
-    const keyword = query.value
-    if (keyword) {
+    if (query.value) {
         router.push({ query: { } })
         setTimeout(() => {
-            router.push({ query: { search: keyword } })
-        }, 500)
+            router.push({ query: { search: query.value } })
+        }, 100)
     }
 }
 </script>
