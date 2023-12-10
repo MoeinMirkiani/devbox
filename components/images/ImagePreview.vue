@@ -12,18 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-useHead({
-    title: 'Image Preview'
-})
+import { type ImagePreviewProps } from "~/contracts/components/images/ImagePreviewProps"
 
-defineProps({
-    image: {
-        type: Object,
-        required: true
-    },
-    alt: {
-        type: String,
-        required: true
-    }
-})
+defineProps<ImagePreviewProps>()
 </script>
