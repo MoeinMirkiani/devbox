@@ -3,7 +3,7 @@
         <AppContainer>
             <MediaTitle :title="image.title" :source="image.source" class="mb-8" />
 
-            <!--<ImagePreview :image="image.cover" :alt="image.title" />-->
+            <ImagePreview :image="image.featuredImage" :alt="image.title" />
         </AppContainer>
     </div>
 </template>
@@ -19,12 +19,18 @@ import { type Image } from "~/contracts/types/Image"
 const route = useRoute()
 const id = Array.isArray(route.params.id) ? route.params.id[0] : route.params.id
 const image = ref<Image>({} as Image)
+const title = ref<string>('')
 
 // Methods
 const fetchImageDetail = async () => {
     const { data } = await ImageService.detail(id)
     image.value = data.value
+    title.value = image.value.title
 }
+
+useSeoMeta({
+    title: () => title.value
+})
 
 await fetchImageDetail()
 </script>
