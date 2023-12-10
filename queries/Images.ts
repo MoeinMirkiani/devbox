@@ -37,3 +37,35 @@ query Images($first: Int!, $after: String!, $keyword: String!) {
   }
 }
 `
+
+export const ImageQuery: string = `
+query Image ($id: ID!) {
+  image(id: $id) {
+    id
+    databaseId
+    title
+    featuredImage {
+      node {
+        mediaItemUrl
+      }
+    }
+    acf {
+      resolution
+      dimension
+      size
+      ratio
+      format
+      isFree
+      source {
+        name
+        link
+      }
+      file {
+        node {
+          mediaItemUrl
+        }
+      }
+    }
+  }
+}
+`
