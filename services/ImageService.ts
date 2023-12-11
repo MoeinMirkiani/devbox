@@ -28,14 +28,11 @@ const presenter = (image: any): Image => {
 }
 
 const transformList = (data: any): { images: Image | Image[], pageInfo: any } => {
-    let images: Image[]
-    let pageInfo: any
-
-    images = data.data.images.edges.map((image: any) => {
+    const images: Image[] = data.data.images.edges.map((image: any) => {
         return presenter(image)
     })
 
-    pageInfo = {
+    const pageInfo: any = {
         hasNextPage: data.data.images.pageInfo.hasNextPage,
         endCursor: data.data.images.pageInfo.endCursor || ''
     }

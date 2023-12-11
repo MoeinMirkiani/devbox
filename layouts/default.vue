@@ -3,7 +3,7 @@
         <AppHeader />
 
         <main class="page-content">
-            <slot/>
+            <slot />
         </main>
 
         <AppFooter />
