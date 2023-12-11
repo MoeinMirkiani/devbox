@@ -1,7 +1,7 @@
 import { callWithNuxt , type NuxtApp } from "#app"
-import { type AsyncData } from '~/contracts/http/AsyncData'
-import { type NavigateToData } from "~/contracts/http/NavigateToData"
-import { type FetchResponse } from "ofetch"
+import type { AsyncData } from '~/contracts/http/AsyncData'
+import type { NavigateToData } from "~/contracts/http/NavigateToData"
+import type { FetchResponse } from "ofetch"
 
 export async function useHttp(path: string, payload?: any): AsyncData<any> {
     const nuxtApp: NuxtApp = useNuxtApp()
