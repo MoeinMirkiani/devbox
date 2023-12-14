@@ -1,5 +1,7 @@
-export function useRouteQuery(name: string): Ref<string> {
+export function useRouteQuery(name: string): ComputedRef<string> {
     const route = useRoute()
-    const query = route.query[name]
-    return ref(Array.isArray(query) ? query[0] || '' : query || '')
+    return computed(() => {
+        const query = route.query[name]
+        return Array.isArray(query) ? query[0] || '' : query || ''
+    })
 }
