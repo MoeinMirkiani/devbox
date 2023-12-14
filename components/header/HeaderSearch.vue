@@ -6,26 +6,25 @@
 
         <div class="header-search__input w-[calc(100%-210px)] relative">
             <input
-                v-model="keyword"
-                @keyup.enter="handleSearch"
+                v-model="query"
+                @keyup.enter="updateQuery"
                 type="text"
                 class="outline-none w-full h-full bg-gray-95 rounded-4 pl-6 pr-22 py-5 text-18 text-gray-30"
                 placeholder="Search"
             />
 
-            <IconButton @click="handleSearch" name="ic--search" radius="16px" class="absolute top-0 right-0" />
+            <IconButton @click="updateQuery" name="ic--search" radius="16px" class="absolute top-0 right-0" />
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
 import IconButton from "~/components/UI/IconButton.vue"
-import { useRouteQuery } from "~/composables/useRouteQuery"
 
 // Variables
 const route = useRoute()
 const router = useRouter()
-const keyword = useRouteQuery('search')
+const query = ref(route.query.search || '')
 
 const pageTitle = computed(() => {
     const title = route.path.replace('/', '')
@@ -33,8 +32,8 @@ const pageTitle = computed(() => {
 })
 
 // Methods
-const handleSearch = () => {
-    router.push(keyword.value === '' ? { query: {} } : { query: { search: keyword.value } })
+const updateQuery = () => {
+    router.push(query.value === '' ? { query: {} } : { query: { search: query.value } })
 }
 </script>
 
