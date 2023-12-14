@@ -1,4 +1,4 @@
-import { callWithNuxt , type NuxtApp } from "#app"
+import { callWithNuxt, type NuxtApp } from "#app"
 import type { AsyncData } from '~/contracts/http/AsyncData'
 import type { NavigateToData } from "~/contracts/http/NavigateToData"
 import type { FetchResponse } from "ofetch"

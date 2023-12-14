@@ -20,14 +20,12 @@
 
 <script lang="ts" setup>
 import IconButton from "~/components/UI/IconButton.vue"
+import { useRouteQuery } from "~/composables/useRouteQuery"
 
 // Variables
 const route = useRoute()
 const router = useRouter()
-const keyword = computed<string>(() => {
-    const search = route.query.search
-    return Array.isArray(search) ? search[0] || '' : search || ''
-})
+const keyword = useRouteQuery('search')
 
 const pageTitle = computed(() => {
     const title = route.path.replace('/', '')
@@ -36,7 +34,7 @@ const pageTitle = computed(() => {
 
 // Methods
 const handleSearch = () => {
-    router.push({ query: { search: keyword.value } })
+    router.push(keyword.value === '' ? { query: {} } : { query: { search: keyword.value } })
 }
 </script>
 
