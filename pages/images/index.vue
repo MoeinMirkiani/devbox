@@ -13,6 +13,7 @@ import ImageList from "~/components/images/ImageList.vue"
 import SpinnerIcon from "~/components/UI/SpinnerIcon.vue"
 import ImageService from "~/services/ImageService"
 import { useIntersectionObserver } from '@vueuse/core'
+import { useRouteQuery } from "~/composables/useRouteQuery"
 import type { Images } from "~/contracts/types/Image"
 
 useHead(({
@@ -30,11 +31,7 @@ const after = ref<string>('')
 const hasNextPage = ref<boolean>(false)
 const loadMoreElement = ref(null)
 const loading = ref<boolean>(false)
-const route = useRoute()
-const keyword = computed<string>(() => {
-    const search = route.query.search
-    return Array.isArray(search) ? search[0] || '' : search || ''
-})
+const keyword = useRouteQuery('search')
 
 // Observers
 useIntersectionObserver(
