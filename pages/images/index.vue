@@ -14,7 +14,6 @@ import AppLoadMore from "~/components/UI/AppLoadMore.vue"
 import ImageList from "~/components/images/ImageList.vue"
 import ImageService from "~/services/ImageService"
 import { useLoadMore } from "~/composables/useLoadMore"
-import type { Images } from "~/contracts/types/Image"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 
 
