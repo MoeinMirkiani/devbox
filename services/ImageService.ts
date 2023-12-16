@@ -10,26 +10,43 @@ const baseUrl = (): string => {
     return runtimeConfig.public.graphqlURL
 }
 
-const presenter = (image: any): Image => {
+const listPresenter = (image: any): Image => {
     return {
-        id: image.node?.id || image.id,
-        databaseId: image.node?.databaseId || image.databaseId,
-        title: image.node?.title || image.title,
-        featuredImage: image.node?.featuredImage.node.mediaItemUrl || image.featuredImage.node.mediaItemUrl,
-        resolution: image.node?.acf.resolution || image.acf.resolution,
-        dimension: image.node?.acf.dimension || image.acf.dimension,
-        size: image.node?.acf.size || image.acf.size,
-        ratio: image.node?.acf.ratio || image.acf.ratio,
-        format: image.node?.acf.format || image.acf.format,
-        isFree: image.node?.acf.isFree || image.acf.isFree,
-        source: image.node?.acf.source || image.acf.source,
-        file: image.node?.acf.file || image.acf.file
+        id: image.node?.id,
+        databaseId: image.node?.databaseId,
+        title: image.node?.title,
+        featuredImage: image.node?.featuredImage.node.mediaItemUrl,
+        resolution: image.node?.acf.resolution,
+        dimension: image.node?.acf.dimension,
+        size: image.node?.acf.size,
+        ratio: image.node?.acf.ratio,
+        format: image.node?.acf.format,
+        isFree: image.node?.acf.isFree,
+        source: image.node?.acf.source,
+        file: image.node?.acf.file
+    }
+}
+
+const singlePresenter = (image: any): Image => {
+    return {
+        id: image.id,
+        databaseId: image.databaseId,
+        title: image.title,
+        featuredImage: image.featuredImage.node.mediaItemUrl,
+        resolution: image.acf.resolution,
+        dimension: image.acf.dimension,
+        size: image.acf.size,
+        ratio: image.acf.ratio,
+        format: image.acf.format,
+        isFree: image.acf.isFree,
+        source: image.acf.source,
+        file: image.acf.file
     }
 }
 
 const transformList = (data: any): { images: Image | Image[], pageInfo: any } => {
     const images: Image[] = data.data.images.edges.map((image: any) => {
-        return presenter(image)
+        return listPresenter(image)
     })
 
     const pageInfo: any = {
@@ -44,7 +61,7 @@ const transformList = (data: any): { images: Image | Image[], pageInfo: any } =>
 }
 
 const transformSingle = (data: any): Image => {
-    return presenter(data.data.image)
+    return singlePresenter(data.data.image)
 }
 
 export default {
