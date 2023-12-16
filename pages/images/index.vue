@@ -1,8 +1,8 @@
 <template>
     <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center">
         <AppContainer>
-            <AppLoadMore @load="fetchImages" :is-active="hasNextPage">
-                <ImageList :items="images" :loading="loading" />
+            <AppLoadMore @load="loadMore" :is-active="hasNextPage">
+                <ImageList :items="list" :loading="loading" />
             </AppLoadMore>
         </AppContainer>
     </div>
@@ -13,8 +13,10 @@ import AppContainer from "~/components/UI/AppContainer.vue"
 import AppLoadMore from "~/components/UI/AppLoadMore.vue"
 import ImageList from "~/components/images/ImageList.vue"
 import ImageService from "~/services/ImageService"
-import { useRouteQuery } from "~/composables/useRouteQuery"
+import { useLoadMore } from "~/composables/useLoadMore"
 import type { Images } from "~/contracts/types/Image"
+import type { AsyncData } from "~/contracts/http/AsyncData"
+
 
 useHead(({
     title: 'Images'
@@ -24,33 +26,19 @@ definePageMeta({
     layout: 'search'
 })
 
+
 // Composables
-const keyword = useRouteQuery('search')
+const { list, hasNextPage, loading, fetch, loadMore } = useLoadMore(service, 9, '')
 
-// Variables
-const images = ref<Images>([])
-const first = ref<number>(9)
-const after = ref<string>('')
-const hasNextPage = ref<boolean>(false)
-const loading = ref<boolean>(false)
-
-// Observers
-watch(keyword, async () => {
-    images.value = []
-    after.value = ''
-    hasNextPage.value = false
-    loading.value = true
-    await fetchImages()
-    loading.value = false
-})
 
 // Methods
-const fetchImages = async () => {
-    const { data } = await ImageService.list(first.value, after.value, keyword.value)
-    images.value = [...images.value, ...data.value.images]
-    hasNextPage.value = data.value.pageInfo.hasNextPage
-    after.value = data.value.pageInfo.endCursor
+async function service(perPage: number, currentPage: string, keyword: string): AsyncData<any> {
+    return await ImageService.list(perPage, currentPage, keyword)
 }
 
-await fetchImages()
+async function init() {
+    await fetch()
+}
+
+await init()
 </script>
