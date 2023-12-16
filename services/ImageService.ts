@@ -1,7 +1,6 @@
 import { useHttp } from "~/composables/useHttp"
 import type { AsyncData } from "~/contracts/http/AsyncData"
-import type { ImagesResponse } from "~/contracts/http/responses/ImagesResponse"
-import type { ImageResponse } from "~/contracts/http/responses/ImageResponse"
+import type { ImageResponse, ImagesResponse } from "~/contracts/http/responses/ImageResponse"
 import type { Image } from '~/contracts/types/Image'
 import { ImagesQuery, ImageQuery } from '~/queries/Images'
 

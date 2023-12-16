@@ -1,3 +1,11 @@
-import { type Image } from '~/contracts/types/Image'
+import type { Image } from '~/contracts/types/Image'
 
 export interface ImageResponse extends Image {}
+
+export interface ImagesResponse {
+    images: Image[],
+    pageInfo: {
+        hasNextPage: boolean,
+        endCursor: string
+    }
+}
