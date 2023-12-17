@@ -74,10 +74,15 @@ export default defineI18nConfig(() => ({
                     res: 'Resolution',
                     size: 'Size',
                     ratio: 'Ratio',
-                    dimension: 'Dimension'
+                    dimension: 'Dimension',
+                    format: 'Format'
                 },
                 free: 'Free to use',
                 from: 'From'
+            },
+
+            image: {
+                info: 'Image Information'
             },
 
             responsive: {
