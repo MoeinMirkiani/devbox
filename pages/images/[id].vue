@@ -13,17 +13,22 @@ import ImagePreview from "~/components/images/ImagePreview.vue"
 import AppContainer from "~/components/UI/AppContainer.vue"
 import MediaTitle from "~/components/media/MediaTitle.vue"
 import ImageService from "~/services/ImageService"
-import { type Image } from "~/contracts/types/Image"
+import type { Image } from "~/contracts/types/Image"
+import { useRouteParam } from "~/composables/useRouteParam"
+
+
+// Composables
+const id = useRouteParam('id')
+
 
 // Variables
-const route = useRoute()
-const id = Array.isArray(route.params.id) ? route.params.id[0] : route.params.id
 const image = ref<Image>({} as Image)
 const title = ref<string>('')
 
+
 // Methods
 const fetchImageDetail = async () => {
-    const { data } = await ImageService.detail(id)
+    const { data } = await ImageService.detail(id.value)
     image.value = data.value
     title.value = image.value.title
 }
