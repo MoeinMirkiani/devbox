@@ -3,10 +3,17 @@
         <AppContainer>
             <MediaTitle :title="image.title" :source="image.source" class="image__title mb-8" />
 
-            <div class="image__detail">
-                <ImagePreview :image="image.featuredImage" :alt="image.title" />
+            <div class="image__detail flex items-start gap-4">
+                <ImagePreview :image="image.featuredImage" :alt="image.title" class="w-2/3" />
 
-                <ImageInformation></ImageInformation>
+                <ImageInformation
+                    :resolution="image.resolution"
+                    :size="image.size"
+                    :ratio="image.ratio"
+                    :dimension="image.dimension"
+                    :format="image.format"
+                    class="w-1/3"
+                />
             </div>
         </AppContainer>
     </div>
