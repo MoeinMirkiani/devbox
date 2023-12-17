@@ -1,6 +1,6 @@
 <template>
     <div class="image-preview flex flex-col items-center">
-        <div class="image-preview__wrapper rounded-4 border border-gray-90 p-5 mb-5 h-[372px] flex justify-center items-center">
+        <div class="image-preview__wrapper rounded-4 border border-gray-90 bg-gray-98 p-5 mb-5 w-full h-[372px] flex justify-center items-center">
             <img :src="image" :alt="alt" class="object-contain w-full h-full" />
         </div>
 
