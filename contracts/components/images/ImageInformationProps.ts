@@ -4,4 +4,5 @@ export interface ImageInformationProps {
     ratio: string
     dimension: string
     format: string
+    file: string
 }

@@ -12,6 +12,7 @@
                     :ratio="image.ratio"
                     :dimension="image.dimension"
                     :format="image.format"
+                    :file="image.file"
                     class="w-1/3"
                 />
             </div>

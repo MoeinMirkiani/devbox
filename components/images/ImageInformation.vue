@@ -26,16 +26,22 @@
             </ul>
         </div>
 
-        <AppButton class="mx-auto">{{ $t('buttons.download') }}</AppButton>
+        <a :href="file" download class="image-download bg-primary-green text-white text-18 px-12 py-4 rounded-[10px] hover:bg-primary-shade mx-auto">{{ $t('buttons.download') }}</a>
     </div>
 </template>
 
 <script lang="ts" setup>
-import AppButton from "~/components/UI/AppButton.vue"
+import MediaInfo from "~/components/UI/MediaInfo.vue"
 import type { ImageInformationProps } from "~/contracts/components/images/ImageInformationProps"
-import MediaInfo from "~/components/UI/MediaInfo.vue";
+
 
 defineProps<ImageInformationProps>()
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.image {
+    &-download {
+        transition: all 0.2s linear;
+    }
+}
+</style>
