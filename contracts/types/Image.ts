@@ -1,4 +1,4 @@
-import { type Source } from "~/contracts/types/Source"
+import type { Source } from "~/contracts/types/Source"
 
 export type Image = {
     id: string,
