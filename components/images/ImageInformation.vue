@@ -5,23 +5,23 @@
 
             <ul class="image-information__list flex flex-col gap-3">
                 <li class="image-information__item">
-                    <MediaInfo :label="$t('images.image.res')" :value="resolution" large />
+                    <MediaInfo :label="$t('images.image.res')" :value="resolution" is-large />
                 </li>
 
                 <li class="image-information__item">
-                    <MediaInfo :label="$t('images.image.size')" :value="size" large />
+                    <MediaInfo :label="$t('images.image.size')" :value="size" is-large />
                 </li>
 
                 <li class="image-information__item">
-                    <MediaInfo :label="$t('images.image.ratio')" :value="ratio" large />
+                    <MediaInfo :label="$t('images.image.ratio')" :value="ratio" is-large />
                 </li>
 
                 <li class="image-information__item">
-                    <MediaInfo :label="$t('images.image.dimension')" :value="dimension" large />
+                    <MediaInfo :label="$t('images.image.dimension')" :value="dimension" is-large />
                 </li>
 
                 <li class="image-information__item">
-                    <MediaInfo :label="$t('images.image.format')" :value="format.toUpperCase()" large />
+                    <MediaInfo :label="$t('images.image.format')" :value="format.toUpperCase()" is-large />
                 </li>
             </ul>
         </div>

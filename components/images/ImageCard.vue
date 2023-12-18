@@ -8,19 +8,19 @@
             <div class="image--detail pt-4 pb-1 px-3">
                 <ul class="image--detail__list flex flex-col gap-2">
                     <li class="image--detail__item">
-                        <MediaInfo :label="$t('images.image.res')" :value="image.resolution" />
+                        <MediaInfo :label="$t('images.image.res')" :value="image.resolution" :is-large="false" />
                     </li>
 
                     <li class="image--detail__item">
-                        <MediaInfo :label="$t('images.image.size')" :value="image.size" />
+                        <MediaInfo :label="$t('images.image.size')" :value="image.size" :is-large="false" />
                     </li>
 
                     <li class="image--detail__item">
-                        <MediaInfo :label="$t('images.image.ratio')" :value="image.ratio" />
+                        <MediaInfo :label="$t('images.image.ratio')" :value="image.ratio" :is-large="false" />
                     </li>
 
                     <li class="image--detail__item">
-                        <MediaInfo :label="$t('images.image.dimension')" :value="image.dimension" />
+                        <MediaInfo :label="$t('images.image.dimension')" :value="image.dimension" :is-large="false" />
                     </li>
                 </ul>
             </div>
