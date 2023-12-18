@@ -39,7 +39,7 @@ const singlePresenter = (image: any): Image => {
         format: image.acf.format,
         isFree: image.acf.isFree,
         source: image.acf.source,
-        file: image.acf.file
+        file: image.acf.file.node.mediaItemUrl
     }
 }
 
