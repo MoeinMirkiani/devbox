@@ -4,7 +4,7 @@
             <MediaTitle :title="image.title" :source="image.source" class="image__title mb-8" />
 
             <div class="image__detail flex items-start gap-4">
-                <ImagePreview :image="image.featuredImage" :alt="image.title" class="w-2/3" />
+                <ImagePreview :image="image.featuredImage" :alt="image.title" :is-free="image.isFree" class="w-2/3" />
 
                 <ImageInformation
                     :resolution="image.resolution"

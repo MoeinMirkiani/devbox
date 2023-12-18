@@ -78,10 +78,8 @@ export default defineI18nConfig(() => ({
                     format: 'Format'
                 },
                 free: 'Free to use',
-                from: 'From'
-            },
-
-            image: {
+                notFree: 'Not free',
+                from: 'From',
                 info: 'Image Information'
             },
 

@@ -1,7 +1,7 @@
 <template>
     <div class="image-information rounded-4 border border-gray-90 bg-gray-98 px-6 py-4 mb-5 h-[372px] flex flex-col justify-between">
         <div class="flex flex-col items-stretch gap-6">
-            <p class="text-gray-30 font-medium">{{ $t('image.info') }}</p>
+            <p class="text-gray-30 font-medium">{{ $t('images.info') }}</p>
 
             <ul class="image-information__list flex flex-col gap-3">
                 <li class="image-information__item">
@@ -26,7 +26,13 @@
             </ul>
         </div>
 
-        <a :href="file" download class="image-download bg-primary-green text-white text-18 px-12 py-4 rounded-[10px] hover:bg-primary-shade mx-auto">{{ $t('buttons.download') }}</a>
+        <a
+            :href="file"
+            download
+            class="image-download bg-primary-green text-white text-18 px-12 py-4 rounded-[10px] hover:bg-primary-shade mx-auto"
+        >
+            {{ $t('buttons.download') }}
+        </a>
     </div>
 </template>
 

@@ -5,8 +5,15 @@
         </div>
 
         <div class="image-preview__license flex items-center gap-2">
-            <NuxtIcon name="ic--free" class="inline-block w-3 h-3 text-primary-green" />
-            <span class="text-14 text-gray-30">{{ $t('images.free') }}</span>
+            <template v-if="isFree">
+                <NuxtIcon name="ic--free" class="inline-block w-3 h-3 text-primary-green" />
+                <span class="text-14 text-gray-30">{{ $t('images.free') }}</span>
+            </template>
+
+            <template v-else>
+                <NuxtIcon name="ic--not-free" class="inline-block w-3 h-3 text-error" />
+                <span class="text-14 text-gray-30">{{ $t('images.notFree') }}</span>
+            </template>
         </div>
     </div>
 </template>

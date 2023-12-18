@@ -37,7 +37,7 @@ const singlePresenter = (image: any): Image => {
         size: image.acf.size,
         ratio: image.acf.ratio,
         format: image.acf.format,
-        isFree: image.acf.isFree,
+        isFree: image.acf.isFree === 'yes',
         source: image.acf.source,
         file: image.acf.file.node.mediaItemUrl
     }
