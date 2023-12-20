@@ -19,8 +19,6 @@
         "sass": "^1.62.1"
     },
     "dependencies": {
-        "@vueuse/core": "^10.2.0",
-        "lodash.debounce": "^4.0.8",
         "nuxt-icons": "^3.2.1",
         "nuxt-swiper": "^1.1.0"
     }
