@@ -80,7 +80,8 @@ export default defineI18nConfig(() => ({
                 free: 'Free to use',
                 notFree: 'Not free',
                 from: 'From',
-                info: 'Image Information'
+                info: 'Image Information',
+                explore: 'Explore more images'
             },
 
             responsive: {
