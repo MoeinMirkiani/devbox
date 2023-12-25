@@ -1,9 +1,9 @@
 <template>
-    <div class="image min-h-[calc(100vh-148px)] pt-8 pb-16 px-20">
+    <div class="media min-h-[calc(100vh-148px)] pt-8 pb-16 px-20">
         <AppContainer>
             <MediaTitle :title="image.title" :source="image.source" class="image__title mb-8" />
 
-            <div class="image__detail flex items-start gap-4 mb-10">
+            <div class="media__detail flex items-start gap-4 mb-10">
                 <ImagePreview :image="image.featuredImage" :alt="image.title" :is-free="image.isFree" class="w-2/3" />
 
                 <ImageInformation
@@ -17,11 +17,9 @@
                 />
             </div>
 
-            <div class="image__explore">
-                <h3 class="text-gray-30 text-24 font-medium mb-6">{{ $t('images.explore') }}</h3>
-
+            <ExploreMore :title="$t('images.explore')">
                 <ImageList :loading="false" :items="more" />
-            </div>
+            </ExploreMore>
         </AppContainer>
     </div>
 </template>
@@ -31,6 +29,7 @@ import AppContainer from "~/components/UI/AppContainer.vue"
 import MediaTitle from "~/components/media/MediaTitle.vue"
 import ImagePreview from "~/components/images/ImagePreview.vue"
 import ImageInformation from "~/components/images/ImageInformation.vue"
+import ExploreMore from "~/components/media/ExploreMore.vue"
 import ImageList from "~/components/images/ImageList.vue"
 import ImageService from "~/services/ImageService"
 import type { Image, Images } from "~/contracts/types/Image"
