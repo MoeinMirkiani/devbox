@@ -67,6 +67,7 @@ export default {
     list: (first: number, after: string, keyword: string): AsyncData<ImagesResponse> => {
         return useHttp('graphql', {
             baseURL: baseUrl,
+            key: 'image-list',
             body: {
                 query: ImagesQuery,
                 variables: {
@@ -82,6 +83,7 @@ export default {
     detail: (id: string): AsyncData<ImageResponse> => {
         return useHttp('graphql', {
             baseURL: baseUrl,
+            key: 'image-single',
             body: {
                 query: ImageQuery,
                 variables: {
