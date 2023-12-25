@@ -3,7 +3,7 @@ import { useRouteQuery } from "~/composables/useRouteQuery"
 
 export type Service = (perPage: number, currentPage: string, keyword: string) => AsyncData<any>
 
-export function useLoadMore(service: Service, perPage: number, currentPage: string) {
+export const useLoadMore = (service: Service, perPage: number, currentPage: string) => {
     // Variables
     const list = ref<any[]>([])
     const first = ref<number>(perPage)
@@ -18,9 +18,7 @@ export function useLoadMore(service: Service, perPage: number, currentPage: stri
 
     // Observers
     watch(keyword, async () => {
-        list.value = []
-        after.value = ''
-        hasNextPage.value = false
+        resetList()
         loading.value = true
         await fetch()
         loading.value = false
@@ -28,22 +26,29 @@ export function useLoadMore(service: Service, perPage: number, currentPage: stri
 
 
     // Methods
-    async function fetch(): Promise<void> {
+    const fetch = async (): Promise<void> => {
         const api = await apiCall()
         list.value = [...list.value, ...api.data.value.images]
         hasNextPage.value = api.data.value.pageInfo.hasNextPage
         after.value = api.data.value.pageInfo.endCursor
     }
 
-    async function apiCall(): AsyncData<any> {
+    const apiCall = async (): AsyncData<any> => {
         loading.value = true
         const data = await service(first.value, after.value, keyword.value)
         loading.value = false
+
         return  data
     }
 
-    async function loadMore() {
+    const loadMore = async () => {
         await fetch()
+    }
+
+    const resetList = () => {
+        list.value = []
+        after.value = ''
+        hasNextPage.value = false
     }
 
     return { list, hasNextPage, loading, fetch, loadMore }
