@@ -62,6 +62,8 @@ const fetchMore = async () => {
     more.value = data.value.images.filter(item => item.id !== id.value).slice(0, 6)
 }
 
-await fetchImageDetail()
-await fetchMore()
+await Promise.all([
+    fetchImageDetail(),
+    fetchMore()
+])
 </script>
