@@ -1,8 +1,8 @@
 <template>
-    <div class="text-gray-60" :class="isLarge ? 'text-16' : 'text-14'">
+    <p class="text-gray-60" :class="isLarge ? 'text-16' : 'text-14'">
         {{ label }}
         <span class="ml-2 font-medium text-gray-30">{{ value }}</span>
-    </div>
+    </p>
 </template>
 
 <script lang="ts" setup>
