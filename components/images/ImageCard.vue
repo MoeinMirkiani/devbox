@@ -7,20 +7,8 @@
 
             <div class="image--detail pt-4 pb-1 px-3">
                 <ul class="image--detail__list flex flex-col gap-2">
-                    <li class="image--detail__item">
-                        <MediaInfo :label="$t('images.image.res')" :value="image.resolution" :is-large="false" />
-                    </li>
-
-                    <li class="image--detail__item">
-                        <MediaInfo :label="$t('images.image.size')" :value="image.size" :is-large="false" />
-                    </li>
-
-                    <li class="image--detail__item">
-                        <MediaInfo :label="$t('images.image.ratio')" :value="image.ratio" :is-large="false" />
-                    </li>
-
-                    <li class="image--detail__item">
-                        <MediaInfo :label="$t('images.image.dimension')" :value="image.dimension" :is-large="false" />
+                    <li v-for="item in info" :key="item.label" class="image--detail__item">
+                        <MediaInfo :label="item.label" :value="item.value" :is-large="item.isLarge" />
                     </li>
                 </ul>
             </div>
@@ -31,6 +19,33 @@
 <script lang="ts" setup>
 import MediaInfo from "~/components/UI/MediaInfo.vue"
 import type { ImageCardProps } from "~/contracts/components/images/ImageCardProps"
+import type { MediaInfoProps } from "~/contracts/components/UI/MediaInfoProps"
 
-defineProps<ImageCardProps>()
+
+const props = defineProps<ImageCardProps>()
+
+
+// Variables
+const info = ref<MediaInfoProps[]>([
+    {
+        label: 'Resolution',
+        value: props.image.resolution,
+        isLarge: false
+    },
+    {
+        label: 'Size',
+        value: props.image.size,
+        isLarge: false
+    },
+    {
+        label: 'Ratio',
+        value: props.image.ratio,
+        isLarge: false
+    },
+    {
+        label: 'Dimension',
+        value: props.image.dimension,
+        isLarge: false
+    }
+])
 </script>
