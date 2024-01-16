@@ -17,7 +17,6 @@
 </template>
 
 <script lang="ts" setup>
-import MediaInfo from "~/components/UI/MediaInfo.vue"
 import type { ImageCardProps } from "~/contracts/components/images/ImageCardProps"
 import type { MediaInfoProps } from "~/contracts/components/UI/MediaInfoProps"
 

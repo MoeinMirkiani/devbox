@@ -19,8 +19,6 @@
 </template>
 
 <script lang="ts" setup>
-import IconButton from "~/components/UI/IconButton.vue"
-
 // Variables
 const route = useRoute()
 const router = useRouter()

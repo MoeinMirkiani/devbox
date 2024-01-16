@@ -25,10 +25,6 @@
 </template>
 
 <script setup lang="ts">
-import AppButton from "~/components/UI/AppButton.vue"
-import AppContainer from "~/components/UI/AppContainer.vue"
-import AvatarSample from "~/components/avatars/AvatarSample.vue"
-
 import sample1 from '~/assets/images/main--avatars-sample1.jpg'
 import sample2 from '~/assets/images/main--avatars-sample2.jpg'
 import sample3 from '~/assets/images/main--avatars-sample3.jpg'

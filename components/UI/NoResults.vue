@@ -15,8 +15,6 @@
 </template>
 
 <script lang="ts" setup>
-import AppButton from "~/components/UI/AppButton.vue"
-
 defineProps({
     page: {
         type: String,

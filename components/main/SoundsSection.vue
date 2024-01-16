@@ -23,10 +23,6 @@
 </template>
 
 <script setup lang="ts">
-import AppButton from "~/components/UI/AppButton.vue"
-import AppContainer from "~/components/UI/AppContainer.vue"
-import SoundSample from "~/components/sounds/SoundSample.vue"
-
 import sample1 from '~/assets/images/main--sounds-sample1.jpg'
 import sample2 from '~/assets/images/main--sounds-sample2.jpg'
 import sample3 from '~/assets/images/main--sounds-sample3.jpg'

@@ -7,8 +7,6 @@
 </template>
 
 <script setup lang="ts">
-import CategoryCard from "~/components/category/CategoryCard.vue"
-
 defineProps({
     categories: {
         type: Array,

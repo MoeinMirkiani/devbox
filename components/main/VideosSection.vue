@@ -29,10 +29,6 @@
 </template>
 
 <script setup lang="ts">
-import AppContainer from "~/components/UI/AppContainer.vue"
-import AppButton from "~/components/UI/AppButton.vue"
-import VideoSwiper from "~/components/swiper/VideoSwiper.vue"
-
 import playerImage from '~/assets/images/main--videos-player.jpg'
 import slide1 from '~/assets/images/main--videos-slider1.jpg'
 import slide2 from '~/assets/images/main--videos-slider2.jpg'

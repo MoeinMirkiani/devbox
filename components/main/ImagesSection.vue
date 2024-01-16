@@ -17,8 +17,6 @@
 </template>
 
 <script lang="ts" setup>
-import AppContainer from '~/components/UI/AppContainer.vue'
-
 import sample1 from '~/assets/images/main--images-sample1.jpg'
 import sample2 from '~/assets/images/main--images-sample2.jpg'
 import sample3 from '~/assets/images/main--images-sample3.jpg'

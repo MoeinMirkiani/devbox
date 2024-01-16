@@ -13,9 +13,6 @@
 </template>
 
 <script setup lang="ts">
-import ImageCard from "~/components/images/ImageCard.vue"
-import SpinnerIcon from "~/components/UI/SpinnerIcon.vue"
-import NoResults from "~/components/UI/NoResults.vue"
 import type { ImageListProps } from "~/contracts/components/images/ImageListProps"
 
 const props = defineProps<ImageListProps>()

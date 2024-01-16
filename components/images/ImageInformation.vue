@@ -37,7 +37,6 @@
 </template>
 
 <script lang="ts" setup>
-import MediaInfo from "~/components/UI/MediaInfo.vue"
 import type { ImageInformationProps } from "~/contracts/components/images/ImageInformationProps"
 
 

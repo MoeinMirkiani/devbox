@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { type MediaTitleProps } from "~/contracts/components/media/MediaTitleProps"
+import type { MediaTitleProps } from "~/contracts/components/media/MediaTitleProps"
 
 defineProps<MediaTitleProps>()
 </script>

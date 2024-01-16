@@ -25,12 +25,6 @@
 </template>
 
 <script lang="ts" setup>
-import AppContainer from "~/components/UI/AppContainer.vue"
-import MediaTitle from "~/components/media/MediaTitle.vue"
-import ImagePreview from "~/components/images/ImagePreview.vue"
-import ImageInformation from "~/components/images/ImageInformation.vue"
-import ExploreMore from "~/components/media/ExploreMore.vue"
-import ImageList from "~/components/images/ImageList.vue"
 import ImageService from "~/services/ImageService"
 import type { Image, Images } from "~/contracts/types/Image"
 import { useRouteParam } from "~/composables/useRouteParam"

@@ -4,7 +4,6 @@
 </template>
 
 <script lang="ts" setup>
-import SpinnerIcon from "~/components/UI/SpinnerIcon.vue"
 import { useIntersectionObserver } from "@vueuse/core"
 import type { LoadMoreProps } from "~/contracts/components/UI/LoadMoreProps"
 

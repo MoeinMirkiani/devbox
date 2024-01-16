@@ -10,6 +10,4 @@
     </footer>
 </template>
 
-<script setup lang="ts">
-import AppContainer from "~/components/UI/AppContainer.vue"
-</script>
+<script setup lang="ts"></script>

@@ -9,10 +9,6 @@
 </template>
 
 <script lang="ts" setup>
-import AppContainer from "~/components/UI/AppContainer.vue"
-import HeaderNavigation from "~/components/header/HeaderNavigation.vue"
-import HeaderSearch from "~/components/header/HeaderSearch.vue"
-
 defineProps({
     search: {
         type: Boolean,

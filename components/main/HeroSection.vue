@@ -13,10 +13,6 @@
 </template>
 
 <script setup lang="ts">
-import AppContainer from '~/components/UI/AppContainer.vue'
-import WordSwiper from '~/components/swiper/WordSwiper.vue'
-import CategoriesBanner from "~/components/category/CategoriesBanner.vue"
-
 const categories: object[] = [
     {
         title: 'Images',
