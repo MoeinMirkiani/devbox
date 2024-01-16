@@ -1,5 +1,4 @@
 import type { AsyncData } from "~/contracts/http/AsyncData"
-import { useRouteQuery } from "~/composables/useRouteQuery"
 
 export type Service = (perPage: number, currentPage: string, keyword: string) => AsyncData<any>
 
@@ -13,7 +12,7 @@ export const useLoadMore = (service: Service, perPage: number, currentPage: stri
 
 
     // Composables
-    const keyword = useRouteQuery('search')
+    const keyword = useRouteInfo({ location: 'query', name: 'search' })
 
 
     // Observers

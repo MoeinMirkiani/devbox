@@ -27,11 +27,10 @@
 <script lang="ts" setup>
 import ImageService from "~/services/ImageService"
 import type { Image, Images } from "~/contracts/types/Image"
-import { useRouteParam } from "~/composables/useRouteParam"
 
 
 // Composables
-const id = useRouteParam('id')
+const id = useRouteInfo({ location: 'param', name: 'id' })
 
 
 // Variables
