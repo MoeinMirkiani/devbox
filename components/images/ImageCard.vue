@@ -25,24 +25,26 @@ const props = defineProps<ImageCardProps>()
 
 
 // Variables
+const { t } = useI18n()
+
 const info = ref<MediaInfoProps[]>([
     {
-        label: 'Resolution',
+        label: t('images.image.res'),
         value: props.image.resolution,
         isLarge: false
     },
     {
-        label: 'Size',
+        label: t('images.image.size'),
         value: props.image.size,
         isLarge: false
     },
     {
-        label: 'Ratio',
+        label: t('images.image.ratio'),
         value: props.image.ratio,
         isLarge: false
     },
     {
-        label: 'Dimension',
+        label: t('images.image.dimension'),
         value: props.image.dimension,
         isLarge: false
     }
