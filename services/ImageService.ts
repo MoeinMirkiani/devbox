@@ -19,7 +19,7 @@ const listPresenter = (image: any): Image => {
         dimension: image.node?.acf.dimension,
         size: image.node?.acf.size,
         ratio: image.node?.acf.ratio,
-        format: image.node?.acf.format,
+        format: image.node?.acf.format.toUpperCase(),
         isFree: image.node?.acf.isFree,
         source: image.node?.acf.source,
         file: image.node?.acf.file
@@ -36,7 +36,7 @@ const singlePresenter = (image: any): Image => {
         dimension: image.acf.dimension,
         size: image.acf.size,
         ratio: image.acf.ratio,
-        format: image.acf.format,
+        format: image.acf.format.toUpperCase(),
         isFree: image.acf.isFree === 'yes',
         source: image.acf.source,
         file: image.acf.file.node.mediaItemUrl
