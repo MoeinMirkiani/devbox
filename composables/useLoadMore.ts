@@ -1,6 +1,6 @@
 import type { AsyncData } from "~/contracts/http/AsyncData"
+import type { Service } from "~/contracts/http/Service"
 
-export type Service = (perPage: number, currentPage: string, keyword: string) => AsyncData<any>
 
 export const useLoadMore = (service: Service, perPage: number, currentPage: string) => {
     // Variables
