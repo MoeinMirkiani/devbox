@@ -9,6 +9,11 @@ export async function useHttp(path: string, payload?: any): AsyncData<any> {
     const baseUrl: string = runtimeConfig.public.graphqlURL
 
     let navigateToData: NavigateToData | null = null
+    const loading = payload?.loading
+        ? payload.loading
+        : ref<boolean>(false)
+
+    loading.value = true
 
     const http = useFetch(path, {
         baseURL: baseUrl,
@@ -63,6 +68,8 @@ export async function useHttp(path: string, payload?: any): AsyncData<any> {
             }
         }
     })
+
+    loading.value = false
 
     if (navigateToData) {
         const nuxtNavigate = callWithNuxt(nuxtApp, navigateTo, [
