@@ -10,7 +10,6 @@
 
 <script lang="ts" setup>
 import ImageService from "~/services/ImageService"
-import { useLoadMore } from "~/composables/useLoadMore"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 
 
