@@ -3,7 +3,7 @@ import type { Service } from "~/contracts/http/Service"
 import type { PageInfo } from "~/contracts/http/PageInfo"
 
 
-export const useLoadMore = (service: Service, perPage: number, currentPage: string) => {
+export const useLoadMore = (service: Service, perPage: number) => {
     // Variables
     const list = ref<any[]>([])
     const first = ref<number>(perPage)
