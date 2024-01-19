@@ -11,7 +11,7 @@ query Images($first: Int!, $after: String!, $keyword: String!) {
             mediaItemUrl
           }
         }
-        acf {
+        acfImage {
           resolution
           dimension
           size
@@ -49,7 +49,7 @@ query Image ($id: ID!) {
         mediaItemUrl
       }
     }
-    acf {
+    acfImage {
       resolution
       dimension
       size

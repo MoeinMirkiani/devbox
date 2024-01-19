@@ -15,14 +15,14 @@ const listPresenter = (image: any): Image => {
         id: image.node?.id,
         title: image.node?.title,
         featuredImage: image.node?.featuredImage.node.mediaItemUrl,
-        resolution: image.node?.acf.resolution,
-        dimension: image.node?.acf.dimension,
-        size: image.node?.acf.size,
-        ratio: image.node?.acf.ratio,
-        format: image.node?.acf.format.toUpperCase(),
-        isFree: image.node?.acf.isFree,
-        source: image.node?.acf.source,
-        file: image.node?.acf.file
+        resolution: image.node?.acfImage.resolution,
+        dimension: image.node?.acfImage.dimension,
+        size: image.node?.acfImage.size,
+        ratio: image.node?.acfImage.ratio,
+        format: image.node?.acfImage.format.toUpperCase(),
+        isFree: image.node?.acfImage.isFree,
+        source: image.node?.acfImage.source,
+        file: image.node?.acfImage.file
     }
 }
 
@@ -31,14 +31,14 @@ const singlePresenter = (image: any): Image => {
         id: image.id,
         title: image.title,
         featuredImage: image.featuredImage.node.mediaItemUrl,
-        resolution: image.acf.resolution,
-        dimension: image.acf.dimension,
-        size: image.acf.size,
-        ratio: image.acf.ratio,
-        format: image.acf.format.toUpperCase(),
-        isFree: image.acf.isFree === 'yes',
-        source: image.acf.source,
-        file: image.acf.file.node.mediaItemUrl
+        resolution: image.acfImage.resolution,
+        dimension: image.acfImage.dimension,
+        size: image.acfImage.size,
+        ratio: image.acfImage.ratio,
+        format: image.acfImage.format.toUpperCase(),
+        isFree: image.acfImage.isFree === 'yes',
+        source: image.acfImage.source,
+        file: image.acfImage.file.node.mediaItemUrl
     }
 }
 
