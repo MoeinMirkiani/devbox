@@ -2,6 +2,7 @@ import { useHttp } from "~/composables/useHttp"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 import type { ImageResponse, ImagesResponse } from "~/contracts/http/responses/ImageResponse"
 import type { Image } from '~/contracts/types/Image'
+import type { PageInfo } from '~/contracts/http/PageInfo'
 import { ImagesQuery, ImageQuery } from '~/queries/Images'
 
 const baseUrl = (): string => {
@@ -41,12 +42,12 @@ const singlePresenter = (image: any): Image => {
     }
 }
 
-const transformList = (data: any): { images: Image | Image[], pageInfo: any } => {
+const transformList = (data: any): { images: Image | Image[], pageInfo: PageInfo } => {
     const images: Image[] = data.data.images.edges.map((image: any) => {
         return listPresenter(image)
     })
 
-    const pageInfo: any = {
+    const pageInfo: PageInfo = {
         hasNextPage: data.data.images.pageInfo.hasNextPage,
         endCursor: data.data.images.pageInfo.endCursor || ''
     }
