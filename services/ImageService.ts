@@ -12,7 +12,6 @@ const baseUrl = (): string => {
 const listPresenter = (image: any): Image => {
     return {
         id: image.node?.id,
-        databaseId: image.node?.databaseId,
         title: image.node?.title,
         featuredImage: image.node?.featuredImage.node.mediaItemUrl,
         resolution: image.node?.acf.resolution,
@@ -29,7 +28,6 @@ const listPresenter = (image: any): Image => {
 const singlePresenter = (image: any): Image => {
     return {
         id: image.id,
-        databaseId: image.databaseId,
         title: image.title,
         featuredImage: image.featuredImage.node.mediaItemUrl,
         resolution: image.acf.resolution,
