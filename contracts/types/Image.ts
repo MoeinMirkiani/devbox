@@ -2,7 +2,6 @@ import type { Source } from "~/contracts/types/Source"
 
 export interface Image {
     id: string
-    databaseId: number
     title: string
     featuredImage: string
     resolution: string
@@ -14,5 +13,7 @@ export interface Image {
     source: Source
     file: string
 }
+
+export interface ImageList extends Pick<Image, 'id' | 'featuredImage' | 'resolution' | 'size' | 'ratio' | 'dimension'> {}[]
 
 export type Images = Image[]
