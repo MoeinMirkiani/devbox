@@ -14,6 +14,6 @@ export interface Image {
     file: string
 }
 
-export interface ImageList extends Pick<Image, 'id' | 'featuredImage' | 'resolution' | 'size' | 'ratio' | 'dimension'> {}[]
+export interface ImageListItem extends Pick<Image, 'id' | 'featuredImage' | 'resolution' | 'size' | 'ratio' | 'dimension'> {}
 
 export type Images = Image[]
