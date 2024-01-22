@@ -1,7 +1,7 @@
 import { useHttp } from "~/composables/useHttp"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 import type { ImageResponse, ImagesResponse } from "~/contracts/http/responses/ImageResponse"
-import type { Image } from '~/contracts/types/Image'
+import type { Image, ImageListItem } from '~/contracts/types/Image'
 import type { PageInfo } from '~/contracts/http/PageInfo'
 import { ImagesQuery, ImageQuery } from '~/queries/Images'
 
@@ -10,19 +10,14 @@ const baseUrl = (): string => {
     return runtimeConfig.public.graphqlURL
 }
 
-const listPresenter = (image: any): Image => {
+const listPresenter = (image: any): ImageListItem => {
     return {
         id: image.node?.id,
-        title: image.node?.title,
         featuredImage: image.node?.featuredImage.node.mediaItemUrl,
         resolution: image.node?.acfImage.resolution,
         dimension: image.node?.acfImage.dimension,
         size: image.node?.acfImage.size,
         ratio: image.node?.acfImage.ratio,
-        format: image.node?.acfImage.format.toUpperCase(),
-        isFree: image.node?.acfImage.isFree,
-        source: image.node?.acfImage.source,
-        file: image.node?.acfImage.file
     }
 }
 
@@ -42,8 +37,8 @@ const singlePresenter = (image: any): Image => {
     }
 }
 
-const transformList = (data: any): { images: Image | Image[], pageInfo: PageInfo } => {
-    const images: Image[] = data.data.images.edges.map((image: any) => {
+const transformList = (data: any): { images: ImageListItem[], pageInfo: PageInfo } => {
+    const images: ImageListItem[] = data.data.images.edges.map((image: any) => {
         return listPresenter(image)
     })
 

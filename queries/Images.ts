@@ -4,8 +4,6 @@ query Images($first: Int!, $after: String!, $keyword: String!) {
     edges {
       node {
         id
-        databaseId
-        title
         featuredImage {
           node {
             mediaItemUrl
@@ -16,17 +14,6 @@ query Images($first: Int!, $after: String!, $keyword: String!) {
           dimension
           size
           ratio
-          format
-          isFree
-          source {
-            name
-            link
-          }
-          file {
-            node {
-              mediaItemUrl
-            }
-          }
         }
       }
     }

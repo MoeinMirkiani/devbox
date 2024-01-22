@@ -23,7 +23,7 @@ definePageMeta({
 
 
 // Composables
-const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 9, '')
+const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 9)
 
 
 // Methods
