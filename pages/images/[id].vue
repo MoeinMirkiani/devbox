@@ -26,7 +26,7 @@
 
 <script lang="ts" setup>
 import ImageService from "~/services/ImageService"
-import type { Image, Images } from "~/contracts/types/Image"
+import type { Image, ImageListItem } from "~/contracts/types/Image"
 
 
 // Composables
@@ -36,7 +36,7 @@ const id = useRouteInfo({ location: 'param', name: 'id' })
 // Variables
 const image = ref<Image>({} as Image)
 const title = ref<string>('')
-const more = ref<Images>([])
+const more = ref<ImageListItem[]>([])
 
 
 // Methods
