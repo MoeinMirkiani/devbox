@@ -15,7 +15,6 @@
 <script lang="ts" setup>
 import ImageService from "~/services/ImageService"
 import type { AsyncData } from "~/contracts/http/AsyncData"
-import PageSearch from "~/components/header/PageSearch.vue";
 
 
 useHead(({
