@@ -30,10 +30,6 @@ const route = useRoute()
 const router = useRouter()
 const query = ref(route.query.search || '')
 
-const pageTitle = computed(() => {
-    const title = route.path.replace('/', '')
-    return title.charAt(0).toUpperCase() + title.slice(1)
-})
 
 // Methods
 const updateQuery = () => {
