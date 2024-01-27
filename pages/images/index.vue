@@ -1,5 +1,9 @@
 <template>
     <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center">
+        <Teleport to="#page-header">
+            <HeaderSearch />
+        </Teleport>
+
         <AppContainer>
             <AppLoadMore @load="loadMore" :is-active="pageInfo.hasNextPage">
                 <ImageList :items="list" :loading="loading" />
@@ -18,7 +22,7 @@ useHead(({
 }))
 
 definePageMeta({
-    layout: 'search'
+    layout: 'default'
 })
 
 
