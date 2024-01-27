@@ -16,9 +16,10 @@
 import ImageService from "~/services/ImageService"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 
+const { t } = useI18n()
 
 useHead(({
-    title: 'Images'
+    title: t('images.title')
 }))
 
 
