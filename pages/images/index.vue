@@ -1,7 +1,7 @@
 <template>
     <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center">
         <Teleport to="#page-header">
-            <PageSearch />
+            <PageSearch :title="$t('images.title')" />
         </Teleport>
 
         <AppContainer>

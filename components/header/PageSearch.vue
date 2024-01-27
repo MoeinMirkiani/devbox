@@ -1,7 +1,7 @@
 <template>
     <div class="header-search h-25 pb-4 pt-5 flex">
         <div id="page-title" class="header-search__title flex w-[210px]">
-            <span class="text-50 font-light text-gray-30">{{ pageTitle }}</span>
+            <span class="text-50 font-light text-gray-30">{{ props.title }}</span>
         </div>
 
         <div class="header-search__input w-[calc(100%-210px)] relative">
@@ -19,6 +19,12 @@
 </template>
 
 <script lang="ts" setup>
+import type { PageSearchProps } from "~/contracts/components/header/PageSearchProps"
+
+
+const props = defineProps<PageSearchProps>()
+
+
 // Variables
 const route = useRoute()
 const router = useRouter()
