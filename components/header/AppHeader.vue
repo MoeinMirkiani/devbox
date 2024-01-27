@@ -3,19 +3,12 @@
         <AppContainer>
             <HeaderNavigation :items="navigation" />
 
-            <HeaderSearch v-if="search" />
+            <div id="page-header"></div>
         </AppContainer>
     </header>
 </template>
 
 <script lang="ts" setup>
-defineProps({
-    search: {
-        type: Boolean,
-        default: false
-    }
-})
-
 const navigation: object[] = [
     {
         name: 'Images',
