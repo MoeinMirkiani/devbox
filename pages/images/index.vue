@@ -21,10 +21,6 @@ useHead(({
     title: 'Images'
 }))
 
-definePageMeta({
-    layout: 'default'
-})
-
 
 // Composables
 const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 9)
