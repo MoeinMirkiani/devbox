@@ -71,6 +71,9 @@
         "info": "Image Information",
         "explore": "Explore more images"
     },
+    "videos": {
+        "title": "Videos"
+    },
     "responsive": {
         "first": "Sorry :(",
         "second": "Responsive version is not available."
