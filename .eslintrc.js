@@ -12,6 +12,7 @@ module.exports = {
         'function-call-argument-newline': 'off',
         'vue/html-indent': ['error', 4],
         'vue/html-self-closing': 'off',
+        'vue/no-multiple-template-root': 'off',
         'vue/mustache-interpolation-spacing' :'off',
         'object-curly-spacing': ['error', 'always'],
         'vue/v-slot-style': ['error', {named: 'longform', default: 'v-slot'}],
