@@ -31,7 +31,7 @@ export const useLoadMore = (service: Service, perPage: number) => {
     const fetch = async (): Promise<void> => {
         const api = await apiCall()
 
-        list.value = [...list.value, ...api.data.value.images]
+        list.value = [...list.value, ...api.data.value.items]
         pageInfo.value = api.data.value.pageInfo
     }
 
