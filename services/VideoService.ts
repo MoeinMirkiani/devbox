@@ -18,6 +18,7 @@ const listPresenter = (video: any): VideoListItem => {
         duration: video.node?.acfVideo.duration,
         size: video.node?.acfVideo.size,
         ratio: video.node?.acfVideo.ratio,
+        format: video.node?.acfVideo.format
     }
 }
 
@@ -38,7 +39,7 @@ const transformList = (data: any): { items: VideoListItem[], pageInfo: PageInfo 
 }
 
 export default {
-    list: (first: string, after: string, keyword: string) :AsyncData<VideosResponse> => {
+    list: (first: number, after: string, keyword: string) :AsyncData<VideosResponse> => {
         return useHttp('graphql', {
             baseURL: baseUrl,
             key: 'video-list',
