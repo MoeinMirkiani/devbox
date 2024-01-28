@@ -3,7 +3,7 @@ import type { AsyncData } from "~/contracts/http/AsyncData"
 import type { VideosResponse } from "~/contracts/http/responses/VideoResponse"
 import type { PageInfo } from '~/contracts/http/PageInfo'
 import type { VideoListItem } from "~/contracts/types/Video"
-import { ImagesQuery } from "~/queries/Images"
+import { VideosQuery } from "~/queries/Videos"
 
 const baseUrl = (): string => {
     const runtimeConfig = useRuntimeConfig()
@@ -21,18 +21,18 @@ const listPresenter = (video: any): VideoListItem => {
     }
 }
 
-const transformList = (data: any): { videos: VideoListItem[], pageInfo: PageInfo } => {
-    const videos: VideoListItem[] = data.data.images.edges.map((video: any) => {
+const transformList = (data: any): { items: VideoListItem[], pageInfo: PageInfo } => {
+    const videos: VideoListItem[] = data.data.videos.edges.map((video: any) => {
         return listPresenter(video)
     })
 
     const pageInfo: PageInfo = {
-        hasNextPage: data.data.images.pageInfo.hasNextPage,
-        endCursor: data.data.images.pageInfo.endCursor || ''
+        hasNextPage: data.data.videos.pageInfo.hasNextPage,
+        endCursor: data.data.videos.pageInfo.endCursor || ''
     }
 
     return {
-        videos,
+        items: videos,
         pageInfo
     }
 }
@@ -41,9 +41,9 @@ export default {
     list: (first: string, after: string, keyword: string) :AsyncData<VideosResponse> => {
         return useHttp('graphql', {
             baseURL: baseUrl,
-            key: 'image-list',
+            key: 'video-list',
             body: {
-                query: ImagesQuery,
+                query: VideosQuery,
                 variables: {
                     first,
                     after,
