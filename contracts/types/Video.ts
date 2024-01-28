@@ -14,4 +14,4 @@ export interface Video {
     file: string
 }
 
-export interface VideoListItem extends Pick<Video, 'id' | 'featuredImage' | 'resolution' | 'size' | 'ratio' | 'duration'> {}
+export interface VideoListItem extends Pick<Video, 'id' | 'featuredImage' | 'resolution' | 'size' | 'ratio' | 'duration' | 'format'> {}
