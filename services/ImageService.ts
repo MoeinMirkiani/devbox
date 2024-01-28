@@ -37,7 +37,7 @@ const singlePresenter = (image: any): Image => {
     }
 }
 
-const transformList = (data: any): { images: ImageListItem[], pageInfo: PageInfo } => {
+const transformList = (data: any): { items: ImageListItem[], pageInfo: PageInfo } => {
     const images: ImageListItem[] = data.data.images.edges.map((image: any) => {
         return listPresenter(image)
     })
@@ -48,7 +48,7 @@ const transformList = (data: any): { images: ImageListItem[], pageInfo: PageInfo
     }
 
     return {
-        images,
+        items: images,
         pageInfo
     }
 }
