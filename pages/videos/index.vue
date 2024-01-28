@@ -35,5 +35,4 @@ async function init() {
 }
 
 await init()
-console.log(list.value)
 </script>
