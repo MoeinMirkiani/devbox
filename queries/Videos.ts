@@ -14,6 +14,7 @@ query Videos($first: Int!, $after: String!, $keyword: String!) {
           duration
           size
           ratio
+          format
         }
       }
     }
