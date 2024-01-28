@@ -1,9 +1,7 @@
 <template>
-    <header class="header shadow-header px-20 z-10 sticky bg-[rgba(255,255,255,0.4)]">
+    <header class="header px-20 z-10 sticky bg-[rgba(255,255,255,0.4)]">
         <AppContainer>
             <HeaderNavigation :items="navigation" />
-
-            <div id="page-header"></div>
         </AppContainer>
     </header>
 </template>

@@ -1,17 +1,16 @@
 <template>
-    <div class="videos-page__wrapper">
-        <AppContainer>VIDEOS</AppContainer>
+    <PageSearch :title="$t('videos.title')" />
+
+    <div class="videos-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center">
+        <AppContainer>
+        </AppContainer>
     </div>
 </template>
 
 <script lang="ts" setup>
-import AppContainer from "~/components/UI/AppContainer.vue"
+const { t } = useI18n()
 
 useHead(({
-    title: 'Videos'
+    title: t('videos.title')
 }))
-
-definePageMeta({
-    layout: 'search'
-})
 </script>
