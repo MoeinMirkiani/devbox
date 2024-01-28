@@ -72,7 +72,19 @@
         "explore": "Explore more images"
     },
     "videos": {
-        "title": "Videos"
+        "title": "Videos",
+        "video": {
+            "res": "Resolution",
+            "size": "Size",
+            "ratio": "Ratio",
+            "duration": "Duration",
+            "format": "Format",
+            "free": "Free to use",
+            "notFree": "Not free",
+            "from": "From"
+        },
+        "info": "Video Information",
+        "explore": "Explore more videos"
     },
     "responsive": {
         "first": "Sorry :(",

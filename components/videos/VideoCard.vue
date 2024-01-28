@@ -29,23 +29,23 @@ const { t } = useI18n()
 
 const info = ref<MediaInfoProps[]>([
     {
-        label: t('images.image.res'),
+        label: t('videos.video.res'),
         value: props.video.resolution
     },
     {
-        label: t('images.image.size'),
+        label: t('videos.video.size'),
         value: props.video.size
     },
     {
-        label: t('images.image.ratio'),
+        label: t('videos.video.ratio'),
         value: props.video.ratio
     },
     {
-        label: t('images.image.dimension'),
+        label: t('videos.video.duration'),
         value: props.video.duration
     },
     {
-        label: t('images.image.dimension'),
+        label: t('videos.video.format'),
         value: props.video.format
     }
 ])
