@@ -52,7 +52,7 @@ useSeoMeta({
 
 const fetchMore = async () => {
     const { data } = await ImageService.list(7, '', '')
-    more.value = data.value.images.filter(item => item.id !== id.value).slice(0, 6)
+    more.value = data.value.items.filter(item => item.id !== id.value).slice(0, 6)
 }
 
 await Promise.all([

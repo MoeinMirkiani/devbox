@@ -4,6 +4,6 @@ import type { PageInfo } from '~/contracts/http/PageInfo'
 export interface ImageResponse extends Image {}
 
 export interface ImagesResponse {
-    images: ImageListItem[],
+    items: ImageListItem[],
     pageInfo: PageInfo
 }
