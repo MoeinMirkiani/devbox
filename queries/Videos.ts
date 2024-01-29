@@ -25,3 +25,34 @@ query Videos($first: Int!, $after: String!, $keyword: String!) {
   }
 }
 `
+
+export const VideoQuery: string = `
+query Video($id: ID!) {
+  video(id: $id) {
+    id
+    title
+    featuredImage {
+      node {
+        mediaItemUrl
+      }
+    }
+    acfVideo {
+      resolution
+      size
+      ratio
+      duration
+      format
+      isFree
+      source {
+        name
+        link
+      }
+      file {
+        node {
+          mediaItemUrl
+        }
+      }
+    }
+  }
+}
+`
