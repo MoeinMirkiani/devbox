@@ -13,6 +13,7 @@
         <a
             :href="file"
             download
+            target="_blank"
             class="video-download bg-primary-green text-white text-18 px-12 py-4 rounded-[10px] hover:bg-primary-shade mx-auto"
         >
             {{ $t('buttons.download') }}
