@@ -1,9 +1,10 @@
 import { useHttp } from "~/composables/useHttp"
 import type { AsyncData } from "~/contracts/http/AsyncData"
-import type { VideosResponse } from "~/contracts/http/responses/VideoResponse"
+import type { VideoResponse, VideosResponse } from "~/contracts/http/responses/VideoResponse"
 import type { PageInfo } from '~/contracts/http/PageInfo'
-import type { VideoListItem } from "~/contracts/types/Video"
-import { VideosQuery } from "~/queries/Videos"
+import type { Video, VideoListItem } from "~/contracts/types/Video"
+import { VideoQuery, VideosQuery } from "~/queries/Videos"
+
 
 const baseUrl = (): string => {
     const runtimeConfig = useRuntimeConfig()
@@ -19,6 +20,22 @@ const listPresenter = (video: any): VideoListItem => {
         size: video.node?.acfVideo.size,
         ratio: video.node?.acfVideo.ratio,
         format: video.node?.acfVideo.format
+    }
+}
+
+const singlePresenter = (video: any): Video => {
+    return {
+        id: video.id,
+        title: video.title,
+        featuredImage: video.featuredImage.node.mediaItemUrl,
+        resolution: video.acfVideo.resolution,
+        duration: video.acfVideo.duration,
+        size: video.acfVideo.size,
+        ratio: video.acfVideo.ratio,
+        format: video.acfVideo.format.toUpperCase(),
+        isFree: video.acfVideo.isFree === 'yes',
+        source: video.acfVideo.source,
+        file: video.acfVideo.file.node.mediaItemUrl
     }
 }
 
@@ -38,6 +55,10 @@ const transformList = (data: any): { items: VideoListItem[], pageInfo: PageInfo 
     }
 }
 
+const transformSingle = (data: any): Video => {
+    return singlePresenter(data.data.video)
+}
+
 export default {
     list: (first: number, after: string, keyword: string) :AsyncData<VideosResponse> => {
         return useHttp('graphql', {
@@ -52,6 +73,20 @@ export default {
                 }
             },
             transform: transformList
+        })
+    },
+
+    detail: (id: string) : AsyncData<VideoResponse> => {
+        return useHttp('graphql', {
+            baseURL: baseUrl,
+            key: 'video-single',
+            body: {
+                query: VideoQuery,
+                variables: {
+                    id
+                }
+            },
+            transform: transformSingle
         })
     }
 }
