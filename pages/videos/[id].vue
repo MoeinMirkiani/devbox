@@ -3,6 +3,18 @@
         <AppContainer>
             <MediaTitle :title="video.title" :source="video.source" />
 
+            <div class="media__detail flex items-start gap-4 mb-10">
+                <VideoInformation
+                    :resolution="video.resolution"
+                    :size="video.size"
+                    :ratio="video.ratio"
+                    :duration="video.duration"
+                    :format="video.format"
+                    :file="video.file"
+                    class="w-1/3"
+                />
+            </div>
+
             <ExploreMore :title="$t('videos.explore')">
                 {{ video }}
             </ExploreMore>
