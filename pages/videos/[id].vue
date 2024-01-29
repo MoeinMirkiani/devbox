@@ -1,9 +1,11 @@
 <template>
     <div class="media min-h-[calc(100vh-148px)] pt-8 pb-16 px-20">
         <AppContainer>
-            <MediaTitle :title="video.title" :source="video.source" />
+            <MediaTitle :title="video.title" :source="video.source" class="video__title mb-8" />
 
             <div class="media__detail flex items-start gap-4 mb-10">
+                <VideoPreview :video="video.featuredImage" :is-free="video.isFree" class="w-2/3" />
+
                 <VideoInformation
                     :resolution="video.resolution"
                     :size="video.size"
