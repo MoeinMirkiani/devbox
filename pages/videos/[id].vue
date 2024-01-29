@@ -18,7 +18,7 @@
             </div>
 
             <ExploreMore :title="$t('videos.explore')">
-                {{ video }}
+                <VideoList :loading="false" :items="more" />
             </ExploreMore>
         </AppContainer>
     </div>
@@ -46,9 +46,17 @@ const fetchVideoDetail = async () => {
     title.value = video.value.title
 }
 
+const fetchMore = async () => {
+    const { data } = await VideoService.list(7, '', '')
+    more.value = data.value.items.filter(item => item.id !== id.value).slice(0, 6)
+}
+
 useSeoMeta({
     title: () => title.value
 })
 
-await fetchVideoDetail()
+await Promise.all([
+    fetchVideoDetail(),
+    fetchMore()
+])
 </script>
