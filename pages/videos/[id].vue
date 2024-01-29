@@ -1,6 +1,8 @@
 <template>
     <div class="media min-h-[calc(100vh-148px)] pt-8 pb-16 px-20">
         <AppContainer>
+            <MediaTitle :title="video.title" :source="video.source" />
+
             <ExploreMore :title="$t('videos.explore')">
                 {{ video }}
             </ExploreMore>
