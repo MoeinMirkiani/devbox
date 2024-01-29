@@ -83,6 +83,8 @@
             "notFree": "Not free",
             "from": "From"
         },
+        "free": "Free to use",
+        "notFree": "Not free",
         "info": "Video Information",
         "explore": "Explore more videos"
     },
