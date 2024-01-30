@@ -50,6 +50,9 @@ export default {
             '24': '96px',
             '25': '100px'
         },
+        minWidth: {
+            '7': '28px'
+        },
         fontSize: {
             '72': ['72px', '96px'],
             '50': ['50px', '52px'],
@@ -88,6 +91,7 @@ export default {
             '25': '100px'
         },
         borderRadius: {
+            '0': '0',
             '1': '4px',
             '2': '8px',
             '3': '12px',
