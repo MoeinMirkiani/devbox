@@ -4,7 +4,13 @@
             <MediaTitle :title="video.title" :source="video.source" class="video__title mb-8" />
 
             <div class="media__detail flex items-start gap-4 mb-10">
-                <VideoPreview :video="video.featuredImage" :is-free="video.isFree" class="w-2/3" />
+                <VideoPreview
+                    :video="video.file"
+                    :poster="video.featuredImage"
+                    :alt="video.title"
+                    :is-free="video.isFree"
+                    class="w-2/3"
+                />
 
                 <VideoInformation
                     :resolution="video.resolution"
