@@ -88,6 +88,9 @@
         "info": "Video Information",
         "explore": "Explore more videos"
     },
+    "sounds": {
+        "title": "Sounds"
+    },
     "responsive": {
         "first": "Sorry :(",
         "second": "Responsive version is not available."
