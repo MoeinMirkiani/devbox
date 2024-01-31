@@ -22,6 +22,6 @@
         "@vueuse/core": "^10.7.0",
         "nuxt-icons": "^3.2.1",
         "nuxt-swiper": "^1.1.0",
-        "vidstack": "^1.9.8"
+        "vidstack": "^1.10.3"
     }
 }
