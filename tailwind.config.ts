@@ -51,7 +51,8 @@ export default {
             '25': '100px'
         },
         minWidth: {
-            '7': '28px'
+            '7': '28px',
+            '8': '32px'
         },
         fontSize: {
             '72': ['72px', '96px'],
