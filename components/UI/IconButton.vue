@@ -5,23 +5,12 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-    name: {
-        type: String,
-        required: true
-    },
-    buttonSize: {
-        type: String,
-        default: '64px'
-    },
-    iconSize: {
-        type: String,
-        default: '32px'
-    },
-    radius: {
-        type: String,
-        default: '50%'
-    }
+import type { IconButtonProps } from "~/contracts/components/UI/IconButtonProps"
+
+const props = withDefaults(defineProps<IconButtonProps>(), {
+    buttonSize: '64px',
+    iconSize: '32px',
+    radius: '50%'
 })
 </script>
 
