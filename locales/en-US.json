@@ -89,7 +89,11 @@
         "explore": "Explore more videos"
     },
     "sounds": {
-        "title": "Sounds"
+        "title": "Sounds",
+        "sound": {
+            "format": "Format",
+            "size": "Size"
+        }
     },
     "responsive": {
         "first": "Sorry :(",
