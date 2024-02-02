@@ -30,7 +30,13 @@
                     <div class="flex justify-between items-center gap-4 mb-3">
                         <p class="text-16 font-bold text-gray-30 truncate">{{ props.title }}</p>
 
-                        <IconButton name="ic--download" button-size="32px" icon-size="24px" class="min-w-8 pointer-events-auto" />
+                        <AppPopover align="right">
+                            <IconButton name="ic--download" button-size="32px" icon-size="24px" class="min-w-8 pointer-events-auto" />
+
+                            <template #content>
+                                <SoundDownload :items="downloadItems" />
+                            </template>
+                        </AppPopover>
                     </div>
 
                     <div class="flex justify-between items-center mb-3">
@@ -67,7 +73,11 @@
 import 'vidstack/player'
 import 'vidstack/player/ui'
 import type { AppAudioPlayerProps } from "~/contracts/components/UI/AppAudioPlayerProps"
+import AppPopover from "~/components/UI/AppPopover.vue";
 
 
 const props = defineProps<AppAudioPlayerProps>()
+
+// Variables
+const downloadItems = computed(() => [{ label: props.format, link: props.file }])
 </script>
