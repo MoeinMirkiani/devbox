@@ -92,7 +92,8 @@
         "title": "Sounds",
         "sound": {
             "format": "Format",
-            "size": "Size"
+            "size": "Size",
+            "download": "Download as"
         }
     },
     "responsive": {
