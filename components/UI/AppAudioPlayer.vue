@@ -33,7 +33,7 @@
                         <AppPopover align="right">
                             <IconButton name="ic--download" button-size="32px" icon-size="24px" class="min-w-8 pointer-events-auto" />
 
-                            <template #content>
+                            <template v-slot:content>
                                 <SoundDownload :items="downloadItems" />
                             </template>
                         </AppPopover>
