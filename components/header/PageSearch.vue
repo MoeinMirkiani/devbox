@@ -1,5 +1,5 @@
 <template>
-    <div class="page-search bg-[rgba(255,255,255,0.4)] shadow-header">
+    <div class="page-search bg-[rgba(255,255,255,0.4)] shadow-header px-20">
         <AppContainer class="h-25 pb-4 pt-5 flex">
             <div id="page-title" class="header-search__title flex w-[210px]">
                 <span class="text-50 font-light text-gray-30">{{ props.title }}</span>
