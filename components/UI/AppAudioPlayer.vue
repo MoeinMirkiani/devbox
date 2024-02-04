@@ -75,10 +75,10 @@
 import 'vidstack/player'
 import 'vidstack/player/ui'
 import type { AppAudioPlayerProps } from "~/contracts/components/UI/AppAudioPlayerProps"
-import AppPopover from "~/components/UI/AppPopover.vue";
 
 
 const props = defineProps<AppAudioPlayerProps>()
+
 
 // Variables
 const downloadItems = computed(() => [{ label: props.format, link: props.file }])
