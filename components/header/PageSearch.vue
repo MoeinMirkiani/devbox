@@ -14,7 +14,7 @@
                     placeholder="Search"
                 />
 
-                <IconButton @click="updateQuery" name="ic--search" radius="16px" class="absolute top-0 right-0" />
+                <IconButton @click="updateQuery" name="ic--search" icon-size="32px" button-size="64px" radius="16px" class="absolute top-0 right-0" />
             </div>
         </AppContainer>
     </div>

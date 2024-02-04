@@ -31,7 +31,7 @@
                         <p class="text-16 font-bold text-gray-30 truncate">{{ props.title }}</p>
 
                         <AppPopover align="right">
-                            <IconButton name="ic--download" button-size="32px" icon-size="24px" class="min-w-8 pointer-events-auto" />
+                            <IconButton name="ic--download" button-size="32px" icon-size="24px" radius="50%" class="min-w-8 pointer-events-auto" />
 
                             <template v-slot:content>
                                 <SoundDownload :items="downloadItems" />

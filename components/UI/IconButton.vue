@@ -7,11 +7,7 @@
 <script lang="ts" setup>
 import type { IconButtonProps } from "~/contracts/components/UI/IconButtonProps"
 
-const props = withDefaults(defineProps<IconButtonProps>(), {
-    buttonSize: '64px',
-    iconSize: '32px',
-    radius: '50%'
-})
+const props = defineProps<IconButtonProps>()
 </script>
 
 <style lang="scss" scoped>
