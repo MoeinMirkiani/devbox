@@ -1,29 +1,31 @@
 <template>
     <ClientOnly>
         <media-player :src="props.file" class="flex gap-4">
-            <media-provider class="relative">
-                <media-poster
-                    :src="props.poster"
-                    :alt="props.title"
-                    class="block w-[130px] h-[130px] rounded-5 overflow-hidden"
-                ></media-poster>
+            <div class="relative">
+                <media-provider>
+                    <media-poster
+                        :src="props.poster"
+                        :alt="props.title"
+                        class="block w-[130px] h-[130px] rounded-5 overflow-hidden"
+                    ></media-poster>
 
-                <media-controls>
-                    <media-controls-group class="flex justify-center items-center w-full px-2">
-                        <media-play-button class="group outline-none h-12 w-12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            <media-icon type="play" class="hidden group-data-[paused]:block">
-                                <NuxtIcon name="ic--play" filled />
-                            </media-icon>
-                        </media-play-button>
+                    <media-controls>
+                        <media-controls-group class="flex justify-center items-center w-full px-2">
+                            <media-play-button class="group outline-none h-12 w-12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <media-icon type="play" class="hidden group-data-[paused]:block">
+                                    <NuxtIcon name="ic--play" filled />
+                                </media-icon>
+                            </media-play-button>
 
-                        <media-play-button class="group outline-none h-12 w-12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            <media-icon type="pause" class="group-data-[paused]:hidden">
-                                <NuxtIcon name="ic--pause" filled />
-                            </media-icon>
-                        </media-play-button>
-                    </media-controls-group>
-                </media-controls>
-            </media-provider>
+                            <media-play-button class="group outline-none h-12 w-12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <media-icon type="pause" class="group-data-[paused]:hidden">
+                                    <NuxtIcon name="ic--pause" filled />
+                                </media-icon>
+                            </media-play-button>
+                        </media-controls-group>
+                    </media-controls>
+                </media-provider>
+            </div>
 
             <div class="w-[calc(100%-146px)] flex flex-col">
                 <media-controls class="flex flex-col">
