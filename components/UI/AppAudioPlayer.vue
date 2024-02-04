@@ -1,6 +1,6 @@
 <template>
     <ClientOnly>
-        <media-player :src="props.file" class="flex gap-4">
+        <media-player :src="playerSound.link" class="flex gap-4">
             <div class="relative">
                 <media-provider>
                     <media-poster
@@ -36,7 +36,7 @@
                             <IconButton name="ic--download" button-size="32px" icon-size="24px" radius="50%" class="min-w-8 pointer-events-auto" />
 
                             <template v-slot:content>
-                                <SoundDownload :items="downloadItems" />
+                                <SoundDownload :items="props.files" />
                             </template>
                         </AppPopover>
                     </div>
@@ -61,7 +61,7 @@
                     </media-time-slider>
 
                     <div class="flex justify-between items-center">
-                        <MediaInfo :label="$t('sounds.sound.format')" :value="props.format" />
+                        <MediaInfo :label="$t('sounds.sound.format')" :value="playerSound.label" />
 
                         <MediaInfo :label="$t('sounds.sound.size')" :value="props.size" />
                     </div>
@@ -81,5 +81,5 @@ const props = defineProps<AppAudioPlayerProps>()
 
 
 // Variables
-const downloadItems = computed(() => [{ label: props.format, link: props.file }])
+const playerSound = computed(() => props.files.find(item => item.label.toLowerCase() === 'mp3'))
 </script>

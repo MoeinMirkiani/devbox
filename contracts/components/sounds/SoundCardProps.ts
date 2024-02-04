@@ -1,7 +1,8 @@
+import type { SoundDownloadItem } from "~/contracts/types/Sound"
+
 export interface SoundCardProps {
     title: string
-    file: string
+    files: SoundDownloadItem[]
     poster: string
-    format: string
     size: string
 }

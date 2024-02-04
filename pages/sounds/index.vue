@@ -5,9 +5,8 @@
         <AppContainer>
             <SoundCard
                 title="White Rabbit"
-                :file="sound"
+                :files="sounds"
                 :poster="poster"
-                format="MP3"
                 size="24KB"
             />
         </AppContainer>
@@ -24,4 +23,15 @@ const { t } = useI18n()
 useHead(({
     title: t('sounds.title')
 }))
+
+const sounds = [
+    {
+        label: 'MP3',
+        link: sound as string
+    },
+    {
+        label: 'WAV',
+        link: sound as string
+    }
+]
 </script>

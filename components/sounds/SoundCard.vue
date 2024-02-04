@@ -2,9 +2,8 @@
     <div class="sound py-3 pl-3 pr-4 bg-white rounded-5 shadow-card">
         <AppAudioPlayer
             :title="props.title"
-            :file="props.file"
+            :files="props.files"
             :poster="props.poster"
-            :format="props.format"
             :size="props.size"
         />
     </div>
