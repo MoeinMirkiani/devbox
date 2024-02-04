@@ -1,7 +1,4 @@
-interface SoundDownloadItem {
-    label: string
-    link: string
-}
+import type { SoundDownloadItem } from "~/contracts/types/Sound"
 
 export interface SoundDownloadProps {
     items: SoundDownloadItem[]
