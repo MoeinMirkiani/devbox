@@ -23,7 +23,7 @@ useHead(({
 
 
 // Composables
-const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 10)
+const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 12)
 
 
 // Methods
