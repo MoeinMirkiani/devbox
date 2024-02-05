@@ -3,7 +3,9 @@
 
     <div class="videos-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center">
         <AppContainer>
-            {{ list }}
+            <AppLoadMore @load="loadMore" :is-active="pageInfo.hasNextPage">
+                {{ list }}
+            </AppLoadMore>
         </AppContainer>
     </div>
 </template>
