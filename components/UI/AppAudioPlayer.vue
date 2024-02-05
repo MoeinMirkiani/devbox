@@ -6,7 +6,7 @@
                     <media-poster
                         :src="props.poster"
                         :alt="props.title"
-                        class="block w-[130px] h-[130px] rounded-5 overflow-hidden"
+                        class="block w-[130px] h-[130px] rounded-5 overflow-hidden [&>img]:w-full [&>img]:h-full [&>img]:object-cover"
                     ></media-poster>
 
                     <media-controls>
