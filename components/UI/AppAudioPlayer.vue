@@ -61,7 +61,7 @@
                     </media-time-slider>
 
                     <div class="flex justify-between items-center">
-                        <MediaInfo :label="$t('sounds.sound.format')" :value="playerSound.label" />
+                        <MediaInfo :label="$t('sounds.sound.format')" :value="playerSound.label.toUpperCase()" />
 
                         <MediaInfo :label="$t('sounds.sound.size')" :value="props.size" />
                     </div>
