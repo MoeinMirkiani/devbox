@@ -3,7 +3,6 @@ query Sounds($first: Int!) {
   sounds(first: $first) {
     edges {
       node {
-        id
         title
         featuredImage {
           node {
@@ -22,6 +21,10 @@ query Sounds($first: Int!) {
           }
         }
       }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
     }
   }
 }
