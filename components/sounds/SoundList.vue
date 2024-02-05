@@ -5,6 +5,7 @@
     <div v-else class="sounds flex items-start flex-wrap gap-x-4 gap-y-5">
         <SoundCard
             v-for="(sound, i) in props.items"
+            :key="i"
             :title="sound.title"
             :poster="sound.featuredImage"
             :size="sound.size"
