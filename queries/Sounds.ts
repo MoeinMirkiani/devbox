@@ -1,6 +1,6 @@
 export const SoundsQuery: string = `
-query Sounds($first: Int!) {
-  sounds(first: $first) {
+query Sounds($first: Int!, $after: String!, $keyword: String!) {
+  sounds(first: $first, after: $after, where: { search: $keyword }) {
     edges {
       node {
         title
