@@ -7,7 +7,7 @@
 <script lang="ts" setup>
 import type { IconButtonProps } from "~/contracts/components/UI/IconButtonProps"
 
-const props = defineProps<IconButtonProps>()
+defineProps<IconButtonProps>()
 </script>
 
 <style lang="scss" scoped>
