@@ -1,6 +1,6 @@
 <template>
     <ClientOnly>
-        <media-player :src="playerSound.link" class="flex gap-4">
+        <media-player ref="player" @play="handlePlay" :src="playerSound.link" class="flex gap-4">
             <div class="relative">
                 <media-provider>
                     <media-poster
@@ -80,6 +80,26 @@ import type { AppAudioPlayerProps } from "~/contracts/components/UI/AppAudioPlay
 const props = defineProps<AppAudioPlayerProps>()
 
 
+// Composables
+const id = useId()
+const currentPlayer = useState('activePlayer', () => '')
+
+
 // Variables
 const playerSound = computed(() => props.files.find(item => item.label.toLowerCase() === 'mp3'))
+const player = ref<HTMLVideoElement>()
+
+
+// Observers
+watch(currentPlayer, () => {
+    if (currentPlayer.value !== id) {
+        player.value?.pause()
+    }
+})
+
+
+// Methods
+const handlePlay = () => {
+    currentPlayer.value = id
+}
 </script>
