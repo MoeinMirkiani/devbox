@@ -46,7 +46,6 @@ export async function useHttp(path: string, payload?: any): AsyncData<any> {
             }
         },
         async onResponseError({ options, response }) {
-            console.log(response)
             if ([401, 403].includes(response.status)) {
                 navigateToData = {
                     path: '/auth/?auth=false',
