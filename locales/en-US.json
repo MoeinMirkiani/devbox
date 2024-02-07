@@ -96,6 +96,9 @@
             "download": "Download as"
         }
     },
+    "avatars": {
+        "title": "Avatars"
+    },
     "responsive": {
         "first": "Sorry :(",
         "second": "Responsive version is not available."
