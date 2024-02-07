@@ -4,6 +4,8 @@
             <div id="page-title" class="header-filters__title flex w-[210px]">
                 <span class="text-50 font-light text-gray-30">{{ props.title }}</span>
             </div>
+
+            <div class="filters w-[calc(100%-210px)] h-full bg-gray-98 rounded-5"></div>
         </AppContainer>
     </div>
 </template>
