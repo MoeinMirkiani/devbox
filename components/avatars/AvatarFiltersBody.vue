@@ -17,10 +17,4 @@ import type { AvatarFiltersBodyProps } from "~/contracts/components/avatars/Avat
 
 // Macros
 const props = defineProps<AvatarFiltersBodyProps>()
-
-
-// Computed
-const names = computed<string[]>(() => {
-    return props.filters.map(item => item.name)
-})
 </script>
