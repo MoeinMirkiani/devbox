@@ -1,3 +1,5 @@
 export interface AppPopoverProps {
-    align?: 'left' | 'right'
+    horizontalAlign?: 'left' | 'right'
+    verticalAlign?: 'top' | 'bottom'
+    verticalOffset: string
 }

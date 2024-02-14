@@ -14,10 +14,12 @@
         >
             <div
                 v-if="isActive"
-                class="popover__content absolute z-50 top-[calc(100%+8px)] pointer-events-auto"
+                class="popover__content absolute z-50 pointer-events-auto"
                 :class="{
-                    'left-0': props.align === 'left',
-                    'right-0': props.align === 'right'
+                    'left-0': props.horizontalAlign === 'left',
+                    'right-0': props.horizontalAlign === 'right',
+                    'top-0': props.verticalAlign === 'top',
+                    'top-full': props.verticalAlign === 'bottom'
                 }"
             >
                 <slot name="content" />
@@ -45,3 +47,11 @@ onClickOutside(popover, _ => {
     isActive.value = false
 })
 </script>
+
+<style lang="scss" scoped>
+.popover {
+    &__content {
+        margin-top: v-bind(verticalOffset);
+    }
+}
+</style>
