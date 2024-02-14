@@ -10,14 +10,10 @@
 
 <script lang="ts" setup>
 import type { PageFiltersProps } from "~/contracts/components/header/PageFiltersProps"
-import PageTitle from "~/components/UI/PageTitle.vue";
 
 
 // Macros
 const props = defineProps<PageFiltersProps>()
-
-
-// Methods
 </script>
 
 <style lang="scss" scoped></style>
