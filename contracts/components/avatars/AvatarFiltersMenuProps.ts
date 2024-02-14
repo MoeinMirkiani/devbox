@@ -1,5 +1,5 @@
 import type { Filter } from "~/contracts/types/Filter"
 
-export interface AvatarFiltersBodyProps {
+export interface AvatarFiltersMenuProps {
     filters: Filter[]
 }

@@ -3,7 +3,7 @@
         <AvatarFiltersNames :names />
 
         <template v-slot:content>
-            <AvatarFiltersBody :filters="props.filters" />
+            <AvatarFiltersMenu :filters="props.filters" />
         </template>
     </AppPopover>
 </template>

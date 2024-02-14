@@ -6,15 +6,16 @@
                 :key="index"
                 :name="filter.name"
                 :items="filter.items"
+                class="flex-1"
             />
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
-import type { AvatarFiltersBodyProps } from "~/contracts/components/avatars/AvatarFiltersBodyProps"
+import type { AvatarFiltersMenuProps } from "~/contracts/components/avatars/AvatarFiltersMenuProps"
 
 
 // Macros
-const props = defineProps<AvatarFiltersBodyProps>()
+const props = defineProps<AvatarFiltersMenuProps>()
 </script>
