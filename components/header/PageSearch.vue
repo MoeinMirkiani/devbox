@@ -1,9 +1,7 @@
 <template>
     <div class="page-search bg-[rgba(255,255,255,0.4)] shadow-header px-20">
         <AppContainer class="h-25 pb-4 pt-5 flex">
-            <div id="page-title" class="header-search__title flex w-[210px]">
-                <span class="text-50 font-light text-gray-30">{{ props.title }}</span>
-            </div>
+            <PageTitle :title="props.title" />
 
             <div class="header-search__input w-[calc(100%-210px)] relative">
                 <input
@@ -22,6 +20,7 @@
 
 <script lang="ts" setup>
 import type { PageSearchProps } from "~/contracts/components/header/PageSearchProps"
+import PageTitle from "~/components/UI/PageTitle.vue";
 
 
 const props = defineProps<PageSearchProps>()
