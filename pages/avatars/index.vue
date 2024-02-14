@@ -1,5 +1,7 @@
 <template>
-    <PageFilters :title="$t('avatars.title')" :filters />
+    <PageFilters :title="$t('avatars.title')" :filters>
+        <AvatarFilters />
+    </PageFilters>
 
     <div class="avatars-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center">
         <AppContainer>
