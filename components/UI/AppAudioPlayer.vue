@@ -32,7 +32,7 @@
                     <div class="flex justify-between items-center gap-4 mb-3">
                         <p class="text-16 font-bold text-gray-30 truncate">{{ props.title }}</p>
 
-                        <AppPopover align="right">
+                        <AppPopover horizontal-align="right" vertical-align="bottom" vertical-offset="8px">
                             <IconButton name="ic--download" button-size="32px" icon-size="24px" radius="50%" class="min-w-8 pointer-events-auto" />
 
                             <template v-slot:content>
