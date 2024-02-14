@@ -1,6 +1,6 @@
 <template>
-    <div ref="popover" class="popover relative">
-        <div @click="toggle" class="popover__trigger">
+    <div ref="popover" class="popover w-full relative">
+        <div @click="toggle" class="popover__trigger w-full h-full">
             <slot />
         </div>
 
@@ -14,7 +14,7 @@
         >
             <div
                 v-if="isActive"
-                class="popover__content absolute z-50 pointer-events-auto"
+                class="popover__content w-full min-w-[fit-content] absolute z-50 pointer-events-auto"
                 :class="{
                     'left-0': props.horizontalAlign === 'left',
                     'right-0': props.horizontalAlign === 'right',
