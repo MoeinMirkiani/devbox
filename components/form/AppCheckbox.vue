@@ -1,10 +1,10 @@
 <template>
     <div class="checkbox">
         <input
+            v-model="model"
             :id="id"
-            @change="update"
+            :value="props.value"
             type="checkbox"
-            :checked="model"
         />
 
         <label :for="id" class="text-18 text-gray-30">{{ props.label }}</label>
@@ -17,16 +17,9 @@ import type { AppCheckboxProps } from "~/contracts/components/form/AppCheckboxPr
 
 // Macros
 const props = defineProps<AppCheckboxProps>()
-const model = defineModel()
+const model = defineModel<boolean | []>()
 
 
 // Composables
 const id = useId()
-
-
-// Methods
-const update = (event: Event) => {
-    const target = event.target as HTMLInputElement
-    model.value = target.checked
-}
 </script>
