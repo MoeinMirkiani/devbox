@@ -20,9 +20,9 @@
 
 <script lang="ts" setup>
 import type { PageSearchProps } from "~/contracts/components/header/PageSearchProps"
-import PageTitle from "~/components/UI/PageTitle.vue";
 
 
+// Macros
 const props = defineProps<PageSearchProps>()
 
 
