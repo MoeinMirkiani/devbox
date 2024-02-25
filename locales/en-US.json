@@ -97,7 +97,15 @@
         }
     },
     "avatars": {
-        "title": "Avatars"
+        "title": "Avatars",
+        "filters": {
+            "gender": "Gender",
+            "age": "Age",
+            "format": "Format",
+            "color": "Color",
+            "male": "Male",
+            "female": "Female"
+        }
     },
     "responsive": {
         "first": "Sorry :(",

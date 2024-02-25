@@ -3,7 +3,13 @@
         <FilterTitle :name="props.name" class="flex-1" />
 
         <div class="px-6 pt-4 pb-9">
-            <div v-for="(item, j) in props.items" :key="j">{{ item.name }}</div>
+            <AppCheckbox
+                v-model="queryParamItems"
+                v-for="item in props.items"
+                :key="item.slug"
+                :label="item.name"
+                :value="item.slug"
+            />
         </div>
     </div>
 </template>
@@ -14,4 +20,29 @@ import type { AvatarFilterGroupProps } from "~/contracts/components/avatars/Avat
 
 // Macros
 const props = defineProps<AvatarFilterGroupProps>()
+
+
+// Composables
+const router = useRouter()
+const route = useRoute()
+
+
+// Computed
+const queryParamName = computed(() => props.name.toLowerCase())
+
+const queryParamItems = computed({
+    get() {
+        return Array.isArray(route.query[queryParamName.value])
+            ? route.query[queryParamName.value]
+            : route.query[queryParamName.value]
+                ? [route.query[queryParamName.value] as string]
+                : []
+    },
+    set(value) {
+        const newQuery = { ...route.query }
+        newQuery[queryParamName.value] = value?.length ? value : []
+
+        router.push({ query: newQuery })
+    }
+})
 </script>
