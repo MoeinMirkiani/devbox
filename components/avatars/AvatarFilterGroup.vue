@@ -2,7 +2,7 @@
     <div class="flex-1">
         <FilterTitle :name="props.name" class="flex-1" />
 
-        <div class="px-6 pt-4 pb-9">
+        <div class="px-6 pt-4 pb-9 flex flex-col gap-3">
             <AppCheckbox
                 v-model="queryParamItems"
                 v-for="item in props.items"
