@@ -3,7 +3,7 @@
 
     <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center">
         <AppContainer>
-            <AppLoadMore @load="loadMore" :is-active="pageInfo.hasNextPage">
+            <AppLoadMore @load="loadMore" :is-active="pageInfo.hasNextPage && !loading">
                 <ImageList :items="list" :loading="loading" />
             </AppLoadMore>
         </AppContainer>
