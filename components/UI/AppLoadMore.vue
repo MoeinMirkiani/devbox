@@ -1,6 +1,7 @@
 <template>
     <slot />
-    <SpinnerIcon v-if="props.isActive" ref="loadMoreElement" class="mx-auto mt-10" />
+
+    <span v-if="props.isActive" ref="loadMoreElement" class="mx-auto my-10" />
 </template>
 
 <script lang="ts" setup>
