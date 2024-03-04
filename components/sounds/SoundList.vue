@@ -1,5 +1,4 @@
 <template>
-    <SpinnerIcon v-if="props.loading" class="mx-auto mt-10" />
     <NoResults v-if="!props.items.length && !props.loading" class="h-full" />
 
     <div v-else class="sounds flex items-start flex-wrap gap-x-4 gap-y-5">
@@ -13,6 +12,8 @@
             class="basis-[51%] max-w-[calc((100%-16px)/2)] flex-grow"
         />
     </div>
+
+    <SpinnerIcon v-if="props.loading" class="mx-auto mt-10" />
 </template>
 
 <script setup lang="ts">
