@@ -36,8 +36,8 @@ const fetchFilters = async () => {
     filters.value = data.value
 }
 
-async function service(perPage: number, currentPage: string, keyword: string): AsyncData<any> {
-    return await AvatarService.list(perPage, currentPage, keyword)
+async function service(perPage: number, currentPage: string): AsyncData<any> {
+    return await AvatarService.list(perPage, currentPage)
 }
 
 async function init() {

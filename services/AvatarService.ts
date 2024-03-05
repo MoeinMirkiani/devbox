@@ -80,7 +80,7 @@ export default {
         })
     },
 
-    list: (first: number, after: string, keyword: string) : AsyncData<any> => {
+    list: (first: number, after: string) : AsyncData<any> => {
         return useHttp('graphql', {
             baseURL: baseUrl,
             key: 'avatar-list',
@@ -88,8 +88,7 @@ export default {
                 query: AvatarsQuery,
                 variables: {
                     first,
-                    after,
-                    keyword
+                    after
                 }
             },
             transform: transformList

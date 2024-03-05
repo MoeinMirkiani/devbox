@@ -1,6 +1,6 @@
 export const AvatarsQuery: string = `
-query Profiles($first: Int!, $after: String!, $keyword: String!) {
-  profiles(first: $first, after: $after, where: { search: $keyword }) {
+query Profiles($first: Int!, $after: String!) {
+  profiles(first: $first, after: $after, where: {}) {
     edges {
       node {
         id
