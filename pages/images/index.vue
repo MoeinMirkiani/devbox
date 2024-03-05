@@ -14,14 +14,14 @@
 import ImageService from "~/services/ImageService"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 
+
+// Composables
 const { t } = useI18n()
 
 useHead(({
     title: t('images.title')
 }))
 
-
-// Composables
 const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 9)
 
 
