@@ -11,12 +11,14 @@
 </template>
 
 <script lang="ts" setup>
+import TaxonomyService from "~/services/TaxonomyService"
 import AvatarService from "~/services/AvatarService"
 import type { Filter } from "~/contracts/types/Filter"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 
 
 // Composables
+const route = useRoute()
 const { t } = useI18n()
 
 useHead(({
@@ -30,9 +32,29 @@ const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 12)
 const filters = ref<Filter[]>()
 
 
+// Computed
+const taxonomies = computed(() => {
+    const queries = route.query
+
+    for (const item in queries) {
+        if (queries[item]?.length === 0) {
+            delete queries[item]
+        }
+    }
+
+    return queries
+})
+
+
+// Observers
+watch(taxonomies, async () => {
+    console.log(taxonomies.value)
+})
+
+
 // Methods
 const fetchFilters = async () => {
-    const { data } = await AvatarService.filters()
+    const { data } = await TaxonomyService.filters()
     filters.value = data.value
 }
 
