@@ -1,4 +1,4 @@
-import type { Filter } from "~/contracts/types/Filter"
+import type { Taxonomy } from "~/contracts/types/Taxonomy"
 
 
-export interface AvatarFilterGroupProps extends Filter {}
+export interface AvatarFilterGroupProps extends Taxonomy {}

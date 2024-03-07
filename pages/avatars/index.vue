@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import TaxonomyService from "~/services/TaxonomyService"
 import AvatarService from "~/services/AvatarService"
-import type { Filter } from "~/contracts/types/Filter"
+import type { Taxonomy } from "~/contracts/types/Taxonomy"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 
 
@@ -29,7 +29,7 @@ const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 12)
 
 
 // Variables
-const filters = ref<Filter[]>()
+const filters = ref<Taxonomy[]>()
 
 
 // Computed

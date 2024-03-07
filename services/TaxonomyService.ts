@@ -1,6 +1,6 @@
 import { useHttp } from "~/composables/useHttp"
 import type { AsyncData } from "~/contracts/http/AsyncData"
-import type { FilterItem, Filter } from "~/contracts/types/Filter"
+import type { TaxonomyItem, Taxonomy } from "~/contracts/types/Taxonomy"
 import { AvatarFiltersQuery } from "~/queries/AvatarFilters"
 
 const baseUrl = (): string => {
@@ -8,15 +8,15 @@ const baseUrl = (): string => {
     return runtimeConfig.public.graphqlURL
 }
 
-const filterItemPresenter = (item: any): FilterItem => {
+const filterItemPresenter = (item: any): TaxonomyItem => {
     return {
         name: item.name,
         slug: item.slug
     }
 }
 
-const transformFilters = (data: any): Filter[] => {
-    const filters: Filter[] = []
+const transformFilters = (data: any): Taxonomy[] => {
+    const filters: Taxonomy[] = []
 
     for (const item in data.data) {
         // Sorts filter items based on "sortIndex" property
