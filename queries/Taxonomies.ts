@@ -1,4 +1,4 @@
-export const AvatarFiltersQuery: string = `
+export const TaxonomiesQuery: string = `
 query Filters {
   ages {
     edges {

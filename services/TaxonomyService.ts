@@ -1,7 +1,7 @@
 import { useHttp } from "~/composables/useHttp"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 import type { TaxonomyItem, Taxonomy } from "~/contracts/types/Taxonomy"
-import { AvatarFiltersQuery } from "~/queries/AvatarFilters"
+import { TaxonomiesQuery } from "~/queries/Taxonomies"
 
 const baseUrl = (): string => {
     const runtimeConfig = useRuntimeConfig()
@@ -43,7 +43,7 @@ export default {
             baseURL: baseUrl,
             key: 'avatar-filters',
             body: {
-                query: AvatarFiltersQuery
+                query: TaxonomiesQuery
             },
             transform: transformFilters
         })
