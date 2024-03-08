@@ -1,6 +1,6 @@
 <template>
     <div class="flex-1">
-        <FilterTitle :name="props.name" class="flex-1" />
+        <FilterTitle :name="props.pluralName" class="flex-1" />
 
         <div class="px-6 pt-4 pb-9 flex flex-col gap-3">
             <AppCheckbox
@@ -28,7 +28,7 @@ const route = useRoute()
 
 
 // Computed
-const queryParamName = computed(() => props.name.toLowerCase())
+const queryParamName = computed(() => props.singleName)
 
 const queryParamItems = computed({
     get() {

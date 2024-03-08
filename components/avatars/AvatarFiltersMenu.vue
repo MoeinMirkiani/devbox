@@ -3,8 +3,9 @@
         <div class="w-full flex divide-x-2 divide-gray-95">
             <AvatarFilterGroup
                 v-for="filter in props.filters"
-                :key="filter.name"
-                :name="filter.name"
+                :key="filter.pluralName"
+                :single-name="filter.singleName"
+                :plural-name="filter.pluralName"
                 :items="filter.items"
             />
         </div>

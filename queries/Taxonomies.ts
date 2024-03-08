@@ -1,37 +1,53 @@
 export const TaxonomiesQuery: string = `
 query Filters {
   ages {
-    edges {
-      node {
-        name
-        slug
-        acfFilter {
-          sortIndex
+    nodes {
+      name
+      slug
+      taxonomy {
+        node {
+          graphqlSingleName
+          graphqlPluralName
         }
+      }
+      acfFilter {
+        sortIndex
       }
     }
   }
   colors {
-    edges {
-      node {
-        name
-        slug
+    nodes {
+      name
+      slug
+      taxonomy {
+        node {
+          graphqlSingleName
+          graphqlPluralName
+        }
       }
     }
   }
   formats {
-    edges {
-      node {
-        name
-        slug
+    nodes {
+      name
+      slug
+      taxonomy {
+        node {
+          graphqlSingleName
+          graphqlPluralName
+        }
       }
     }
   }
   genders {
-    edges {
-      node {
-        name
-        slug
+    nodes {
+      name
+      slug
+      taxonomy {
+        node {
+          graphqlSingleName
+          graphqlPluralName
+        }
       }
     }
   }

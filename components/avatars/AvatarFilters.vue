@@ -18,6 +18,6 @@ const props = defineProps<AvatarFiltersProps>()
 
 // Computed
 const names = computed<string[]>(() => {
-    return props.filters.map(item => item.name)
+    return props.filters.map(item => item.pluralName)
 })
 </script>

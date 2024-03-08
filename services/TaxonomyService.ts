@@ -19,18 +19,16 @@ const transformFilters = (data: any): Taxonomy[] => {
     const filters: Taxonomy[] = []
 
     for (const item in data.data) {
-        // Sorts filter items based on "sortIndex" property
-        if (data.data[item].edges[0].node.hasOwnProperty('acfFilter')) {
-            data.data[item].edges.sort((a: any, b: any) => a.node.acfFilter.sortIndex - b.node.acfFilter.sortIndex)
+        data.data[item] = data.data[item].nodes
+
+        if (data.data[item][0].hasOwnProperty('acfFilter')) {
+            data.data[item].sort((a: any, b: any) => a.acfFilter.sortIndex - b.acfFilter.sortIndex)
         }
 
-        data.data[item] = data.data[item].edges.map((item: any) => {
-            return filterItemPresenter(item.node)
-        })
-
         filters.push({
-            name: item,
-            items: data.data[item]
+            singleName: data.data[item][0].taxonomy.node.graphqlSingleName,
+            pluralName: data.data[item][0].taxonomy.node.graphqlPluralName,
+            items: data.data[item].map((item: any) => filterItemPresenter(item))
         })
     }
 

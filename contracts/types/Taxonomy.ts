@@ -4,6 +4,7 @@ export interface TaxonomyItem {
 }
 
 export interface Taxonomy {
-    name: string,
+    singleName: string,
+    pluralName: string,
     items: TaxonomyItem[]
 }
