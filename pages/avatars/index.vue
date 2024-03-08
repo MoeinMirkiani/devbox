@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import TaxonomyService from "~/services/TaxonomyService"
 import AvatarService from "~/services/AvatarService"
-import type { Taxonomy } from "~/contracts/types/Taxonomy"
+import type { Taxonomy, TaxonomyQuery, TaxonomyQueryItem } from "~/contracts/types/Taxonomy"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 
 
@@ -30,6 +30,10 @@ const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 12)
 
 // Variables
 const filters = ref<Taxonomy[]>()
+const taxonomyQuery = ref<TaxonomyQuery>({
+    relations: 'AND',
+    taxArray: []
+})
 
 
 // Computed
@@ -48,7 +52,18 @@ const taxonomies = computed(() => {
 
 // Observers
 watch(taxonomies, async () => {
-    console.log(taxonomies.value)
+    taxonomyQuery.value.taxArray = []
+
+    for (const item in taxonomies.value) {
+        taxonomyQuery.value.taxArray.push({
+            terms: taxonomies.value[item] as string[],
+            taxonomy: item,
+            operator: 'IN',
+            field: 'slug'
+        })
+    }
+
+    console.log(taxonomyQuery.value)
 })
 
 
