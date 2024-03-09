@@ -13,10 +13,10 @@ export interface TaxonomyQueryItem {
     terms: string[]
     taxonomy: string
     operator: 'IN'
-    field: 'slug'
+    field: 'SLUG'
 }
 
 export interface TaxonomyQuery {
-    relations: 'AND'
+    relation: 'AND'
     taxArray: TaxonomyQueryItem[]
 }

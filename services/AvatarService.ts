@@ -2,6 +2,7 @@ import { useHttp } from "~/composables/useHttp"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 import type { Avatar } from "~/contracts/types/Avatar"
 import type { PageInfo } from "~/contracts/http/PageInfo"
+import type { TaxonomyQuery } from "~/contracts/types/Taxonomy"
 import { AvatarsQuery } from "~/queries/Avatars"
 
 
@@ -38,7 +39,7 @@ const transformList = (data: any): { items: Avatar[], pageInfo: PageInfo } => {
 }
 
 export default {
-    list: (first: number, after: string) : AsyncData<any> => {
+    list: (first: number, after: string, taxonomyQuery: TaxonomyQuery) : AsyncData<any> => {
         return useHttp('graphql', {
             baseURL: baseUrl,
             key: 'avatar-list',
@@ -46,7 +47,8 @@ export default {
                 query: AvatarsQuery,
                 variables: {
                     first,
-                    after
+                    after,
+                    taxQuery: taxonomyQuery
                 }
             },
             transform: transformList

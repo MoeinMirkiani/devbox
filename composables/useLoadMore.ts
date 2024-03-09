@@ -57,5 +57,5 @@ export const useLoadMore = (service: Service, perPage: number) => {
         }
     }
 
-    return { pageInfo, list, loading, fetch, loadMore }
+    return { pageInfo, list, resetList, loading, fetch, loadMore }
 }

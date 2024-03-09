@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import TaxonomyService from "~/services/TaxonomyService"
 import AvatarService from "~/services/AvatarService"
-import type { Taxonomy, TaxonomyQuery, TaxonomyQueryItem } from "~/contracts/types/Taxonomy"
+import type { Taxonomy, TaxonomyQuery } from "~/contracts/types/Taxonomy"
 import type { AsyncData } from "~/contracts/http/AsyncData"
 
 
@@ -25,45 +25,40 @@ useHead(({
     title: t('avatars.title')
 }))
 
-const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 12)
+const { pageInfo, list, resetList, loading, fetch, loadMore } = useLoadMore(service, 12)
 
 
 // Variables
 const filters = ref<Taxonomy[]>()
-const taxonomyQuery = ref<TaxonomyQuery>({
-    relations: 'AND',
-    taxArray: []
-})
 
 
 // Computed
-const taxonomies = computed(() => {
+const taxonomyQuery = computed<TaxonomyQuery>(() => {
     const queries = route.query
+    const query: TaxonomyQuery = {
+        relation: 'AND',
+        taxArray: []
+    }
 
     for (const item in queries) {
-        if (queries[item]?.length === 0) {
-            delete queries[item]
+        if (queries[item]?.length) {
+            query.taxArray.push({
+                terms: queries[item] as string[],
+                taxonomy: item.toUpperCase(),
+                operator: 'IN',
+                field: 'SLUG'
+            })
         }
     }
 
-    return queries
+    return query
 })
 
 
 // Observers
-watch(taxonomies, async () => {
-    taxonomyQuery.value.taxArray = []
-
-    for (const item in taxonomies.value) {
-        taxonomyQuery.value.taxArray.push({
-            terms: taxonomies.value[item] as string[],
-            taxonomy: item,
-            operator: 'IN',
-            field: 'slug'
-        })
-    }
-
-    console.log(taxonomyQuery.value)
+watch(taxonomyQuery, async () => {
+    resetList()
+    await fetch()
 })
 
 
@@ -74,7 +69,7 @@ const fetchFilters = async () => {
 }
 
 async function service(perPage: number, currentPage: string): AsyncData<any> {
-    return await AvatarService.list(perPage, currentPage)
+    return await AvatarService.list(perPage, currentPage, taxonomyQuery.value)
 }
 
 async function init() {
