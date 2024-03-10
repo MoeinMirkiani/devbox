@@ -105,6 +105,11 @@
             "color": "Color",
             "male": "Male",
             "female": "Female"
+        },
+        "avatar": {
+            "res": "Resolution",
+            "size": "Size",
+            "format": "Format"
         }
     },
     "responsive": {
