@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { MediaInfoProps } from "~/contracts/components/UI/MediaInfoProps"
+import type { MediaInfoProps } from "~/contracts/components/media/MediaInfoProps"
 
 const props = withDefaults(defineProps<MediaInfoProps>(), {
     isLarge: false

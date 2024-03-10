@@ -46,7 +46,7 @@
 
 <script setup lang="ts">
 import type { AvatarCardProps } from "~/contracts/components/avatars/AvatarCardProps"
-import type { MediaInfoProps } from "~/contracts/components/UI/MediaInfoProps"
+import type { MediaInfoProps } from "~/contracts/components/media/MediaInfoProps"
 
 
 // Macros
