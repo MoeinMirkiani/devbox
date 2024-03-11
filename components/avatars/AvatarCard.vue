@@ -33,6 +33,7 @@
                 <a
                     :href="props.avatar.file"
                     download
+                    target="_blank"
                     class="avatar-download block bg-primary-green text-white text-18 text-center mx-1 py-3 rounded-[10px] hover:bg-primary-shade"
                 >
                     {{ $t('buttons.download') }}
