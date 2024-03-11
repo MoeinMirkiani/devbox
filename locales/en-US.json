@@ -112,6 +112,9 @@
             "format": "Format"
         }
     },
+    "logos": {
+        "title": "Logos"
+    },
     "responsive": {
         "first": "Sorry :(",
         "second": "Responsive version is not available."
