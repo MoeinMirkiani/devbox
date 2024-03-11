@@ -6,6 +6,7 @@
             v-for="avatar in props.items"
             :key="avatar.id"
             :avatar="avatar"
+            @show-me="displayAvatar"
             class="basis-[100%] md:basis-[26%] md:max-w-[calc((100%-32px)/3)] lg:basis-[21%] lg:max-w-[calc((100%-48px)/4)] flex-grow"
         />
     </div>
@@ -19,4 +20,10 @@ import type { AvatarListProps } from "~/contracts/components/avatars/AvatarListP
 
 // Macros
 const props = defineProps<AvatarListProps>()
+
+
+// Methods
+const displayAvatar = (id: string) => {
+    console.log('id: ', id)
+}
 </script>

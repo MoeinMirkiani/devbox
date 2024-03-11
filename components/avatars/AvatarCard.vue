@@ -48,6 +48,9 @@ import type { AvatarCardProps } from "~/contracts/components/avatars/AvatarCardP
 
 // Macros
 const props = defineProps<AvatarCardProps>()
+const emit = defineEmits<{
+    (e: 'showMe', id: string): void
+}>()
 
 
 // Variables
@@ -56,7 +59,7 @@ const displayMore = ref<boolean>(false)
 
 // Methods
 const displayAvatar = () => {
-    console.log(props.avatar.id)
+    emit('showMe', props.avatar.id)
 }
 </script>
 
