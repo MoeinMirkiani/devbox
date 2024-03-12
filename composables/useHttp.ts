@@ -1,7 +1,7 @@
-import { callWithNuxt , type NuxtApp } from "#app"
-import { type AsyncData } from '~/contracts/http/AsyncData'
-import { type NavigateToData } from "~/contracts/http/NavigateToData"
-import { type FetchResponse } from "ofetch"
+import { callWithNuxt, type NuxtApp } from "#app"
+import type { AsyncData } from '~/contracts/http/AsyncData'
+import type { NavigateToData } from "~/contracts/http/NavigateToData"
+import type { FetchResponse } from "ofetch"
 
 export async function useHttp(path: string, payload?: any): AsyncData<any> {
     const nuxtApp: NuxtApp = useNuxtApp()
@@ -9,6 +9,11 @@ export async function useHttp(path: string, payload?: any): AsyncData<any> {
     const baseUrl: string = runtimeConfig.public.graphqlURL
 
     let navigateToData: NavigateToData | null = null
+    const loading = payload?.loading
+        ? payload.loading
+        : ref<boolean>(false)
+
+    loading.value = true
 
     const http = useFetch(path, {
         baseURL: baseUrl,
@@ -41,7 +46,6 @@ export async function useHttp(path: string, payload?: any): AsyncData<any> {
             }
         },
         async onResponseError({ options, response }) {
-            console.log(response)
             if ([401, 403].includes(response.status)) {
                 navigateToData = {
                     path: '/auth/?auth=false',
@@ -63,6 +67,8 @@ export async function useHttp(path: string, payload?: any): AsyncData<any> {
             }
         }
     })
+
+    loading.value = false
 
     if (navigateToData) {
         const nuxtNavigate = callWithNuxt(nuxtApp, navigateTo, [

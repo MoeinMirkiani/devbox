@@ -1,17 +1,38 @@
 <template>
-    <div class="videos-page__wrapper">
-        <AppContainer>VIDEOS</AppContainer>
+    <PageSearch :title="$t('videos.title')" />
+
+    <div class="videos-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center">
+        <AppContainer>
+            <AppLoadMore @load="loadMore" :is-active="pageInfo.hasNextPage && !loading">
+                <VideoList :items="list" :loading="loading" />
+            </AppLoadMore>
+        </AppContainer>
     </div>
 </template>
 
 <script lang="ts" setup>
-import AppContainer from "~/components/UI/AppContainer.vue"
+import type { AsyncData } from "~/contracts/http/AsyncData"
+import VideoService from "~/services/VideoService"
+
+const { t } = useI18n()
 
 useHead(({
-    title: 'Videos'
+    title: t('videos.title')
 }))
 
-definePageMeta({
-    layout: 'search'
-})
+
+// Composables
+const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 9)
+
+
+// Methods
+async function service(perPage: number, currentPage: string, keyword: string): AsyncData<any> {
+    return await VideoService.list(perPage, currentPage, keyword)
+}
+
+async function init() {
+    await fetch()
+}
+
+await init()
 </script>

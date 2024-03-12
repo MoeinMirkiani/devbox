@@ -1,10 +1,15 @@
 <template>
     <section id="sounds" class="sounds">
         <AppContainer class="py-[120px] flex justify-between">
-            <div class="sounds__content w-2/5 flex flex-col justify-end gap-12 pt-[152px] pb-15">
+            <div class="sounds__content w-2/5 flex flex-col items-start justify-end gap-12 pt-[152px] pb-15">
                 <h6 class="sounds__text text-50 font-light text-gray-30">{{ $t('main.sounds.text') }}</h6>
 
-                <AppButton>{{ $t('buttons.more') }}</AppButton>
+                <NuxtLink
+                    :to="{ name: 'sounds' }"
+                    class="inline-flex py-3 px-12 bg-primary-green text-white text-18 font-medium rounded-[10px] hover:bg-primary-shade"
+                >
+                    {{ $t('buttons.more') }}
+                </NuxtLink>
             </div>
 
             <div class="sounds__samples flex flex-wrap gap-4 w-2/5 pt-15 relative">
@@ -23,10 +28,6 @@
 </template>
 
 <script setup lang="ts">
-import AppButton from "~/components/UI/AppButton.vue"
-import AppContainer from "~/components/UI/AppContainer.vue"
-import SoundSample from "~/components/sounds/SoundSample.vue"
-
 import sample1 from '~/assets/images/main--sounds-sample1.jpg'
 import sample2 from '~/assets/images/main--sounds-sample2.jpg'
 import sample3 from '~/assets/images/main--sounds-sample3.jpg'

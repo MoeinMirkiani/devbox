@@ -1,10 +1,15 @@
 <template>
     <section id="images" class="images">
         <AppContainer class="pb-[142px] flex gap-8">
-            <div class="images__content w-2/5 flex flex-col justify-end gap-12 pb-10">
+            <div class="images__content w-2/5 flex flex-col items-start justify-end gap-12 pb-10">
                 <h6 class="images__text text-50 font-light text-gray-30">{{ $t('main.images.text') }}</h6>
 
-                <AppButton>{{ $t('buttons.more') }}</AppButton>
+                <NuxtLink
+                    :to="{ name: 'images' }"
+                    class="inline-flex py-3 px-12 bg-primary-green text-white text-18 font-medium rounded-[10px] hover:bg-primary-shade"
+                >
+                    {{ $t('buttons.more') }}
+                </NuxtLink>
             </div>
 
             <div class="images__samples flex flex-wrap gap-4 w-3/5 pt-15">
@@ -17,13 +22,10 @@
 </template>
 
 <script lang="ts" setup>
-import AppContainer from '~/components/UI/AppContainer.vue'
-
 import sample1 from '~/assets/images/main--images-sample1.jpg'
 import sample2 from '~/assets/images/main--images-sample2.jpg'
 import sample3 from '~/assets/images/main--images-sample3.jpg'
 import sample4 from '~/assets/images/main--images-sample4.jpg'
-import AppButton from "~/components/UI/AppButton.vue";
 
 const samples = [sample1, sample2, sample4, sample3]
 </script>

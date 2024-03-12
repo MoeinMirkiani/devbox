@@ -1,0 +1,126 @@
+{
+    "app": {
+        "title": "Devbox"
+    },
+    "header": {
+        "navigation": [
+            {
+                "name": "Images",
+                "link": "images"
+            },
+            {
+                "name": "Videos",
+                "link": "videos"
+            },
+            {
+                "name": "Avatars",
+                "link": "avatars"
+            },
+            {
+                "name": "Sounds",
+                "link": "sounds"
+            },
+            {
+                "name": "Logos",
+                "link": "logos"
+            }
+        ]
+    },
+    "footer": {
+        "copyright": "© 2021 devbox.com All Rights Reserved"
+    },
+    "buttons": {
+        "download": "Download",
+        "more": "View more",
+        "goBack": "Go Back",
+        "goTo": "Go to"
+    },
+    "main": {
+        "hero": {
+            "fixed": "Find free",
+            "description": "Access many of royalty-free soundtracks, stock photos, sample videos, avatars and logos for your projects"
+        },
+        "images": {
+            "text": "detailed images you can use for any project"
+        },
+        "videos": {
+            "text": "Videos for any purposes"
+        },
+        "sounds": {
+            "text": "Find your perfect track file fast and free"
+        },
+        "avatars": {
+            "text": "Avatars for everyone and any age"
+        },
+        "logos": {
+            "text": "High-res logos for your website & digital use"
+        }
+    },
+    "images": {
+        "title": "Images",
+        "image": {
+            "res": "Resolution",
+            "size": "Size",
+            "ratio": "Ratio",
+            "dimension": "Dimension",
+            "format": "Format"
+        },
+        "free": "Free to use",
+        "notFree": "Not free",
+        "from": "From",
+        "info": "Image Information",
+        "explore": "Explore more images"
+    },
+    "videos": {
+        "title": "Videos",
+        "video": {
+            "res": "Resolution",
+            "size": "Size",
+            "ratio": "Ratio",
+            "duration": "Duration",
+            "format": "Format",
+            "free": "Free to use",
+            "notFree": "Not free",
+            "from": "From"
+        },
+        "free": "Free to use",
+        "notFree": "Not free",
+        "info": "Video Information",
+        "explore": "Explore more videos"
+    },
+    "sounds": {
+        "title": "Sounds",
+        "sound": {
+            "format": "Format",
+            "size": "Size",
+            "download": "Download as"
+        }
+    },
+    "avatars": {
+        "title": "Avatars",
+        "filters": {
+            "gender": "Gender",
+            "age": "Age",
+            "format": "Format",
+            "color": "Color",
+            "male": "Male",
+            "female": "Female"
+        },
+        "avatar": {
+            "res": "Resolution",
+            "size": "Size",
+            "format": "Format"
+        }
+    },
+    "logos": {
+        "title": "Logos"
+    },
+    "responsive": {
+        "first": "Sorry :(",
+        "second": "Responsive version is not available."
+    },
+    "errors": {
+        "sorry": "Sorry!",
+        "noResults": "No Results Found!"
+    }
+}

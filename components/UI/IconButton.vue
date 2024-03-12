@@ -5,24 +5,9 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-    name: {
-        type: String,
-        required: true
-    },
-    buttonSize: {
-        type: String,
-        default: '64px'
-    },
-    iconSize: {
-        type: String,
-        default: '32px'
-    },
-    radius: {
-        type: String,
-        default: '50%'
-    }
-})
+import type { IconButtonProps } from "~/contracts/components/UI/IconButtonProps"
+
+defineProps<IconButtonProps>()
 </script>
 
 <style lang="scss" scoped>

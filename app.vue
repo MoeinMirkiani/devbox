@@ -4,6 +4,8 @@
         <NuxtPage />
     </NuxtLayout>
 
+    <div id="modal" class="hidden md:block"></div>
+
     <ResponsiveAlert class="md:hidden" />
 </template>
 

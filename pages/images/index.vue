@@ -1,67 +1,38 @@
 <template>
+    <PageSearch :title="$t('images.title')" />
+
     <div class="images-page__wrapper pt-8 pb-16 px-20 bg-gray-98 min-h-[calc(100vh-248px)] flex justify-center">
         <AppContainer>
-            <ImageList :items="images" :loading="loading" />
-            <SpinnerIcon v-if="hasNextPage" ref="loadMoreElement" class="mx-auto mt-10" />
+            <AppLoadMore @load="loadMore" :is-active="pageInfo.hasNextPage && !loading">
+                <ImageList :items="list" :loading="loading" />
+            </AppLoadMore>
         </AppContainer>
     </div>
 </template>
 
 <script lang="ts" setup>
-import AppContainer from "~/components/UI/AppContainer.vue"
-import ImageList from "~/components/images/ImageList.vue"
-import SpinnerIcon from "~/components/UI/SpinnerIcon.vue"
 import ImageService from "~/services/ImageService"
-import { useIntersectionObserver } from '@vueuse/core'
-import type { Images } from "~/contracts/types/Image"
+import type { AsyncData } from "~/contracts/http/AsyncData"
+
+
+// Composables
+const { t } = useI18n()
 
 useHead(({
-    title: 'Images'
+    title: t('images.title')
 }))
 
-definePageMeta({
-    layout: 'search'
-})
+const { pageInfo, list, loading, fetch, loadMore } = useLoadMore(service, 9)
 
-// Variables
-const images = ref<Images>([])
-const first = ref<number>(9)
-const after = ref<string>('')
-const hasNextPage = ref<boolean>(false)
-const loadMoreElement = ref(null)
-const loading = ref<boolean>(false)
-const route = useRoute()
-const keyword = computed<string>(() => {
-    const search = route.query.search
-    return Array.isArray(search) ? search[0] || '' : search || ''
-})
-
-// Observers
-useIntersectionObserver(
-    loadMoreElement,
-    async ([{ isIntersecting }]) => {
-        if (isIntersecting) {
-            await fetchImages()
-        }
-    }
-)
-
-watch(keyword, async () => {
-    images.value = []
-    after.value = ''
-    hasNextPage.value = false
-    loading.value = true
-    await fetchImages()
-    loading.value = false
-})
 
 // Methods
-const fetchImages = async () => {
-    const { data } = await ImageService.list(first.value, after.value, keyword.value)
-    images.value = [...images.value, ...data.value.images]
-    hasNextPage.value = data.value.pageInfo.hasNextPage
-    after.value = data.value.pageInfo.endCursor
+async function service(perPage: number, currentPage: string, keyword: string): AsyncData<any> {
+    return await ImageService.list(perPage, currentPage, keyword)
 }
 
-await fetchImages()
+async function init() {
+    await fetch()
+}
+
+await init()
 </script>

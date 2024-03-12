@@ -1,5 +1,5 @@
-import type { Image } from '~/contracts/types/Image'
+import type { ImageListItem } from '~/contracts/types/Image'
 
 export interface ImageCardProps {
-    image: Image
+    image: ImageListItem
 }
