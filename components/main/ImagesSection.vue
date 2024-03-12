@@ -26,7 +26,6 @@ import sample1 from '~/assets/images/main--images-sample1.jpg'
 import sample2 from '~/assets/images/main--images-sample2.jpg'
 import sample3 from '~/assets/images/main--images-sample3.jpg'
 import sample4 from '~/assets/images/main--images-sample4.jpg'
-import AppButton from "~/components/UI/AppButton.vue";
 
 const samples = [sample1, sample2, sample4, sample3]
 </script>
