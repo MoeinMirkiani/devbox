@@ -7,15 +7,16 @@
                 :src="props.url"
                 :alt="props.alt"
                 :width="props.imageWidth"
-                class="max-w-full max-h-full aspect-square object-cover rounded-5"
-                :class="`aspect-${props.aspectRatio}`" />
+                class="max-w-full max-h-full rounded-5"
+                :class="`aspect-[${props.aspectRatio}] object-${props.fit}`"
+            />
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { onClickOutside } from '@vueuse/core'
 import type { ImageModalProps } from '~/contracts/components/UI/ImageModalProps'
+import { onClickOutside } from '@vueuse/core'
 
 
 // Macros

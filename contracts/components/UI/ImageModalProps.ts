@@ -3,4 +3,5 @@ export interface ImageModalProps {
     alt: string
     imageWidth: string
     aspectRatio: string
+    fit: string
 }

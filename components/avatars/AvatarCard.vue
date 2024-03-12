@@ -1,8 +1,5 @@
 <template>
-    <div
-        @mouseenter="displayMore = true"
-        class="avatar relative"
-    >
+    <div @mouseenter="displayMore = true" class="avatar relative">
         <AvatarDetail
             :featured-image="props.avatar.featuredImage"
             :format="props.avatar.format"

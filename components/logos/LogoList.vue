@@ -18,6 +18,7 @@
             :url="modalItem" alt="logo"
             image-width="560px"
             aspect-ratio="1.6"
+            fit="contain"
         />
     </Teleport>
 

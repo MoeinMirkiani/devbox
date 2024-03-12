@@ -12,7 +12,14 @@
     </div>
 
     <Teleport to="#modal">
-        <ImageModal v-if="!!modalItem.length" @kill-me="modalItem = ''" :url="modalItem" alt="avatar" image-width="400px" aspect-ratio="1" />
+        <ImageModal
+            v-if="!!modalItem.length"
+            @kill-me="modalItem = ''"
+            :url="modalItem" alt="avatar"
+            image-width="400px"
+            aspect-ratio="1"
+            fit="cover"
+        />
     </Teleport>
 
     <SpinnerIcon v-if="props.loading" class="mx-auto mt-10" />
