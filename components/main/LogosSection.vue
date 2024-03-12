@@ -1,10 +1,15 @@
 <template>
     <section id="logos" class="logos">
         <AppContainer class="py-[120px] flex justify-between">
-            <div class="logos__content w-2/5 flex flex-col justify-end gap-12 pt-[152px] pb-15">
+            <div class="logos__content w-2/5 flex flex-col items-start justify-end gap-12 pt-[152px] pb-15">
                 <h6 class="logos__text text-50 font-light text-gray-30">{{ $t('main.logos.text') }}</h6>
 
-                <AppButton>{{ $t('buttons.more') }}</AppButton>
+                <NuxtLink
+                    :to="{ name: 'logos' }"
+                    class="inline-flex py-3 px-12 bg-primary-green text-white text-18 font-medium rounded-[10px] hover:bg-primary-shade"
+                >
+                    {{ $t('buttons.more') }}
+                </NuxtLink>
             </div>
 
             <div class="logos__samples flex flex-wrap gap-4 w-2/5 pt-15 relative">

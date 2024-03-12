@@ -12,10 +12,15 @@
                     </div>
                 </div>
 
-                <div class="videos__content w-1/2 flex flex-col justify-end gap-12 pl-[120px]">
+                <div class="videos__content w-1/2 flex flex-col items-start justify-end gap-12 pl-[120px]">
                     <h6 class="videos__text text-50 font-light text-gray-30">{{ $t('main.videos.text') }}</h6>
 
-                    <AppButton>{{ $t('buttons.more') }}</AppButton>
+                    <NuxtLink
+                        :to="{ name: 'videos' }"
+                        class="inline-flex py-3 px-12 bg-primary-green text-white text-18 font-medium rounded-[10px] hover:bg-primary-shade"
+                    >
+                        {{ $t('buttons.more') }}
+                    </NuxtLink>
                 </div>
             </div>
 
