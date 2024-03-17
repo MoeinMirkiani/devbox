@@ -1,42 +1,12 @@
-# Nuxt 3 Minimal Starter
+# Devbox
+### Mock data generation for developers
+<br>
+Devbox is a concept idea to bring mock data to your development environment.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This application is built using Nuxt 3 and Tailwind CSS. Its backend is a WordPress website with GraphQL API.
 
-## Setup
+Go to [live demo](https://devbox-moeinmirkiani.vercel.app/).
 
-Make sure to install the dependencies:
+<img src="./assets/images/site-cover.jpg" alt="Devbox Cover" />
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+If you have any questions about the implementation of the frontend or the backend of this application, please contact me on [Telegram](https://t.me/moein_mirkiani) or [LinkedIn](https://www.linkedin.com/in/moeinmirkiani/).
